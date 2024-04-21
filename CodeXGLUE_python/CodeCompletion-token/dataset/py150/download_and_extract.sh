@@ -11,7 +11,7 @@ cd py150_files
 tar -zxvf data.tar.gz
 rm data.tar.gz
 
-cd ..
-python3 preprocess.py --base_dir=py150_files --output_dir=token_completion
+# cd ..
+# python3 preprocess.py --base_dir=py150_files --output_dir=token_completion
 
-rm -r py150_files
+# rm -r py150_files
