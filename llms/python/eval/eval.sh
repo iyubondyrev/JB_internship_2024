@@ -1,12 +1,12 @@
 export CUDA_VISIBLE_DEVICES=0
 LANG=python
-DATADIR=../../datasets/python
-LITFILE=../../datasets/python/literals.json
+DATADIR=../../../datasets/python
+LITFILE=../../../datasets/python/literals.json
 OUTPUTDIR=../save/
-PRETRAINDIR=../save/checkpoint
-LOGFILE=../save/completion_python_eval.log
+PRETRAINDIR=microsoft/CodeGPT-small-py-adaptedGPT2
+LOGFILE=completion_python_eval.log
 
-python -u run_lm.py \
+python -u ../code/run_lm.py \
         --data_dir=$DATADIR \
         --lit_file=$LITFILE \
         --langs=$LANG \
