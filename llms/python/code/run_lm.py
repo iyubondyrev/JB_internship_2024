@@ -631,6 +631,7 @@ def main():
                    args.local_rank, device, args.n_gpu, bool(args.local_rank != -1), args.fp16,
                    torch.distributed.get_world_size() if args.local_rank != -1 else 1)
 
+    # TODO create file
     # 使用FileHandler输出到文件
     fh = logging.FileHandler(args.log_file)
     logger.addHandler(fh)
