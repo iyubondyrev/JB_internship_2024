@@ -18,4 +18,6 @@ python -u run_lm.py \
         --do_eval \
         --per_gpu_eval_batch_size=16 \
         --logging_steps=100 \
-        --seed=42 
+        --seed=42
+
+python evaluator.py -a=../../datasets/python/test.txt -p=../save/predictions.txt > eval_result.txt 2>&1
