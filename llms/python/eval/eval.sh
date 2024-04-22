@@ -20,4 +20,4 @@ python -u ../code/run_lm.py \
         --logging_steps=100 \
         --seed=42
 
-python evaluator.py -a=../../datasets/python/test.txt -p=../save/predictions.txt > eval_result.txt 2>&1
+python evaluator.py -a=../../../datasets/python/test.txt -p=../save/predictions.txt > eval_result.txt 2>&1
