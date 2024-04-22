@@ -1,11 +1,9 @@
-# TODO: download GetPopularLiterals.jar
-
-if [ ! -f "GetPopularLiterals.jar" ]; then
-    echo "GetPopularLiterals.jar not found, downloading..."
-    gdown 1iF2lODFziIEMlA3wquyYGSpjyLqWdPHs
-else
-    echo "GetPopularLiterals.jar already exists, skipping download."
-fi
+# Download the latest version of GetPopularLiterals.jar
+curl -s https://api.github.com/repos/iyubondyrev/KotlinTokenizerJB/releases/latest \
+| grep "browser_download_url" \
+| grep "GetPopularLiterals.jar" \
+| cut -d '"' -f 4 \
+| wget -O GetPopularLiterals.jar -i -
 
 python3 create_archive.py
 

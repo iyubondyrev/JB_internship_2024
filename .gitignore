@@ -5,3 +5,5 @@ __pycache__/
 *.tar.gz
 *.zip
 *.txt
+*.jar
+kotlin_data/

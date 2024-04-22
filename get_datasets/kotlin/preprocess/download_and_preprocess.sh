@@ -1,19 +1,18 @@
 # TODO: download Tokenize.jar, kotlin_files.tar.gz
 
-
-if [ ! -f "Tokenize.jar" ]; then
-    echo "Tokenize.jar not found, downloading..."
-    gdown 1gdYlWo6nNz6g_I_NCFyNOLfzakLJuMGx
-else
-    echo "Tokenize.jar already exists, skipping download."
-fi
+# Download the latest version of Tokenize.jar
+curl -s https://api.github.com/repos/iyubondyrev/KotlinTokenizerJB/releases/latest \
+| grep "browser_download_url" \
+| grep "Tokenize.jar" \
+| cut -d '"' -f 4 \
+| wget -O Tokenize.jar -i -
 
 TAR_FILE="kotlin_files.tar.gz"
-GD_DOWNLOAD_LINK="" 
+TAR_ID=1FLdFBhqQVS-estT0OHHCy8SwI3JQ4gqA
 
 if [ ! -f "$TAR_FILE" ]; then
     echo "$TAR_FILE not found, downloading..."
-    gdown "$GD_DOWNLOAD_LINK" -O "$TAR_FILE"
+    gdown $TAR_ID
 else
     echo "$TAR_FILE already exists, skipping download."
 fi
