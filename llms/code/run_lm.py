@@ -170,10 +170,12 @@ def train(args, train_dataset, model, tokenizer, fh, pool):
     answers_file = os.path.join(args.data_dir, "dev.txt")
     pred_file = os.path.join(args.output_dir, "predictions.txt")
     total, epoch_zero_acc = calculate_accuracy(answers_file_name=answers_file, predictions_file_name=pred_file, logger=logger)
-
-    wandb.log({"accuracy": epoch_zero_acc})
     
     global_step = args.start_step
+
+    wandb.log({"dev_accuracy": epoch_zero_acc}, step=global_step)
+    
+    
     tr_loss, logging_loss,avg_loss,tr_nb = 0.0, 0.0, 0.0, global_step
     # model.resize_token_embeddings(len(tokenizer))
     model.zero_grad()
@@ -212,7 +214,7 @@ def train(args, train_dataset, model, tokenizer, fh, pool):
                 avg_loss=round(np.exp((tr_loss - logging_loss) /(global_step- tr_nb)),4)
                 if global_step % args.logging_steps == 0:
                     logger.info("  steps: %s  ppl: %s  lr: %s", global_step, round(avg_loss,5), scheduler.get_last_lr()[0])
-                    wandb.log({"train_ppl": avg_loss, "lr": scheduler.get_last_lr()[0]})
+                    wandb.log({"train_ppl": avg_loss, "lr": scheduler.get_last_lr()[0]}, step=global_step)
                 if args.local_rank in [-1, 0] and args.logging_steps > 0 and global_step % args.logging_steps == 0:
                     # Log metrics
                     logging_loss = tr_loss
@@ -223,7 +225,7 @@ def train(args, train_dataset, model, tokenizer, fh, pool):
                     # Save model checkpoint
                     if args.evaluate_during_training:  # Only evaluate when single GPU otherwise metrics may not average well
                         results = evaluate(args, model, tokenizer, eval_when_training=True)
-                        wandb.log({"dev_ppl": results["perplexity"]})
+                        wandb.log({"dev_ppl": results["perplexity"]}, step=global_step)
                         for key, value in results.items():
                             logger.info("  %s = %s", key, round(value,4))                    
                         output_dir = os.path.join(args.output_dir, '{}-{}-{}'.format(checkpoint_prefix, global_step, round(results['perplexity'],4)))
@@ -276,6 +278,8 @@ def train(args, train_dataset, model, tokenizer, fh, pool):
         answers_file = os.path.join(args.data_dir, "dev.txt")
         pred_file = os.path.join(args.output_dir, "predictions.txt")
         total, epoch_acc = calculate_accuracy(answers_file_name=answers_file, predictions_file_name=pred_file, logger=logger)
+
+        wandb.log({"dev_accuracy": epoch_acc}, step=global_step)
         
 
         if args.max_steps > 0 and global_step > args.max_steps:
