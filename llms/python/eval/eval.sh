@@ -6,7 +6,7 @@ OUTPUTDIR=../save/
 PRETRAINDIR=microsoft/CodeGPT-small-py-adaptedGPT2
 LOGFILE=completion_python_eval.log
 
-python -u ../code/run_lm.py \
+python -u ../../code/run_lm.py \
         --data_dir=$DATADIR \
         --lit_file=$LITFILE \
         --langs=$LANG \
@@ -20,4 +20,6 @@ python -u ../code/run_lm.py \
         --logging_steps=100 \
         --seed=42
 
-python evaluator.py -a=../../../datasets/python/test.txt -p=../save/predictions.txt > eval_result.txt 2>&1
+python ../../code/evaluator.py -a=../../../datasets/python/test.txt -p=../save/predictions.txt > eval_result.txt 2>&1
+
+cp ../save/predictions.txt .

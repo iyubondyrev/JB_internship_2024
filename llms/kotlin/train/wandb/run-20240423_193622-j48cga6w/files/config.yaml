@@ -1,0 +1,66 @@
+wandb_version: 1
+
+per_gpu_train_batch_size:
+  desc: null
+  value: 2
+per_gpu_eval_batch_size:
+  desc: null
+  value: 4
+gradient_accumulation_steps:
+  desc: null
+  value: 4
+learning_rate:
+  desc: null
+  value: 8.0e-05
+weight_decay:
+  desc: null
+  value: 0.01
+adam_epsilon:
+  desc: null
+  value: 1.0e-08
+max_grad_norm:
+  desc: null
+  value: 1.0
+num_train_epochs:
+  desc: null
+  value: 5.0
+max_steps:
+  desc: null
+  value: -1
+warmup_steps:
+  desc: null
+  value: 0
+model_type:
+  desc: null
+  value: gpt2
+_wandb:
+  desc: null
+  value:
+    python_version: 3.10.13
+    cli_version: 0.16.6
+    framework: huggingface
+    huggingface_version: 4.40.0
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1713900982.0
+    t:
+      1:
+      - 1
+      - 11
+      - 49
+      - 55
+      2:
+      - 1
+      - 11
+      - 49
+      - 55
+      3:
+      - 13
+      - 16
+      - 23
+      4: 3.10.13
+      5: 0.16.6
+      6: 4.40.0
+      8:
+      - 5
+      13: linux-x86_64
