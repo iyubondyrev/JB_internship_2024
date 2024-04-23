@@ -143,7 +143,7 @@ def main():
 
     create_test_train_split(list_file_path, output_bad)
 
-    delete_files([output_bad, file_names])
+    delete_files([output_bad])
 
     os.chdir("..")
 

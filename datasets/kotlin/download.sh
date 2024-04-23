@@ -1,8 +1,11 @@
 # train
-gdown 1JacGJC7SvOPQG_2MTfXVEzpDikXFTthC
+# https://drive.google.com/file/d/1nCvINGrcVCxTJnwW6bfXRp2ALZqa3qBx/view?usp=sharing
+gdown 1nCvINGrcVCxTJnwW6bfXRp2ALZqa3qBx
 
 # test
-gdown 1wrsN6XmaPfWqb9gGmjPpA7ckVGUAuvVr
+# https://drive.google.com/file/d/1bqw2JzBrYBQ4PG2i-HQ6TI2TqC-En_hj/view?usp=sharing
+gdown 1bqw2JzBrYBQ4PG2i-HQ6TI2TqC-En_hj
 
 # val
-gdown 1hYL5fybEy2YrQqiO_T0PnP3jyisuPAaV
+# https://drive.google.com/file/d/1V58utME8VAppfqNut4-dWjz0FS1wfo1N/view?usp=sharing
+gdown 1V58utME8VAppfqNut4-dWjz0FS1wfo1N
