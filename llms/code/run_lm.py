@@ -28,6 +28,7 @@ import random
 import re
 import shutil
 import json
+import gc
 import wandb
 
 import numpy as np
@@ -175,6 +176,8 @@ def train(args, train_dataset, model, tokenizer, fh, pool):
     global_step = args.start_step
 
     wandb.log({"dev_accuracy": epoch_zero_acc}, step=global_step)
+
+    gc.collect()
     
     
     tr_loss, logging_loss,avg_loss,tr_nb = 0.0, 0.0, 0.0, global_step
@@ -276,6 +279,8 @@ def train(args, train_dataset, model, tokenizer, fh, pool):
                     step_file = os.path.join(last_output_dir, 'step_file.txt')
                     with open(step_file, 'w', encoding='utf-8') as stepf:
                         stepf.write(str(global_step) + '\n')
+                    
+                    gc.collect()
                     
 
             if args.max_steps > 0 and global_step > args.max_steps:

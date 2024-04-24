@@ -247,3 +247,149 @@ Saving optimizer and scheduler states to save/checkpoint-last
   steps: 6800  ppl: 2.1348  lr: 1.7828900071890728e-06
   steps: 6900  ppl: 2.1413  lr: 6.326383896477354e-07
  global_step = 6955, average loss = 0.8713822233481942
+Model has a total of 1415660931 trainable parameters
+Training/evaluation parameters Namespace(data_dir='../../../datasets/kotlin', langs='kotlin', output_dir='save/', model_type='phi_1_5', pretrain_dir='microsoft/phi-1_5', config_dir=None, tokenizer_dir=None, lit_file='../../../datasets/kotlin/literals.json', load_name='pretrained', mlm=False, mlm_probability=0.15, cache_dir='', block_size=512, do_train=True, do_eval=False, evaluate_during_training=True, do_lower_case=False, per_gpu_train_batch_size=4, per_gpu_eval_batch_size=8, gradient_accumulation_steps=4, learning_rate=8e-05, weight_decay=0.01, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=5.0, max_steps=-1, warmup_steps=0, logging_steps=100, save_steps=1000, save_total_limit=None, eval_all_checkpoints=False, no_cuda=False, overwrite_output_dir=True, overwrite_cache=False, seed=42, not_pretrain=True, fp16=False, fp16_opt_level='O1', local_rank=-1, node_index=-1, gpu_per_node=1, server_ip='', server_port='', log_file='completion_kotlin_eval_vanilla_gpt_py.log', tensorboard_dir=None, wandb_run_name='PHI_1_5_FINETUNE', wandb_project_name='JB_internship_2024', n_gpu=1, device=device(type='cuda'), start_epoch=0, start_step=0)
+Creating features from dataset file at ../../../datasets/kotlin/train.txt
+Data size: 39754
+Rank 0, load 0
+Rank 0, load 10
+Rank 0, load 20
+Rank 0, load 30
+Rank 0, load 40
+Rank 0, load 50
+Rank 0, load 60
+Rank 0, load 70
+Rank 0, load 80
+Rank 0, load 90
+Rank 0, load 100
+tokens: 22796815
+Rank 0 Training 22796815 token, 44525 samples
+Saving features into cached file save/train_blocksize_512_wordsize_1_rank_0
+***** Running training *****
+  Num examples = 44525
+  Num epoch = 4
+  Instantaneous batch size per GPU = 4
+  Total train batch size (w. parallel, distributed & accumulation) = 16
+  Gradient Accumulation steps = 4
+  Total optimization steps = 13910
+Data size: 2487
+load 0
+load 10
+load 20
+load 30
+load 40
+load 50
+load 60
+load 70
+load 80
+load 90
+load 100
+tokens: 1496828
+0 are done!
+2227, 0.5779074988774136
+100 are done!
+261277, 0.4837318248448964
+200 are done!
+526617, 0.4887100112605556
+300 are done!
+803069, 0.5260245383646984
+Eval on 2487, saved at save/predictions.txt
+Total 867460 tokens, accuracy: 58.05
+Model has a total of 1415660931 trainable parameters
+Training/evaluation parameters Namespace(data_dir='../../../datasets/kotlin', langs='kotlin', output_dir='save/', model_type='phi_1_5', pretrain_dir='microsoft/phi-1_5', config_dir=None, tokenizer_dir=None, lit_file='../../../datasets/kotlin/literals.json', load_name='pretrained', mlm=False, mlm_probability=0.15, cache_dir='', block_size=512, do_train=True, do_eval=False, evaluate_during_training=True, do_lower_case=False, per_gpu_train_batch_size=4, per_gpu_eval_batch_size=4, gradient_accumulation_steps=4, learning_rate=8e-05, weight_decay=0.01, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=5.0, max_steps=-1, warmup_steps=0, logging_steps=100, save_steps=1000, save_total_limit=None, eval_all_checkpoints=False, no_cuda=False, overwrite_output_dir=True, overwrite_cache=False, seed=42, not_pretrain=True, fp16=False, fp16_opt_level='O1', local_rank=-1, node_index=-1, gpu_per_node=1, server_ip='', server_port='', log_file='completion_kotlin_eval_vanilla_gpt_py.log', tensorboard_dir=None, wandb_run_name='PHI_1_5_FINETUNE', wandb_project_name='JB_internship_2024', n_gpu=1, device=device(type='cuda'), start_epoch=0, start_step=0)
+Loading features from cached file save/train_blocksize_512_wordsize_1_rank_0
+***** Running training *****
+  Num examples = 44525
+  Num epoch = 4
+  Instantaneous batch size per GPU = 4
+  Total train batch size (w. parallel, distributed & accumulation) = 16
+  Gradient Accumulation steps = 4
+  Total optimization steps = 13910
+0 are done!
+1159, 0.5798101811906816
+100 are done!
+129844, 0.4881704198884816
+200 are done!
+260023, 0.48397257165712265
+300 are done!
+393050, 0.48858923801043125
+400 are done!
+525219, 0.48883608551861224
+500 are done!
+666311, 0.5357648305370916
+600 are done!
+801699, 0.5261014420624199
+700 are done!
+930580, 0.5186109738012852
+Eval on 2487, saved at save/predictions.txt
+Total 867460 tokens, accuracy: 58.05
+Model has a total of 1415660931 trainable parameters
+Training/evaluation parameters Namespace(data_dir='../../../datasets/kotlin', langs='kotlin', output_dir='save/', model_type='phi_1_5', pretrain_dir='microsoft/phi-1_5', config_dir=None, tokenizer_dir=None, lit_file='../../../datasets/kotlin/literals.json', load_name='pretrained', mlm=False, mlm_probability=0.15, cache_dir='', block_size=512, do_train=True, do_eval=False, evaluate_during_training=True, do_lower_case=False, per_gpu_train_batch_size=2, per_gpu_eval_batch_size=4, gradient_accumulation_steps=8, learning_rate=8e-05, weight_decay=0.01, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=5.0, max_steps=-1, warmup_steps=0, logging_steps=100, save_steps=1000, save_total_limit=None, eval_all_checkpoints=False, no_cuda=False, overwrite_output_dir=True, overwrite_cache=False, seed=42, not_pretrain=True, fp16=False, fp16_opt_level='O1', local_rank=-1, node_index=-1, gpu_per_node=1, server_ip='', server_port='', log_file='completion_kotlin_eval_vanilla_gpt_py.log', tensorboard_dir=None, wandb_run_name='PHI_1_5_FINETUNE', wandb_project_name='JB_internship_2024', n_gpu=1, device=device(type='cuda'), start_epoch=0, start_step=0)
+Loading features from cached file save/train_blocksize_512_wordsize_1_rank_0
+***** Running training *****
+  Num examples = 44525
+  Num epoch = 4
+  Instantaneous batch size per GPU = 2
+  Total train batch size (w. parallel, distributed & accumulation) = 16
+  Gradient Accumulation steps = 8
+  Total optimization steps = 13910
+0 are done!
+1159, 0.5798101811906816
+100 are done!
+129844, 0.4881704198884816
+200 are done!
+260023, 0.48397257165712265
+300 are done!
+393050, 0.48858923801043125
+400 are done!
+525219, 0.48883608551861224
+500 are done!
+666311, 0.5357648305370916
+600 are done!
+801699, 0.5261014420624199
+700 are done!
+930580, 0.5186109738012852
+Eval on 2487, saved at save/predictions.txt
+Total 867460 tokens, accuracy: 58.05
+Model has a total of 1415660931 trainable parameters
+Training/evaluation parameters Namespace(data_dir='../../../datasets/kotlin', langs='kotlin', output_dir='save/', model_type='phi_1_5', pretrain_dir='microsoft/phi-1_5', config_dir=None, tokenizer_dir=None, lit_file='../../../datasets/kotlin/literals.json', load_name='pretrained', mlm=False, mlm_probability=0.15, cache_dir='', block_size=512, do_train=True, do_eval=False, evaluate_during_training=True, do_lower_case=False, per_gpu_train_batch_size=2, per_gpu_eval_batch_size=2, gradient_accumulation_steps=8, learning_rate=8e-05, weight_decay=0.01, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=5.0, max_steps=-1, warmup_steps=0, logging_steps=100, save_steps=1000, save_total_limit=None, eval_all_checkpoints=False, no_cuda=False, overwrite_output_dir=True, overwrite_cache=False, seed=42, not_pretrain=True, fp16=False, fp16_opt_level='O1', local_rank=-1, node_index=-1, gpu_per_node=1, server_ip='', server_port='', log_file='completion_kotlin_eval_vanilla_gpt_py.log', tensorboard_dir=None, wandb_run_name='PHI_1_5_FINETUNE', wandb_project_name='JB_internship_2024', n_gpu=1, device=device(type='cuda'), start_epoch=0, start_step=0)
+Loading features from cached file save/train_blocksize_512_wordsize_1_rank_0
+***** Running training *****
+  Num examples = 44525
+  Num epoch = 4
+  Instantaneous batch size per GPU = 2
+  Total train batch size (w. parallel, distributed & accumulation) = 16
+  Gradient Accumulation steps = 8
+  Total optimization steps = 13910
+0 are done!
+643, 0.6189735614307932
+100 are done!
+64441, 0.48495523036576094
+200 are done!
+129199, 0.488548672977345
+300 are done!
+193258, 0.4834314750230262
+400 are done!
+259267, 0.4842536844257079
+500 are done!
+326182, 0.4901803287735068
+600 are done!
+392442, 0.48866329291971805
+700 are done!
+458569, 0.48660070785421605
+800 are done!
+524483, 0.48892719115776867
+900 are done!
+593484, 0.49830492481684424
+1000 are done!
+665579, 0.535729041931912
+1100 are done!
+732143, 0.5324765790289602
+1200 are done!
+800983, 0.5260361331014516
+1300 are done!
+865886, 0.5230619273206866
+1400 are done!
+930023, 0.5185559927012557
+Eval on 2487, saved at save/predictions.txt
+Total 867460 tokens, accuracy: 58.05
