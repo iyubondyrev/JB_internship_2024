@@ -224,6 +224,16 @@ def train(args, train_dataset, model, tokenizer, fh, pool):
                     checkpoint_prefix = "checkpoint"
                     # Save model checkpoint
                     if args.evaluate_during_training:  # Only evaluate when single GPU otherwise metrics may not average well
+                        
+                        # calculating accuracy after  save_steps
+                        eval_acc(args, model, tokenizer, file_type='dev')
+                        # calculate accuracy based on the file output
+                        answers_file = os.path.join(args.data_dir, "dev.txt")
+                        pred_file = os.path.join(args.output_dir, "predictions.txt")
+                        total, epoch_acc = calculate_accuracy(answers_file_name=answers_file, predictions_file_name=pred_file, logger=logger)
+
+                        wandb.log({"dev_accuracy": epoch_acc}, step=global_step)
+
                         results = evaluate(args, model, tokenizer, eval_when_training=True)
                         wandb.log({"dev_ppl": results["perplexity"]}, step=global_step)
                         for key, value in results.items():
@@ -269,18 +279,6 @@ def train(args, train_dataset, model, tokenizer, fh, pool):
 
             if args.max_steps > 0 and global_step > args.max_steps:
                 break
-        
-        # calculating accuracy after each epoch
-        eval_acc(args, model, tokenizer, file_type='dev')
-
-        # calculate accuracy based on the file output
-
-        answers_file = os.path.join(args.data_dir, "dev.txt")
-        pred_file = os.path.join(args.output_dir, "predictions.txt")
-        total, epoch_acc = calculate_accuracy(answers_file_name=answers_file, predictions_file_name=pred_file, logger=logger)
-
-        wandb.log({"dev_accuracy": epoch_acc}, step=global_step)
-        
 
         if args.max_steps > 0 and global_step > args.max_steps:
             break
