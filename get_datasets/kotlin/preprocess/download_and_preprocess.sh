@@ -15,13 +15,18 @@ else
     echo "$TAR_FILE already exists, skipping download."
 fi
 
-if [ -f "$TAR_FILE" ]; then
-    echo "Extracting $TAR_FILE..."
-    tar -xzf "$TAR_FILE"
-    echo "Extraction complete."
+if [ ! -d "kotlin_data" ]; then
+    if [ -f "$TAR_FILE" ]; then
+        echo "Extracting $TAR_FILE..."
+        tar -xzf "$TAR_FILE"
+        echo "Extraction complete."
+    else
+        echo "Failed to locate $TAR_FILE after download attempt."
+    fi
 else
-    echo "Failed to locate $TAR_FILE after download attempt."
+    echo "kotlin_data directory already exists, skipping extraction."
 fi
+
 
 # train
 java -jar Preprocess.jar --base_dir="kotlin_data" --output_dir_token_completion="token_completion" --output_dir_method_generation="method_generation" --file_names='train_file_names.txt' --result_file_token_completion='train.txt' --result_file_method_generation='train.json' --literal_file_path='literals.json' 2>/dev/null
