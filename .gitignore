@@ -10,3 +10,4 @@ __pycache__/
 kotlin_data/
 save/
 wandb/
+method_generation/
