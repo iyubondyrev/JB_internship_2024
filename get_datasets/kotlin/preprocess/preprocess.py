@@ -29,7 +29,8 @@ def run_java_commands(args, chunks):
                 f"--file_names='{input_file}' " \
                 f"--result_file_token_completion='{output_file_token}' " \
                 f"--result_file_method_generation='{output_file_method}' " \
-                f"--literal_file_path='literals.json'"
+                f"--literal_file_path='{args.literal_file_path}' " \
+                f"--tokens_threshold_to_parse={args.tokens_threshold_to_parse}"
             subprocess.run(cmd, shell=True, stderr=error_file, check=True)
             print("--------------------------------------")
             print(f"Prerocessed {i} chunk out of {chunks} chunks")
@@ -69,7 +70,7 @@ def main():
                         help='Path to the literals file used in processing')
     parser.add_argument('--max_lines', type=int, default=3000,
                         help='Maximum number of lines per chunk file')
-    parser.add_argument('--tokens_threshold_to_parse', type=int, default=15000,
+    parser.add_argument('--tokens_threshold_to_parse', type=int, default=10000,
                         help='Max number of tokens to parse')
 
     args = parser.parse_args()
