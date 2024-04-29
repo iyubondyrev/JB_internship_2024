@@ -1,124 +1,94 @@
-from antlr4 import *
-
-# just to fix relative import
-import sys, os
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-
-from kotlin_grammar.KotlinLexer import KotlinLexer
-
+import subprocess
 import os
-from typing import List
 import argparse
-import re
 
-popular_literals = []
+def split_file(filename, lines_per_file):
+    smallfile = None
+    with open(filename, 'r') as bigfile:
+        for lineno, line in enumerate(bigfile):
+            if lineno % lines_per_file == 0:
+                if smallfile:
+                    smallfile.close()
+                small_filename = f'{filename}_{lineno // lines_per_file + 1}.txt'
+                smallfile = open(small_filename, 'w')
+            smallfile.write(line)
+        if smallfile:
+            smallfile.close()
 
-def process_string(tokens_of_string: List[Token], special_chars={" ": "U+0020", ",": "U+002C"}) -> str:
-    # TODO: if TRIPLE_QUOTE => always STR_LIT
-    return "<STR_LIT>"
+def run_java_commands(args, chunks):
+    with open('train_errors.txt', 'w') as error_file:
+        for i in range(1, chunks + 1):
+            input_file = f"{args.file_names}_{i}.txt"
+            output_file_token_prefix = args.result_file_token_completion.split(".")[0]
+            output_file_method_prefix = args.result_file_token_completion.split(".")[0]
+            output_file_token = f"{output_file_token_prefix}_{i}.txt"
+            output_file_method = f"{output_file_method_prefix}_{i}.json"
+            cmd = f"java -jar Preprocess.jar --base_dir=\"{args.base_dir}\" " \
+                f"--output_dir_token_completion=\"{args.output_dir_token_completion}\" " \
+                f"--output_dir_method_generation=\"{args.output_dir_method_generation}\" " \
+                f"--file_names='{input_file}' " \
+                f"--result_file_token_completion='{output_file_token}' " \
+                f"--result_file_method_generation='{output_file_method}' " \
+                f"--literal_file_path='literals.json'"
+            subprocess.run(cmd, shell=True, stderr=error_file, check=True)
+            print("--------------------------------------")
+            print(f"Prerocessed {i} chunk out of {chunks} chunks")
+            print("--------------------------------------")
 
-def process_all_tokens(all_tokens: List[Token], lexer: KotlinLexer) -> List[str]:
-    # TODO: delete lexer from here
-    result_strings: List[str] = []
-    i: int = 0
-    while i < len(all_tokens):
+def merge_files(output_dir, pattern, output_file):
+    with open(output_file, 'w') as outfile:
+        for filename in sorted(os.listdir(output_dir)):
+            if filename.startswith(pattern):
+                with open(os.path.join(output_dir, filename), 'r') as readfile:
+                    outfile.write(readfile.read())
 
-        # hidden channel, tokens like whitespaces, etc. => skip
-        if all_tokens[i].channel == 1:
-            i += 1
-    
-        # quote open => get all the tokens related to the string in quotes
-        elif all_tokens[i].type in [lexer.QUOTE_OPEN, lexer.TRIPLE_QUOTE_OPEN]:
-            tokens_of_string_lit: List[Token] = [all_tokens[i]]
-            i += 1
-            # it is ok because it is either QUOTE_OPEN or TRIPLE_QUOTE_OPEN
-            # there can't be 2 types in one string
-            while not (all_tokens[i].type in [lexer.QUOTE_CLOSE, lexer.TRIPLE_QUOTE_CLOSE]):
-                #print(all_tokens[i])
-                tokens_of_string_lit.append(all_tokens[i])
-                i += 1
-            tokens_of_string_lit.append(all_tokens[i])
-            result_strings.append(process_string(tokens_of_string_lit))
-            i += 1
-        
-        # literals
-        # these [137..147] are the keys for literals, see KotlinLexer.py
-        elif (137 <= all_tokens[i].type <= 147):
-            if (all_tokens[i] in [lexer.BooleanLiteral, lexer.NullLiteral]):
-                result_strings.append(all_tokens[i].text) # we want to keep bool, null as it is
-                i += 1
-                continue
-            if all_tokens[i].text in popular_literals:
-                result_strings.append(f"<NUM_LIT:{all_tokens[i].text}>")
-            else:
-                result_strings.append("<NUM_LIT>")
-            i += 1
-        
-        # newline
-        elif all_tokens[i].type == lexer.NL:
-            if result_strings[-1] != "<EOL>":
-                result_strings.append("<EOL>")
-            i += 1
+def clean_up(args, chunks):
+    for i in range(1, chunks + 1):
+        outpu_file_token_prefix = args.result_file_token_completion.split(".")[0]
+        outpu_file_method_prefix = args.result_file_token_completion.split(".")[0]
 
-        # all other tokens
-        else:
-            result_strings.append(all_tokens[i].text)
-            i += 1
-    
-    if result_strings[0] == "<EOL>":
-        result_strings = result_strings[1:]
-    if result_strings[-1] == "<EOL>":
-        result_strings = result_strings[:-1]
-    
-    return result_strings
-
-
-def tokenize_kotlin(args, file_name_with_paths: str, file_type: str) -> None:
-    file_paths = open(os.path.join(args.base_dir, file_name_with_paths)).readlines()
-    lexer = KotlinLexer()
-    with open(os.path.join(args.output_dir, f"{file_type}.txt"), 'w') as result_file:
-        for file_num, path in enumerate(file_paths):
-            
-            full_path: str = os.path.join(args.base_dir, path.strip())
-            input_stream = FileStream(full_path)
-            lexer.inputStream = input_stream
-            all_tokens: List[Token] = lexer.getAllTokens()
-
-            try:
-                result_strings: List[str] = process_all_tokens(all_tokens, lexer)
-            except Exception as e:
-                # TODO Remove raise
-                raise e
-                print(e)
-                result_strings = []
-            
-            result_strings = ["<s>"] + result_strings + ["</s>"]
-            result_str = " ".join(result_strings)
-            result_file.write(result_str + "\n")
-            if file_num % 10000 == 0:
-                print(f"{file_type}: {file_num} are done")
+        os.remove(f"{args.base_dir}/{args.file_names}_{i}.txt")
+        os.remove(f"{args.output_dir_token_completion}/{outpu_file_token_prefix}_{i}.txt")
+        os.remove(f"{args.output_dir_method_generation}/{outpu_file_method_prefix}_{i}.json")
 
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--base_dir", required=True, type=str, 
-                        help="The downloaded data path")
-    parser.add_argument("--output_dir", default="token_completion", type=str, 
-                        help="The output directory")
+    parser = argparse.ArgumentParser(description="Process some files for Java preprocessing.")
+    parser.add_argument('--base_dir', type=str, default="kotlin_data",
+                        help='Base directory where the train files are located')
+    parser.add_argument('--output_dir_token_completion', type=str, default="token_completion",
+                        help='Output directory for token completion files')
+    parser.add_argument('--output_dir_method_generation', type=str, default="method_generation",
+                        help='Output directory for method generation files')
+    parser.add_argument('--file_names', type=str, default="train_file_names.txt",
+                        help='Filename containing the train file names')
+    parser.add_argument('--result_file_token_completion', type=str, default="train.txt",
+                        help='Resulting file name for token completions')
+    parser.add_argument('--result_file_method_generation', type=str, default="train.json",
+                        help='Resulting file name for method generations')
+    parser.add_argument('--literal_file_path', type=str, default="literals.json",
+                        help='Path to the literals file used in processing')
+    parser.add_argument('--max_lines', type=int, default=3000,
+                        help='Maximum number of lines per chunk file')
+    parser.add_argument('--tokens_threshold_to_parse', type=int, default=15000,
+                        help='Max number of tokens to parse')
 
     args = parser.parse_args()
 
-    if not os.path.exists(args.output_dir):
-        os.makedirs(args.output_dir)
 
 
-    tokenize_kotlin(args, file_name_with_paths="kotlin_train_files.txt", file_type="train")
-    tokenize_kotlin(args, file_name_with_paths="kotlin_validation_files.txt", file_type="dev")
-    tokenize_kotlin(args, file_name_with_paths="kotlin_test_files.txt", file_type="test")
+    split_file(f"{args.base_dir}/{args.file_names}", args.max_lines)
+    chunks = (sum(1 for _ in open(f"{args.base_dir}/{args.file_names}")) + args.max_lines - 1) // args.max_lines
+
+    run_java_commands(args, chunks)
+
+    output_file_token_prefix = args.result_file_token_completion.split(".")[0]
+    output_file_method_prefix = args.result_file_method_generation.split(".")[0]
+    output_file_token_completion = f"{args.output_dir_token_completion}/{args.result_file_token_completion}"
+    output_file_method_generation = f"{args.output_dir_method_generation}/{args.result_file_method_generation}"
+    merge_files(output_dir=args.output_dir_token_completion, pattern=f"{output_file_token_prefix}_", output_file=output_file_token_completion)
+    merge_files(output_dir=args.output_dir_token_completion, pattern=f"{output_file_method_prefix}_", output_file=output_file_method_generation)
+
+    clean_up(args, chunks)
 
 if __name__ == "__main__":
     main()
-
-
-
-    
-

@@ -29,10 +29,19 @@ fi
 
 
 # train
-java -jar Preprocess.jar --base_dir="kotlin_data" --output_dir_token_completion="token_completion" --output_dir_method_generation="method_generation" --file_names='train_file_names.txt' --result_file_token_completion='train.txt' --result_file_method_generation='train.json' --literal_file_path='literals.json' 2>/dev/null
+echo "Preprocess train."
+python3 preprocess.py --base_dir="kotlin_data" --output_dir_token_completion="token_completion" --output_dir_method_generation="method_generation" --file_names='train_file_names.txt' --result_file_token_completion='train.txt' --result_file_method_generation='train.json' --literal_file_path='literals.json' --max_lines=2000
+echo "Done with train"
+echo ""
 
 # test
-java -jar Preprocess.jar --base_dir="kotlin_data" --output_dir_token_completion="token_completion" --output_dir_method_generation="method_generation" --file_names='test_file_names.txt' --result_file_token_completion='test.txt' --result_file_method_generation='test.json' --literal_file_path='literals.json' 2>/dev/null
+echo "Preprocess test."
+#python3 preprocess.py --base_dir="kotlin_data" --output_dir_token_completion="token_completion" --output_dir_method_generation="method_generation" --file_names='test_file_names.txt' --result_file_token_completion='test.txt' --result_file_method_generation='test.json' --literal_file_path='literals.json' --max_lines=2000
+echo "Done with test"
+echo ""
 
 # val
-java -jar Preprocess.jar --base_dir="kotlin_data" --output_dir_token_completion="token_completion" --output_dir_method_generation="method_generation" --file_names='validation_file_names.txt' --result_file_token_completion='dev.txt' --result_file_method_generation='dev.json' --literal_file_path='literals.json' 2>/dev/null
+echo "Preprocess dev."
+# python3 preprocess.py --base_dir="kotlin_data" --output_dir_token_completion="token_completion" --output_dir_method_generation="method_generation" --file_names='validation_file_names.txt' --result_file_token_completion='dev.txt' --result_file_method_generation='dev.json' --literal_file_path='literals.json' --max_lines=2000
+echo "Done with dev"
+echo ""
