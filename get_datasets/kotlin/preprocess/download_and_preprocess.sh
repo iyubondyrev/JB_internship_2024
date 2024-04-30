@@ -6,7 +6,7 @@ curl -s https://api.github.com/repos/iyubondyrev/KotlinTokenizerJB/releases/late
 | wget -O Preprocess.jar -i -
 
 TAR_FILE="kotlin_files.tar.gz"
-TAR_ID=1186GKPKDaxGx4MwZ4mi9OtpOON0Do1UC
+TAR_ID=1uJyaJWGH3wurecY5M9QlTLEm7N_K4-RP
 
 if [ ! -f "$TAR_FILE" ]; then
     echo "$TAR_FILE not found, downloading..."
@@ -30,18 +30,18 @@ fi
 
 # train
 echo "Preprocess train."
-python3 preprocess.py --base_dir="kotlin_data" --output_dir_token_completion="token_completion" --output_dir_method_generation="method_generation" --file_names='train_file_names.txt' --result_file_token_completion='train.txt' --result_file_method_generation='train.json' --literal_file_path='literals.json' --max_lines=2000
+python3 preprocess.py --base_dir="kotlin_data" --output_dir_token_completion="token_completion" --output_dir_method_generation="method_generation" --file_names='train_file_names.txt' --result_file_token_completion='train.txt' --result_file_method_generation='train.json' --literal_file_path='literals.json' --max_lines=1000 --tokens_threshold_to_parse=9000
 echo "Done with train"
 echo ""
 
 # test
 echo "Preprocess test."
-#python3 preprocess.py --base_dir="kotlin_data" --output_dir_token_completion="token_completion" --output_dir_method_generation="method_generation" --file_names='test_file_names.txt' --result_file_token_completion='test.txt' --result_file_method_generation='test.json' --literal_file_path='literals.json' --max_lines=2000
+python3 preprocess.py --base_dir="kotlin_data" --output_dir_token_completion="token_completion" --output_dir_method_generation="method_generation" --file_names='test_file_names.txt' --result_file_token_completion='test.txt' --result_file_method_generation='test.json' --literal_file_path='literals.json' --max_lines=1000 --tokens_threshold_to_parse=9000
 echo "Done with test"
 echo ""
 
 # val
 echo "Preprocess dev."
-# python3 preprocess.py --base_dir="kotlin_data" --output_dir_token_completion="token_completion" --output_dir_method_generation="method_generation" --file_names='validation_file_names.txt' --result_file_token_completion='dev.txt' --result_file_method_generation='dev.json' --literal_file_path='literals.json' --max_lines=2000
+python3 preprocess.py --base_dir="kotlin_data" --output_dir_token_completion="token_completion" --output_dir_method_generation="method_generation" --file_names='validation_file_names.txt' --result_file_token_completion='dev.txt' --result_file_method_generation='dev.json' --literal_file_path='literals.json' --max_lines=1000 --tokens_threshold_to_parse=9000
 echo "Done with dev"
 echo ""
