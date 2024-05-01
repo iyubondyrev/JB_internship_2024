@@ -87,7 +87,7 @@ def main():
     output_file_token_completion = f"{args.output_dir_token_completion}/{args.result_file_token_completion}"
     output_file_method_generation = f"{args.output_dir_method_generation}/{args.result_file_method_generation}"
     merge_files(output_dir=args.output_dir_token_completion, pattern=f"{output_file_token_prefix}_", output_file=output_file_token_completion)
-    merge_files(output_dir=args.output_dir_token_completion, pattern=f"{output_file_method_prefix}_", output_file=output_file_method_generation)
+    merge_files(output_dir=args.output_dir_method_generation, pattern=f"{output_file_method_prefix}_", output_file=output_file_method_generation)
 
     clean_up(args, chunks)
 
