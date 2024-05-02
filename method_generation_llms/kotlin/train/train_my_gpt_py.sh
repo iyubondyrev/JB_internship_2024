@@ -19,7 +19,7 @@ python -u ../../code/run.py \
         --do_train \
         --node_index 0 \
         --gpu_per_node $PER_NODE_GPU \
-        --learning_rate=5e-5 \
+        --learning_rate=2.5e-5 \
         --weight_decay=0.01 \
         --evaluate_during_training \
         --per_gpu_train_batch_size=4 \
@@ -28,6 +28,6 @@ python -u ../../code/run.py \
         --num_train_epochs=5 \
         --logging_steps=100 \
         --save_steps=1000 \
-        --warmup_steps=1000 \
+        --warmup_steps=700 \
         --overwrite_output_dir \
         --seed=42
