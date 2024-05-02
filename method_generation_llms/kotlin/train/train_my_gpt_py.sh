@@ -2,9 +2,9 @@
 LANG=kotlin                  
 DATADIR=../../../datasets/method_generation_dataset/kotlin
 LITFILE=../../../datasets/method_generation_dataset/kotlin/literals.json
-OUTPUTDIR=save_phi/
-PRETRAINDIR=iyubondyrev/jb_2024_kotlin_phi-1_5
-LOGFILE=method_gen_kotlin_train_my_phi-1_5.log
+OUTPUTDIR=save_gpt/
+PRETRAINDIR=iyubondyrev/jb_2024_kotlin_gpt
+LOGFILE=method_gen_kotlin_train_my_gpt_py.log
 PER_NODE_GPU=1 
 
 python -u ../../code/run.py \
@@ -14,8 +14,8 @@ python -u ../../code/run.py \
         --lit_file=$LITFILE \
         --log_file=$LOGFILE \
         --lang=$LANG \
-        --model_type=phi_1_5 \
-        --block_size=512 \
+        --model_type=gpt2 \
+        --block_size=1024 \
         --do_train \
         --node_index 0 \
         --gpu_per_node $PER_NODE_GPU \
