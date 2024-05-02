@@ -13,6 +13,7 @@ python -u ../../code/run.py \
         --pretrain_dir=$PRETRAINDIR \
         --lit_file=$LITFILE \
         --log_file=$LOGFILE \
+        --lang=$LANG \
         --model_type=phi_1_5 \
         --block_size=512 \
         --do_train \
