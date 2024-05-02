@@ -12,7 +12,7 @@ python -u ../../code/run.py \
         --lit_file=$LITFILE \
         --log_file=$LOGFILE \
         --model_type=phi_1_5 \
-        --block_size=1024 \
+        --block_size=512 \
         --lang=kotlin \
         --do_infer \
         --node_index 0 \
