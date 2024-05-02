@@ -1,7 +1,7 @@
 GPU_ID=${1} && echo GPU_ID: ${GPU_ID}
 export CUDA_VISIBLE_DEVICES=${GPU_ID}
-DATADIR=../../../datasets/method_generation/python
-LITFILE=../../../datasets/method_generation/python/literals.json
+DATADIR=../../../datasets/method_generation_dataset/python
+LITFILE=../../../datasets/method_generation_dataset/python/literals.json
 OUTPUTDIR=save/
 PRETRAINDIR=microsoft/CodeGPT-small-py-adaptedGPT2
 LOGFILE=eval.log
