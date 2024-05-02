@@ -1,5 +1,4 @@
-GPU_ID=${1} && echo GPU_ID: ${GPU_ID}
-export CUDA_VISIBLE_DEVICES=${GPU_ID}
+export CUDA_VISIBLE_DEVICES=0
 DATADIR=../../../datasets/method_generation_dataset/python
 LITFILE=../../../datasets/method_generation_dataset/python/literals.json
 OUTPUTDIR=save/
