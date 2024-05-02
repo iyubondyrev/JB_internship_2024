@@ -1,6 +1,6 @@
 export CUDA_VISIBLE_DEVICES=0
-DATADIR=../../../datasets/method_generation_dataset/python
-LITFILE=../../../datasets/method_generation_dataset/python/literals.json
+DATADIR=../../../datasets/method_generation_dataset/kotlin
+LITFILE=../../../datasets/method_generation_dataset/kotlin/literals.json
 OUTPUTDIR=save/
 PRETRAINDIR=microsoft/CodeGPT-small-py-adaptedGPT2
 LOGFILE=eval.log
@@ -11,7 +11,7 @@ python -u ../../code/run.py \
         --pretrain_dir=$PRETRAINDIR \
         --lit_file=$LITFILE \
         --log_file=$LOGFILE \
-        --model_type=gpt2 \
+        --model_type=phi_1_5 \
         --block_size=1024 \
         --do_infer \
         --node_index 0 \
