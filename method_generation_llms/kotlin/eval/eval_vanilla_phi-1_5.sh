@@ -22,3 +22,7 @@ python -u ../../code/run.py \
         --logging_steps=100 \
         --overwrite_output_dir \
         --seed=42
+
+python ../../code/evaluator.py -a=save/test.gold -p=save/test.output > eval_result_vanilla_phi-1_5.txt 2>&1
+
+cp save/test.output predictions_vanilla_phi-1_5.txt
