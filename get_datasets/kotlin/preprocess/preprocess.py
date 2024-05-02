@@ -22,7 +22,7 @@ def run_java_commands(args, chunks):
             output_file_token_prefix = args.result_file_token_completion.split(".")[0]
             output_file_method_prefix = args.result_file_token_completion.split(".")[0]
             output_file_token = f"{output_file_token_prefix}_{i}.txt"
-            output_file_method = f"{output_file_method_prefix}_{i}.json"
+            output_file_method = f"{output_file_method_prefix}_{i}.jsonl"
             cmd = f"java -jar Preprocess.jar --base_dir=\"{args.base_dir}\" " \
                 f"--output_dir_token_completion=\"{args.output_dir_token_completion}\" " \
                 f"--output_dir_method_generation=\"{args.output_dir_method_generation}\" " \
@@ -50,7 +50,7 @@ def clean_up(args, chunks):
 
         os.remove(f"{args.base_dir}/{args.file_names}_{i}.txt")
         os.remove(f"{args.output_dir_token_completion}/{outpu_file_token_prefix}_{i}.txt")
-        os.remove(f"{args.output_dir_method_generation}/{outpu_file_method_prefix}_{i}.json")
+        os.remove(f"{args.output_dir_method_generation}/{outpu_file_method_prefix}_{i}.jsonl")
 
 def main():
     parser = argparse.ArgumentParser(description="Process some files for Java preprocessing.")
@@ -64,9 +64,9 @@ def main():
                         help='Filename containing the train file names')
     parser.add_argument('--result_file_token_completion', type=str, default="train.txt",
                         help='Resulting file name for token completions')
-    parser.add_argument('--result_file_method_generation', type=str, default="train.json",
+    parser.add_argument('--result_file_method_generation', type=str, default="train.jsonl",
                         help='Resulting file name for method generations')
-    parser.add_argument('--literal_file_path', type=str, default="literals.json",
+    parser.add_argument('--literal_file_path', type=str, default="literals.jsonl",
                         help='Path to the literals file used in processing')
     parser.add_argument('--max_lines', type=int, default=3000,
                         help='Maximum number of lines per chunk file')
@@ -89,7 +89,7 @@ def main():
     merge_files(output_dir=args.output_dir_token_completion, pattern=f"{output_file_token_prefix}_", output_file=output_file_token_completion)
     merge_files(output_dir=args.output_dir_method_generation, pattern=f"{output_file_method_prefix}_", output_file=output_file_method_generation)
 
-    clean_up(args, chunks)
+    #clean_up(args, chunks)
 
 if __name__ == "__main__":
     main()

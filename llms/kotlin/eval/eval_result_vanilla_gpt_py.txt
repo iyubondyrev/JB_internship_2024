@@ -1,1 +1,0 @@
-INFO:__main__:Total 2665521 tokens, accuracy: 43.96

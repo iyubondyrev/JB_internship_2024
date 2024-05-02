@@ -1,0 +1,1 @@
+curl -L https://huggingface.co/datasets/microsoft/codexglue_method_generation/resolve/main/test.jsonl?download=true -o test.jsonl
