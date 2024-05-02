@@ -6,7 +6,7 @@ OUTPUTDIR=save/
 PRETRAINDIR=microsoft/CodeGPT-small-py-adaptedGPT2
 LOGFILE=eval.log
 
-python -u run.py \
+python -u ../../code/run.py \
         --data_dir=$DATADIR \
         --output_dir=$OUTPUTDIR \
         --pretrain_dir=$PRETRAINDIR \
