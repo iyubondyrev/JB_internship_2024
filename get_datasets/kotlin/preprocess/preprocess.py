@@ -89,7 +89,7 @@ def main():
     merge_files(output_dir=args.output_dir_token_completion, pattern=f"{output_file_token_prefix}_", output_file=output_file_token_completion)
     merge_files(output_dir=args.output_dir_method_generation, pattern=f"{output_file_method_prefix}_", output_file=output_file_method_generation)
 
-    #clean_up(args, chunks)
+    clean_up(args, chunks)
 
 if __name__ == "__main__":
     main()

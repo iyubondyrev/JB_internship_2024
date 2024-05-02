@@ -11,3 +11,4 @@ kotlin_data/
 save/
 wandb/
 method_generation/
+*.jsonl
