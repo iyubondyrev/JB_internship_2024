@@ -1,6 +1,6 @@
 LANG=kotlin                  
-DATADIR=../../../datasets/kotlin
-LITFILE=../../../datasets/kotlin/literals.json
+DATADIR=../../../datasets/token_completion_dataset/kotlin
+LITFILE=../../../datasets/token_completion_dataset/kotlin/literals.json
 OUTPUTDIR=save/
 PRETRAINDIR=microsoft/phi-1_5
 LOGFILE=completion_kotlin_train_vanilla_phi-1_5.log
