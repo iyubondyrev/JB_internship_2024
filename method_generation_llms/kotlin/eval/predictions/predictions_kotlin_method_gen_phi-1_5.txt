@@ -1,0 +1,2252 @@
+fun pushFilledTail ( root : Array < Any ? > , filledTail : Array < Any ? > , newTail : Array < Any ? > ) : PersistentVector < E
+fun pushTail ( root : Array < Any ? > ? , shift : Int , tail : Array < Any ? > ) : Array < Any ?
+fun insertIntoRoot ( root : Array < Any ? > , shift : Int , index : Int , element : Any ? , elementCarry : ObjectRef ) : Array < Any ?
+fun pullLastBuffer ( root : Array < Any ? > , rootSize : Int , shift : Int ) : PersistentList < E
+fun pullLastBuffer ( root : Array < Any ? > , shift : Int , index : Int , tailCarry : ObjectRef ) : Array < Any ? > ?
+fun removeFromRootAt ( root : Array < Any ? > , shift : Int , index : Int , tailCarry : ObjectRef ) : Array < Any ?
+fun bufferFor ( index : Int ) : Array < Any ?
+fun areTypesTheSame ( ktTypeRef : KtTypeReference , psiType : PsiType , varArgs : Boolean ) : Boolean
+fun flatIter ( ) : Iterator < T
+fun toList ( ) : List < T
+fun toList2d ( ) : List < List < T >
+fun toList3d ( ) : List < List < List < T > >
+operator fun iterator ( ) : Iterator < KtNDArray < T >
+override fun equals ( other : Any ? ) : Boolean
+}
+fun < T : Any , C : Number > KtNDArray < T > . lt ( other : C ) : KtNDArray < Boolean
+fun < T : Any , C : Number > KtNDArray < T > . le ( other : C ) : KtNDArray < T
+fun < T : Any , C : Number > KtNDArray < T > . gt ( other : C ) : KtNDArray < Boolean
+fun < T : Any , C : Number > KtNDArray < T > . ge ( other : C ) : KtNDArray < Boolean
+fun < T : Any , C : Number > KtNDArray < T > . eq ( other : C ) : KtNDArray < Boolean
+fun < T : Any , C : Number > KtNDArray < T > . ne ( other : C ) : KtNDArray < Boolean
+fun produceCAdapterBitcode ( clang : ClangArgs , cppFile : File , bitcodeFile : File )
+fun FirFunctionSymbol < * > . hasDifferentParameterNames ( other : FirFunctionSymbol < * > ) : Boolean
+fun resetCurrentMapKey ( )
+fun ijListenTestTask ( task : AbstractTestTask )
+fun runLazyResolverByPhase ( phase : FirResolvePhase , target : LLFirResolveTarget )
+
+fun disableConDy ( ) : String ?
+fun restoreConDy ( prevValue : String ? )
+
+public fun < T > DataFrame < T > . drop ( n : Int ) : DataFrame < T
+public fun < T > DataFrame < T > . dropLast ( n : Int = 1 ) : DataFrame < T
+public fun < T > DataFrame < T > . drop ( predicate : RowFilter < T > ) : DataFrame < T
+public fun < T > DataFrame < T > . dropWhile ( predicate : RowFilter < T > ) : DataFrame < T
+public fun < C > ColumnSet < C > . drop ( n : Int ) : ColumnSet < C
+public fun ColumnsSelectionDsl < * > . drop ( n : Int ) : ColumnSet < *
+internal fun SingleColumn < DataRow < * > > . dropCols ( n : Int ) : ColumnSet < *
+public fun String . dropCols ( n : Int ) : ColumnSet < *
+public fun KProperty < * > . dropCols ( n : Int ) : ColumnSet < *
+public fun ColumnPath . dropCols ( n : Int ) : ColumnSet < *
+public fun < C > ColumnSet < C > . dropLast ( n : Int = 1 ) : ColumnSet < C
+public fun ColumnsSelectionDsl < * > . dropLast ( n : Int = 1 ) : ColumnSet < *
+internal fun SingleColumn < DataRow < * > > . dropLastCols ( n : Int ) : ColumnSet < *
+public fun String . dropLastCols ( n : Int ) : ColumnSet < *
+public fun KProperty < * > . dropLastCols ( n : Int ) : ColumnSet < *
+public fun ColumnPath . dropLastCols ( n : Int ) : ColumnSet < *
+public fun < C > ColumnSet < C > . dropWhile ( predicate : ColumnFilter < C > ) : ColumnSet < C
+public fun ColumnsSelectionDsl < * > . dropWhile ( predicate : ColumnFilter < * > ) : ColumnSet < *
+internal fun SingleColumn < DataRow < * > > . dropColsWhile ( predicate : ColumnFilter < * > ) : ColumnSet < *
+public fun String . dropColsWhile ( predicate : ColumnFilter < * > ) : ColumnSet < *
+public fun KProperty < * > . dropColsWhile ( predicate : ColumnFilter < * > ) : ColumnSet < *
+public fun ColumnPath . dropColsWhile ( predicate : ColumnFilter < * > ) : ColumnSet < *
+public fun < C > ColumnSet < C > . dropLastWhile ( predicate : ColumnFilter < C > ) : ColumnSet < C
+public fun ColumnsSelectionDsl < * > . dropLastWhile ( predicate : ColumnFilter < * > ) : ColumnSet < *
+internal fun SingleColumn < DataRow < * > > . dropLastColsWhile ( predicate : ColumnFilter < * > ) : ColumnSet < *
+public fun String . dropLastColsWhile ( predicate : ColumnFilter < * > ) : ColumnSet < *
+public fun KProperty < * > . dropLastColsWhile ( predicate : ColumnFilter < * > ) : ColumnSet < *
+public fun ColumnPath . dropLastColsWhile ( predicate : ColumnFilter < * > ) : ColumnSet < *
+fun buildFirstStageArgs ( klibPath : String )
+fun buildSecondStageArgs ( klibPath : String )
+fun buildCommonArgs ( )
+fun buildSingleStageArgs ( )
+
+public fun < C > SingleColumn < DataRow < * > > . col ( column : ColumnReference < C > ) : SingleColumn < C
+internal fun < C > AnyColumnGroupAccessor . col ( col : ColumnAccessor < C > ) : ColumnAccessor < C
+public fun < C > String . col ( column : ColumnReference < C > ) : ColumnAccessor < C
+public fun < C > KProperty < * > . col ( column : ColumnReference < C > ) : ColumnAccessor < C
+public fun < C > ColumnPath . col ( column : ColumnReference < C > ) : ColumnAccessor < C
+
+public fun < C > column ( name : String ) : ColumnAccessor < C
+@ Suppress ( "" ) @ JvmName ( "" ) public fun SingleColumn < DataRow < * > > . col ( name : String ) : SingleColumn < *
+public fun < C > SingleColumn < DataRow < * > > . col ( name : String ) : SingleColumn < C
+@ Suppress ( "" ) @ JvmName ( "" ) public fun AnyColumnGroupAccessor . col ( name : String ) : ColumnAccessor < *
+public fun < C > AnyColumnGroupAccessor . col ( name : String ) : ColumnAccessor < C
+@ Suppress ( "" ) @ JvmName ( "" ) public fun String . col ( name : String ) : ColumnAccessor < *
+public fun < C > String . col ( name : String ) : ColumnAccessor < C
+
+public fun < C > KProperty < * > . columnGroup ( name : String ) : ColumnAccessor < C
+fun ColumnPath . col ( name : String ) : ColumnAccessor < *
+public fun < C > ColumnPath . col ( name : String ) : ColumnAccessor < C
+
+public fun < C > columnGroup ( path : ColumnPath ) : ColumnAccessor < C
+@ Suppress ( "" ) @ JvmName ( "" ) public fun SingleColumn < DataRow < * > > . col ( path : ColumnPath ) : SingleColumn < *
+public fun < C > SingleColumn < DataRow < * > > . col ( path : ColumnPath ) : SingleColumn < C
+@ Suppress ( "" ) @ JvmName ( "" ) public fun AnyColumnGroupAccessor . col ( path : ColumnPath ) : ColumnAccessor < *
+public fun < C > AnyColumnGroupAccessor . ensureIsColumnGroup ( ) : ColumnAccessor < C
+
+public fun < C > String . col ( path : ColumnPath ) : ColumnAccessor < C
+
+public fun < C > KProperty < * > . columnGroup ( path : ColumnPath ) : ColumnAccessor < C
+public fun ColumnPath . col ( path : ColumnPath ) : ColumnAccessor < *
+public fun < C > ColumnPath . col ( path : ColumnPath ) : ColumnAccessor < C
+}
+public fun < C > SingleColumn < DataRow < * > > . col ( property : KProperty < C > ) : SingleColumn < C
+public fun < C > AnyColumnGroupAccessor . col ( property : KProperty < C > ) : ColumnAccessor < C
+public fun < C > String . col ( property : KProperty < C > ) : ColumnAccessor < C
+
+columnGroup ( this ) . ensureIsColumnGroup ( ) . column ( property ) . ensureIsColumnGroup ( )
+public fun < C > ColumnSet < C > . col ( index : Int ) : SingleColumn < C
+public operator fun < C > ColumnSet < C > . get ( index : Int ) : SingleColumn < C
+@ Suppress ( "" ) @ JvmName ( "" ) public fun ColumnsSelectionDsl < * > . col ( index : Int ) : SingleColumn < *
+public fun < C > ColumnsSelectionDsl < * > . col ( index : Int ) : SingleColumn < C
+@ Suppress ( "" ) @ JvmName ( "" ) public fun SingleColumn < DataRow < * > > . col ( index : Int ) : SingleColumn < *
+public fun < C > SingleColumn < DataRow < * > > . col ( index : Int ) : SingleColumn < C
+@ Suppress ( "" ) @ JvmName ( "" ) public fun String . col ( index : Int ) : SingleColumn < *
+public fun < C > String . col ( index : Int ) : SingleColumn < C
+@ Suppress ( "" ) @ JvmName ( "" ) public fun KProperty < * > . col ( index : Int ) : SingleColumn < *
+public fun < C > KProperty < * > . col ( index : Int ) : SingleColumn < C
+@ Suppress ( "" ) @ JvmName ( "" ) public fun ColumnPath . col ( index : Int ) : SingleColumn < *
+public fun < C > ColumnPath . col ( index : Int ) : SingleColumn < C
+internal fun getCanonicalClassInternal ( ch : Int ) : Int
+internal fun hasSingleCodepointDecompositionInternal ( ch : Int ) : Boolean
+internal fun decomposeString ( inputCodePoints : IntArray , inputLength : Int , outputCodePoints : IntArray ) : Int
+internal fun decomposeCodePoint ( codePoint : Int , outputCodePoints : IntArray , fromIndex : Int ) : Int
+fun binarySearchRange ( array : IntArray , needle : Int ) : Int
+fun computeRebindTarget ( function : FirFunction ) : FirFunction ?
+fun generateForwardStruct ( s : StructDecl ) : List < StubIrElement
+fun generateEnumAsConstants ( enumDef : EnumDef ) : List < StubIrElement
+internal suspend fun < T > withRestrictedStages ( allowed : Set < KotlinPluginLifecycle . Stage > , block : suspend ( ) -> T ) : T
+@ Suppress ( "" ) class SnackViewModelFactory ( val snackbarManager : SnackbarManager = SnackbarManager , val snackRepo : SnackRepo = SnackRepo ) : ViewModelProvider . Factory
+fun shouldUseK2 ( ) : Boolean
+fun ifExhaustive ( vararg values : T ) : Array < out T
+
+fun extractFashionImages ( archivePath : String ) : Array < FloatArray
+fun extractFashionLabels ( archivePath : String , numClasses : Int ) : Array < FloatArray
+override fun subList ( fromIndex : Int , toIndex : Int ) : ImmutableList < E
+override fun subList ( fromIndex : Int , toIndex : Int ) : ImmutableList < E
+override fun add ( element : @ UnsafeVariance E ) : PersistentList < E
+override fun addAll ( elements : Collection < @ UnsafeVariance E > ) : PersistentList < E
+override fun remove ( element : @ UnsafeVariance E ) : PersistentList < E
+override fun removeAll ( elements : Collection < @ UnsafeVariance E > ) : PersistentList < E
+override fun removeAll ( predicate : ( E ) -> Boolean ) : PersistentList < E
+override fun retainAll ( elements : Collection < @ UnsafeVariance E > ) : PersistentList < E
+override fun clear ( ) : PersistentList < E
+public fun addAll ( index : Int , c : Collection < @ UnsafeVariance E > ) : PersistentList < E
+public fun set ( index : Int , element : @ UnsafeVariance E ) : PersistentList < E
+public fun add ( index : Int , element : @ UnsafeVariance E ) : PersistentList < E
+public fun removeAt ( index : Int ) : PersistentList < E
+public fun < T > x ( column : ColumnReference < T > , parameters : LetsPlotPositionalMappingParametersContinuous < T > . ( ) -> Unit = { } ) : PositionalMapping < T
+public fun < T > x ( column : KProperty < T > , parameters : LetsPlotPositionalMappingParametersContinuous < T > . ( ) -> Unit = { } ) : PositionalMapping < T
+public fun x ( column : String , parameters : LetsPlotPositionalMappingParametersContinuous < Any ? > . ( ) -> Unit = { } ) : PositionalMapping < Any ?
+public fun < T > x ( values : Iterable < T > , name : String ? = null , parameters : LetsPlotPositionalMappingParametersContinuous < T > . ( ) -> Unit = { } ) : PositionalMapping < T
+public fun < T > x ( values : DataColumn < T > , parameters : LetsPlotPositionalMappingParametersContinuous < T > . ( ) -> Unit = { } ) : PositionalMapping < T
+
+
+
+fun getResolveExtensionScopeWithTopLevelDeclarations ( ) : KtScope
+fun KtElement . getResolveExtensionNavigationElements ( ) : Collection < PsiElement
+fun cleanBlockHoundTraces ( frames : List < String > ) : List < String
+fun removeJavaUtilConcurrentTraces ( frames : List < String > ) : List < String
+fun parse ( header : String ) : CoroutineDumpHeader
+fun isAgpRunnable ( ) : Boolean
+fun TypeInfo . isSubtypeOf ( other : TypeInfo , context : CheckerContext ) : Boolean
+fun shouldReportAsPerRules1 ( l : TypeInfo , r : TypeInfo , context : CheckerContext ) : Boolean
+fun convertFile ( file : LighterASTNode , sourceFile : KtSourceFile , linesMapping : KtSourceFileLinesMapping ) : FirFile
+fun convertBlockExpression ( block : LighterASTNode ) : FirBlock
+fun convertPackageDirective ( packageNode : LighterASTNode ) : FirPackageDirective
+fun convertImportDirective ( importDirective : LighterASTNode ) : FirImport
+fun convertImportDirectives ( importList : LighterASTNode ) : List < FirImport
+fun convertModifierList ( modifiers : LighterASTNode , isInClass : Boolean = false ) : Modifier
+fun convertAnnotationList ( annotations : LighterASTNode ) : List < FirAnnotationCall
+fun convertTypeModifierList ( modifiers : LighterASTNode ) : Modifier
+fun convertTypeArgumentModifierList ( modifiers : LighterASTNode ) : TypeProjectionModifier
+fun convertTypeParameterModifiers ( modifiers : LighterASTNode ) : TypeParameterModifier
+fun convertAnnotation ( annotationNode : LighterASTNode ) : List < FirAnnotationCall
+fun convertAnnotationTarget ( annotationUseSiteTarget : LighterASTNode ) : AnnotationUseSiteTarget
+fun convertAnnotationEntry ( unescapedAnnotation : LighterASTNode , defaultAnnotationUseSiteTarget : AnnotationUseSiteTarget ? = null , diagnostic : ConeDiagnostic ? = null , ) : FirAnnotationCall
+fun convertClass ( classNode : LighterASTNode ) : FirDeclaration
+fun convertObjectLiteral ( objectLiteral : LighterASTNode ) : FirElement
+
+fun convertInitializerList ( initializerList : LighterASTNode ) : List < FirExpression
+fun convertClassBody ( classBody : LighterASTNode , classWrapper : ClassWrapper ) : List < FirDeclaration
+fun convertPrimaryConstructor ( classNode : LighterASTNode , primaryConstructor : LighterASTNode ? , selfTypeSource : KtSourceElement ? , classWrapper : ClassWrapper , delegatedConstructorSource : KtLightSourceElement ? , isEnumEntry : Boolean = false , isImplicitlyActual : Boolean = false , isKotlinAny : Boolean = false , ) : PrimaryConstructor ?
+fun convertAnonymousInitializer ( anonymousInitializer : LighterASTNode , classWrapper : ClassWrapper ) : FirDeclaration
+fun convertSecondaryConstructor ( secondaryConstructor : LighterASTNode , classWrapper : ClassWrapper ) : FirConstructor
+fun convertConstructorDelegationCall ( constructorDelegationCall : LighterASTNode , classWrapper : ClassWrapper ) : FirDelegatedConstructorCall ?
+fun convertTypeAlias ( typeAlias : LighterASTNode ) : FirDeclaration
+fun convertPropertyDeclaration ( property : LighterASTNode , classWrapper : ClassWrapper ? = null ) : FirDeclaration
+fun convertDestructingDeclaration ( destructingDeclaration : LighterASTNode ) : DestructuringDeclaration
+
+fun convertGetterOrSetter ( getterOrSetter : LighterASTNode , propertyTypeRef : FirTypeRef , propertyVisibility : Visibility , propertySymbol : FirPropertySymbol , propertyModifiers : Modifier , propertyAnnotations : List < FirAnnotationCall > , ) : FirPropertyAccessor
+fun convertBackingField ( propertySymbol : FirPropertySymbol , propertyModifiers : Modifier , propertyReturnType : FirTypeRef , isVar : Boolean , annotationsFromProperty : List < FirAnnotationCall > , property : LighterASTNode , ) : FirBackingField
+fun convertSetterParameter ( setterParameter : LighterASTNode , functionSymbol : FirFunctionSymbol < * > , propertyTypeRef : FirTypeRef , additionalAnnotations : List < FirAnnotation > ) : FirValueParameter
+fun convertFunctionDeclaration ( functionDeclaration : LighterASTNode ) : FirStatement
+fun convertFunctionBody ( blockNode : LighterASTNode ? , expression : LighterASTNode ? , allowLegacyContractDescription : Boolean ) : Pair < FirBlock ? , FirContractDescription ?
+fun convertBlock ( block : LighterASTNode ? ) : FirBlock
+fun convertConstructorInvocation ( constructorInvocation : LighterASTNode ) : Pair < FirTypeRef , List < FirExpression >
+fun convertExplicitDelegation ( explicitDelegation : LighterASTNode , delegateFieldsMap : MutableMap < Int , FirFieldSymbol > , index : Int ) : FirTypeRef
+fun convertTypeParameters ( typeParameterList : LighterASTNode , typeConstraints : List < TypeConstraint > , containingDeclarationSymbol : FirBasedSymbol < * > ) : List < FirTypeParameter
+fun convertTypeConstraints ( typeConstraints : LighterASTNode ) : List < TypeConstraint
+fun convertTypeConstraint ( typeConstraint : LighterASTNode ) : TypeConstraint
+fun convertTypeParameter ( typeParameter : LighterASTNode , typeConstraints : List < TypeConstraint > , containingSymbol : FirBasedSymbol < * > ) : FirTypeParameter
+fun convertType ( type : LighterASTNode ) : FirTypeRef
+fun convertReceiverType ( receiverType : LighterASTNode ) : FirTypeRef
+fun convertNullableType ( typeRefSource : KtSourceElement , nullableType : LighterASTNode , allTypeModifiers : MutableList < Modifier > , isNullable : Boolean = true ) : FirTypeRef
+fun convertUserType ( typeRefSource : KtSourceElement , userType : LighterASTNode , isNullable : Boolean = false ) : FirTypeRef
+fun convertTypeArguments ( typeArguments : LighterASTNode , allowedUnderscoredTypeArgument : Boolean ) : List < FirTypeProjection
+fun convertTypeProjection ( typeProjection : LighterASTNode , allowedUnderscoredTypeArgument : Boolean ) : FirTypeProjection
+fun convertFunctionType ( typeRefSource : KtSourceElement , functionType : LighterASTNode , isNullable : Boolean = false , isSuspend : Boolean = false ) : FirTypeRef
+fun convertValueParameters ( valueParameters : LighterASTNode , functionSymbol : FirFunctionSymbol < * > , valueParameterDeclaration : ValueParameterDeclaration , additionalAnnotations : List < FirAnnotation > = emptyList ( ) ) : List < ValueParameter
+fun convertValueParameter ( valueParameter : LighterASTNode , functionSymbol : FirFunctionSymbol < * > ? , valueParameterDeclaration : ValueParameterDeclaration , additionalAnnotations : List < FirAnnotation > = emptyList ( ) ) : ValueParameter
+
+@ OptIn ( DelicateIoApi :: class ) public fun Sink . asOutputStream ( ) : OutputStream
+@ OptIn ( InternalIoApi :: class ) public fun Sink . write ( source : ByteBuffer ) : Int
+public fun Sink . asByteChannel ( ) : ReadableByteChannel
+@ SinceKotlin ( "1.4" ) public fun UIntProgression . first ( ) : UInt
+@ SinceKotlin ( "1.4" ) public fun ULongProgression . first ( ) : ULong
+@ SinceKotlin ( "1.4" ) public fun UIntProgression . firstOrNull ( ) : UInt ?
+@ SinceKotlin ( "1.4" ) public fun ULongProgression . firstOrNull ( ) : ULong ?
+@ SinceKotlin ( "1.4" ) public fun UIntProgression . last ( ) : UInt
+@ SinceKotlin ( "1.4" ) public fun ULongProgression . last ( ) : ULong
+@ SinceKotlin ( "1.4" ) public fun UIntProgression . lastOrNull ( ) : UInt ?
+@ SinceKotlin ( "1.4" ) public fun ULongProgression . lastOrNull ( ) : ULong ?
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalUnsignedTypes :: class ) @ kotlin . internal . InlineOnly public inline fun UIntRange . random ( ) : UInt
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalUnsignedTypes :: class ) @ kotlin . internal . InlineOnly public inline fun ULongRange . random ( ) : ULong
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalUnsignedTypes :: class ) public fun UIntRange . random ( random : Random ) : UInt
+fun ULongRange . random ( random : Random ) : ULong
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalStdlibApi :: class , ExperimentalUnsignedTypes :: class ) @ kotlin . internal . InlineOnly public inline fun UIntRange . randomOrNull ( ) : UInt ?
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalStdlibApi :: class , ExperimentalUnsignedTypes :: class ) @ kotlin . internal . InlineOnly public inline fun ULongRange . randomOrNull ( ) : ULong ?
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalStdlibApi :: class , ExperimentalUnsignedTypes :: class ) public fun UIntRange . randomOrNull ( random : Random ) : UInt ?
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalStdlibApi :: class , ExperimentalUnsignedTypes :: class ) public fun ULongRange . randomOrNull ( random : Random ) : ULong ?
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalUnsignedTypes :: class ) @ kotlin . internal . InlineOnly public inline operator fun UIntRange . contains ( element : UInt ? ) : Boolean
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalUnsignedTypes :: class ) @ kotlin . internal . InlineOnly public inline operator fun ULongRange . contains ( element : ULong ? ) : Boolean
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalUnsignedTypes :: class ) public operator fun UIntRange . contains ( value : UByte ) : Boolean
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalUnsignedTypes :: class ) public operator fun ULongRange . contains ( value : UByte ) : Boolean
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalUnsignedTypes :: class ) public operator fun ULongRange . contains ( value : UInt ) : Boolean
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalUnsignedTypes :: class ) public operator fun UIntRange . contains ( value : ULong ) : Boolean
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalUnsignedTypes :: class ) public operator fun UIntRange . contains ( value : UShort ) : Boolean
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalUnsignedTypes :: class ) public operator fun ULongRange . contains ( value : UShort ) : Boolean
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalUnsignedTypes :: class ) public infix fun UByte . downTo ( to : UByte ) : UIntProgression
+public infix fun UInt . downTo ( to : UInt ) : UIntProgression
+public infix fun ULong . downTo ( to : ULong ) : ULongProgression
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalUnsignedTypes :: class ) public infix fun UShort . downTo ( to : UShort ) : UIntProgression
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalUnsignedTypes :: class ) public fun UIntProgression . reversed ( ) : UIntProgression
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalUnsignedTypes :: class ) public fun ULongProgression . reversed ( ) : ULongProgression
+public infix fun UIntProgression . step ( step : Int ) : UIntProgression
+public infix fun ULongProgression . step ( step : Long ) : ULongProgression
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalUnsignedTypes :: class ) public infix fun UByte . until ( to : UByte ) : UIntRange
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalUnsignedTypes :: class ) public infix fun UInt . until ( to : UInt ) : UIntRange
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalUnsignedTypes :: class ) public infix fun ULong . until ( to : ULong ) : ULongRange
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalUnsignedTypes :: class ) public infix fun UShort . until ( to : UShort ) : UIntRange
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalUnsignedTypes :: class ) public fun UInt . coerceAtLeast ( minimumValue : UInt ) : UInt
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalUnsignedTypes :: class ) public fun ULong . coerceAtLeast ( minimumValue : ULong ) : ULong
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalUnsignedTypes :: class ) public fun UByte . coerceAtLeast ( minimumValue : UByte ) : UByte
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalUnsignedTypes :: class ) public fun UShort . coerceAtLeast ( minimumValue : UShort ) : UShort
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalUnsignedTypes :: class ) public fun UInt . coerceAtMost ( maximumValue : UInt ) : UInt
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalUnsignedTypes :: class ) public fun ULong . coerceAtMost ( maximumValue : ULong ) : ULong
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalUnsignedTypes :: class ) public fun UByte . coerceAtMost ( maximumValue : UByte ) : UByte
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalUnsignedTypes :: class ) public fun UShort . coerceAtMost ( maximumValue : UShort ) : UShort
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalUnsignedTypes :: class ) public fun UInt . coerceIn ( minimumValue : UInt , maximumValue : UInt ) : UInt
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalUnsignedTypes :: class ) public fun ULong . coerceIn ( minimumValue : ULong , maximumValue : ULong ) : ULong
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalUnsignedTypes :: class ) public fun UByte . coerceIn ( minimumValue : UByte , maximumValue : UByte ) : UByte
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalUnsignedTypes :: class ) public fun UShort . coerceIn ( minimumValue : UShort , maximumValue : UShort ) : UShort
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalUnsignedTypes :: class ) public fun UInt . coerceIn ( range : ClosedRange < UInt > ) : UInt
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalUnsignedTypes :: class ) public fun ULong . coerceIn ( range : ClosedRange < ULong > ) : ULong
+fun createKSerializerParamsForEachGenericArgument ( parentFunction : FunctionDescriptor , serializableClass : ClassDescriptor , actualArgsOffset : Int = 0 ) : Pair < List < TypeParameterDescriptor > , List < ValueParameterDescriptor >
+fun FunctionDescriptor . incDecCheckForExpectClass ( receiver : ReceiverParameterDescriptor ) : Boolean
+
+fun Configuration . declarable ( visible : Boolean = false , )
+internal fun Configuration . consumable ( visible : Boolean = false , )
+fun Configuration . resolvable ( visible : Boolean = false , )
+public fun < T : Any > Publisher < T > . asFlow ( ) : Flow < T
+fun < T : Any > Flow < T > . asPublisher ( context : CoroutineContext = EmptyCoroutineContext ) : Publisher < T
+public fun markNow ( ) : TimeMark
+public operator fun minus ( other : ValueTimeMark ) : Duration
+public operator fun compareTo ( other : ValueTimeMark ) : Int
+abstract fun elapsedNow ( ) : Duration
+public operator fun plus ( duration : Duration ) : TimeMark
+public open operator fun minus ( duration : Duration ) : TimeMark
+fun hasPassedNow ( ) : Boolean
+fun hasNotPassedNow ( ) : Boolean
+public operator fun minus ( other : Duration ) : Duration
+override operator fun compareTo ( other : ComparableTimeMark ) : Int
+override fun equals ( other : Any ? ) : Boolean
+class CompressSequenceWithoutLineNumberTest : AbstractCompressSequenceTest ( ) { override fun createCompressSequence ( testData : List < String > ) : CompressSequence < String > = object : CompressSequence < String > , TestCompressSequence < String > , TestCompressSequence < String > > ( ) { override fun createCompressSequence ( testData : List < String > ) : CompressSequence < String > = object : CompressSequence < String > , TestCompressSequence < String > , TestCompressSequence < String > > ( ) { }
+fun areRuntimeOrCompileConfigurationsAvailable ( ) : Boolean
+fun < R > Dataset . map ( transform : ( FloatData ) -> R ) : List < R
+public fun OnHeapDataset . partialToString ( ) : String
+fun OnHeapDataset . fullToString ( ) : String
+fun OnHeapDataset . buildStringRepr ( xString : String , yString : String ) : String
+fun FloatArray . partialToString ( maxSize : Int = 10 , lowPercent : Double = 0 ) : String
+
+fun extractNativeCompilerClasspath ( taskOutput : String , toolName : NativeToolKind ) : List < String
+fun extractNativeCompilerCommandLineArguments ( taskOutput : String , toolName : NativeToolKind ) : List < String
+@ kotlin . internal . InlineOnly public actual inline fun CharSequence . elementAt ( index : Int ) : Char
+fun CharSequence . toSortedSet ( ) : java . util . TreeSet < Char
+fun CharSequence . sumOf ( selector : ( Char ) -> java . math . BigDecimal ) : java . math . BigDecimal
+fun sumOf ( selector : ( Char ) -> java . math . BigInteger ) : java . math . BigInteger
+setExecutionSourceFrom ( testExecutable )
+val modelHub = TFModelHub ( cacheDirectory = File ( "" ) )
+fun main ( ) : Unit
+override fun testCaseWithInvocation ( invocation : NSInvocation ? ) : XCTestCase
+fun createRunMethod ( selector : SEL )
+override fun testInvocations ( ) : List < NSInvocation
+
+fun compute ( currentJavaClassSnapshots : List < JavaClassSnapshot > , previousJavaClassSnapshots : List < JavaClassSnapshot > ) : ProgramSymbolSet
+fun collectClassChanges ( currentClassSnapshot : JavaClassSnapshot , previousClassSnapshot : JavaClassSnapshot , changes : ProgramSymbolSet . Collector )
+fun collectClassMemberChanges ( classId : ClassId , currentMemberSnapshots : List < JavaElementSnapshot > , previousMemberSnapshots : List < JavaElementSnapshot > , changes : ProgramSymbolSet . Collector )
+fun < K : Any , V , CONTEXT > createCache ( createValue : ( K , CONTEXT ) -> V ) : FirCache < K , V , CONTEXT
+fun < K : Any , V , CONTEXT > createCache ( initialCapacity : Int , loadFactor : Float , createValue : ( K , CONTEXT ) -> V ) : FirCache < K , V , CONTEXT
+
+fun resolve ( resolveAsInput : Boolean = false ) : Constraint
+internal fun checkDescriptor ( descriptor : OptionDescriptor < * , * > )
+fun < T : Any , TResult , DefaultType : DefaultRequiredType > AbstractSingleOption < T , TResult , DefaultType > . multiple ( ) : MultipleOption < T , MultipleOptionType . Repeated , DefaultType
+fun < T : Any , DefaultType : DefaultRequiredType > MultipleOption < T , MultipleOptionType . RepeatedDelimited , DefaultRequiredType > . multiple ( ) : MultipleOption < T , MultipleOptionType . RepeatedDelimited , DefaultRequiredType
+fun < T : Any > SingleNullableOption < T > . default ( value : T ) : SingleOption < T , DefaultRequiredType . Default
+fun < T : Any , OptionType : MultipleOptionType > MultipleOption < T , OptionType , DefaultRequiredType . Default
+fun < T : Any > SingleNullableOption < T > . default ( ) : SingleOption < T , DefaultRequiredType . Default
+fun < T : Any , OptionType : MultipleOptionType > MultipleOption < T , OptionType , DefaultRequiredType . None > . optional ( ) : MultipleOption < T , OptionType , DefaultRequiredType . Optional
+fun < T : Any , DefaultRequired : DefaultRequiredType > AbstractSingleOption < T , * , DefaultRequired > . delimiter ( delimiterValue : String ) : MultipleOption < T , MultipleOptionType . Delimited , DefaultRequired
+fun < T : Any , DefaultRequired : DefaultRequiredType > MultipleOption < T , MultipleOptionType . Repeated , DefaultRequired > . delimiter ( delimiterValue : String ) : MultipleOption < T , MultipleOptionType . RepeatedDelimited , DefaultRequired
+fun JsScope . findOwnName ( ident : String ) : JsName
+override fun hashCode ( ) : Int
+fun CallableDescriptor . approximateCapturedTypes ( approximator : TypeApproximator ) : CallableDescriptor
+print ( message )
+println ( message )
+println ( message )
+println ( message )
+println ( message )
+println ( message )
+println ( message )
+println ( message )
+println ( message )
+println ( message )
+println ( message )
+println ( message )
+println ( message )
+println ( message )
+println ( message )
+println ( message )
+println ( message )
+println ( message )
+println ( message )
+println ( message )
+println ( "" )
+@ SinceKotlin ( "1.6" ) public actual fun readln ( ) : String
+@ SinceKotlin ( "1.6" ) public actual fun readlnOrNull ( ) : String ?
+public fun readLine ( ) : String ?
+fun readLine ( inputStream : InputStream , charset : Charset ) : String ?
+public fun FaceAlignmentModelBase < Bitmap > . detectLandmarks ( imageProxy : ImageProxy ) : List < Landmark
+fun selectSubstitutionClassifierId ( types : List < CirClassOrTypeAliasType > ) : CirEntityId ?
+public fun KtAnnotationValue . renderAsSourceCode ( ) : String
+fun lastObservedStackTrace ( ) : List < StackTraceElement
+fun forKlib ( ) : Iterable < CompiledDependency < KLIB >
+fun forStaticCache ( klib : CompiledDependency < * > , useHeaders : Boolean ) : Iterable < CompiledDependency < * >
+fun forOneStageExecutable ( ) : Iterable < CompiledDependency < * >
+fun forTwoStageExecutable ( includedKlib : CompiledDependency < * > , includedKlibStaticCache : CompiledDependency < * > ? ) : Iterable < CompiledDependency < * >
+public fun apply ( input : I ) : O
+public fun getOutputShape ( inputShape : TensorShape ) : TensorShape
+fun subprojects ( )
+fun subprojects ( filter : Spec < Project > )
+fun allProjects ( )
+fun allProjects ( filter : String )
+. allprojects ( )
+public fun sources ( config : Action < KoverMergingVariantSources > )
+fun instrumentation ( config : Action < KoverMergingInstrumentation > )
+fun createVariant ( variantName : String , config : Action < KoverMergingVariantCreate > )
+for ( element in this . declarations ) { if ( element is FirFile ) { val owners = element . declarations . mapNotNull { ( it as? FirRegularClass ) ? . containingDeclarationSymbol } saveDeclaration ( element , owners ) } }
+for ( child in this . declarations ) action ( child )
+
+fun computePackageSetWithNonClassDeclarations ( ) : Set < String
+fun mayHaveOptionalAnnotationClasses ( ) : Boolean
+fun checkLibrariesInDistribution ( ) : Boolean
+fun checkCaches ( ) : Boolean
+fun isGenerated ( path : File ) : Boolean
+fun setGenerated ( path : File )
+fun isCached ( path : File , kind : NativeCacheKind ) : Boolean
+fun setCached ( path : File , kind : NativeCacheKind )
+val mavenPublishingSettings = MavenPublishingSettings ( ) . apply ( configure )
+throw KoverDeprecationException ( "" )
+fun File . patchKoverDependency ( koverVersion : String )
+fun String . invariantNewlines ( ) : String
+@ SinceKotlin ( "1.4" ) public expect fun Throwable . stackTraceToString ( ) : String
+fun Throwable . printStackTrace ( ) : Unit
+@ SinceKotlin ( "1.4" ) @ Suppress ( "" ) public expect fun Throwable . addSuppressed ( exception : Throwable )
+
+fun < reified IN , reified OUT , reified AGG : Aggregator < IN , * , OUT > > udf ( aggregate : AGG , nondeterministic : Boolean = false , ) : NamedUserDefinedFunction1 < IN , OUT
+fun < reified IN , reified OUT , reified AGG : Aggregator < IN , * , OUT > > udf ( name : String , nondeterministic : Boolean = false , ) : NamedUserDefinedFunction1 < IN , OUT
+fun < reified IN , reified OUT , reified AGG : Aggregator < IN , * , OUT > > udfUnnamed ( aggregate : AGG , nondeterministic : Boolean = false , ) : UserDefinedFunction1 < IN , OUT
+
+
+
+
+
+val testCaseId = TestCaseId . TestDataFile ( baseSourcesDir . absolutePath , outputDir . absolutePath , incrementalCacheDir . absolutePath , projectBaseDirFirstRun . absolutePath , projectBaseDirSecondRun . absolutePath )
+fun findInheritableSimpleNames ( typeElement : KtTypeElement ) : List < String
+fun throwExceptionIfCompilationFailed ( exitCode : ExitCode , executionStrategy : KotlinCompilerExecutionStrategy )
+internal fun wrapAndRethrowCompilationException ( executionStrategy : KotlinCompilerExecutionStrategy , e : Throwable ) : Nothing
+@ ExperimentalSerializationApi public fun decodeNotNullMark ( ) : Boolean
+@ ExperimentalSerializationApi public fun decodeNull ( ) : Nothing ?
+public fun decodeBoolean ( ) : Boolean
+public fun decodeByte ( ) : Byte
+fun decodeShort ( ) : Short
+
+public fun decodeInt ( ) : Int
+public fun decodeLong ( ) : Long
+public fun decodeFloat ( ) : Float
+public fun decodeDouble ( ) : Double
+public fun decodeString ( ) : String
+fun decodeEnum ( enumDescriptor : SerialDescriptor ) : Int
+fun decodeInline ( descriptor : SerialDescriptor ) : Decoder
+public fun beginStructure ( descriptor : SerialDescriptor ) : CompositeDecoder
+fun < T : Any ? > decodeSerializableValue ( deserializer : DeserializationStrategy < T > ) : T
+@ ExperimentalSerializationApi public fun < T : Any > decodeNullableSerializableValue ( deserializer : DeserializationStrategy < T ? > ) : T ?
+}
+
+
+public fun decodeCollectionSize ( descriptor : SerialDescriptor ) : Int
+public fun decodeBooleanElement ( descriptor : SerialDescriptor , index : Int ) : Boolean
+public fun decodeByteElement ( descriptor : SerialDescriptor , index : Int ) : Byte
+fun decodeCharElement ( descriptor : SerialDescriptor , index : Int ) : Char
+fun decodeShortElement ( descriptor : SerialDescriptor , index : Int ) : Short
+public fun decodeIntElement ( descriptor : SerialDescriptor , index : Int ) : Int
+public fun decodeLongElement ( descriptor : SerialDescriptor , index : Int ) : Long
+public fun decodeFloatElement ( descriptor : SerialDescriptor , index : Int ) : Float
+public fun decodeDoubleElement ( descriptor : SerialDescriptor , index : Int ) : Double
+public fun decodeStringElement ( descriptor : SerialDescriptor , index : Int ) : String
+
+
+
+public inline fun < T > Decoder . decodeStructure ( descriptor : SerialDescriptor , crossinline block : CompositeDecoder . ( ) -> T ) : T
+fun x ( )
+
+fun isSingletonReceiver ( descriptor : DeclarationDescriptor ) : Boolean
+public fun isApplicable ( customTag : CustomTagWrapper ) : Boolean
+{ group ( sourceSets = setOf ( sourceSet ) , styles = setOf ( ContentStyle . KDocTag ) ) { customTag . contentForDescription ( sourceSet , this ) } }
+fun contentForBrief ( sourceSet : DokkaSourceSet , customTag : CustomTagWrapper )
+public fun < T > symbol ( column : ColumnReference < T > , parameters : LetsPlotNonPositionalMappingParametersCategorical < T , Symbol > ( ) -> Unit = { } ) : NonPositionalMapping < T , Symbol
+public fun < T > symbol ( column : KProperty < T > , parameters : LetsPlotNonPositionalMappingParametersCategorical < T , Symbol > ( ) -> Unit = { } ) : NonPositionalMapping < T , Symbol
+public fun symbol ( column : String , parameters : LetsPlotNonPositionalMappingParametersCategorical < Any ? , Symbol > ( ) -> Unit = { } ) : NonPositionalMapping < Any ? , Symbol
+public fun < T > symbol ( values : Iterable < T > , name : String ? = null , parameters : LetsPlotNonPositionalMappingParametersCategorical < T , Symbol > ( ) -> Unit = { } ) : NonPositionalMapping < T , Symbol
+public fun < T > symbol ( values : DataColumn < T > , parameters : LetsPlotNonPositionalMappingParametersCategorical < T , Symbol > ( ) -> Unit = { } ) : NonPositionalMapping < T , Symbol
+public abstract fun loadModel ( modelType : ModelType < * , * > , loadingMode : LoadingMode = LoadingMode . SKIP_LOADING_IF_EXISTS ) : T
+fun loadPretrainedModel ( modelType : ModelType < * , * > , loadingMode : LoadingMode = LoadingMode . SKIP_LOADING_IF_EXISTS ) : U
+operator fun < T : InferenceModel < * > , U > get ( modelType : ModelType < * , * > ) : U
+}
+fun Source . asNSInputStream ( ) : NSInputStream
+fun computeOutputShape ( inputShape : Shape ) : Shape
+internal fun IntArray . withStandardPadding ( padding : ConvPadding , kernelSize : IntArray , dilations : IntArray ) : IntArray
+internal fun buildOptions ( dilations : IntArray , outputPadding : IntArray ? ) : Array < Conv2dBackpropInput . Options
+
+fun getCell ( id : Int ) : CodeCell
+fun getResult ( id : Int ) : Any ?
+fun getAllDisplays ( ) : List < DisplayResultWithCell
+fun getDisplaysById ( id : String ? ) : List < DisplayResultWithCell
+fun history ( before : Int ) : CodeCell ?
+fun changeColorScheme ( newScheme : ColorScheme )
+fun renderHtmlAsIFrame ( data : HtmlData ) : MimeTypedResult
+fun toRawFloatArray ( image : BufferedImage , colorMode : ColorMode ? = null ) : FloatArray
+fun toRawFloatArray ( inputStream : InputStream , colorMode : ColorMode ? = null ) : FloatArray
+fun toRawFloatArray ( imageFile : File , colorMode : ColorMode ? = null ) : FloatArray
+fun toNormalizedFloatArray ( image : BufferedImage , colorMode : ColorMode ? = null ) : FloatArray
+fun toNormalizedFloatArray ( inputStream : InputStream , colorMode : ColorMode ? = null ) : FloatArray
+fun toNormalizedFloatArray ( imageFile : File , colorMode : ColorMode ? = null ) : FloatArray
+@ Throws ( IOException :: class ) public fun toBufferedImage ( inputStream : InputStream ) : BufferedImage
+@ Throws ( IOException :: class ) public fun toBufferedImage ( file : File ) : BufferedImage
+fun swapRandB ( image : FloatArray )
+fun imageTo3DFloatArray ( image : BufferedImage , colorMode : ColorMode = ColorMode . BGR ) : Array < Array < FloatArray >
+
+
+
+fun ColorMode . imageType ( ) : Int
+internal fun < T > projectStoredProperty ( initializer : Project . ( ) -> T ) : ReadOnlyProperty < Project , T
+internal fun < R : HasMutableExtras , T > extras storedProperty ( initializer : R . ( ) -> T ) : ReadOnlyProperty < R , T
+fun dumpLibrary ( library : KotlinLibrary , testMode : Boolean )
+fun KtFile . facadeIsPossible ( ) : Boolean
+fun close ( ) : CompositeMetadataArtifactContent
+fun exists ( ) : Boolean
+internal inline fun < T > CompositeMetadataArtifact . read ( action : ( artifactContent : CompositeMetadataArtifactContent ) -> T ) : T
+fun copyTo ( file : File ) : Boolean
+fun copyIntoDirectory ( source : File , destination : File )
+fun MultifileClass ( representativeFile : KtFile ? , descriptor : PackageFragmentDescriptor ) : JvmDeclarationOrigin
+public fun < T : Comparable < T > > checkInRange ( aes : Aes , value : T , range : ClosedRange < T > ) : Unit
+checkRequiredAes ( requiredAes , layerContext , plotContext )
+override fun getName ( ) : String ?
+open fun getSubjectName ( ) : String ?
+open fun getContent ( ) : String
+abstract fun replaceType ( newType : TypeRefWithNullability ) : Field
+abstract fun copy ( ) : Field
+public fun < T : Any > create ( any : T ) : StableRef < T
+
+}
+@ Suppress ( "UNCHECKED_CAST" ) public fun get ( ) : T
+@ ExperimentalForeignApi public inline fun < reified T : Any > CPointer < * > . asStableRef ( ) : StableRef < T
+@ JsName ( "" ) internal fun setAdapter ( adapter : dynamic )
+public suspend fun CompletableSource . await ( ) : Unit
+
+public suspend fun < T > MaybeSource < T > . awaitSingle ( ) : T
+
+
+public suspend fun < T > SingleSource < T > . await ( ) : T
+public suspend fun < T > ObservableSource < T > . awaitFirst ( ) : T
+suspend fun < T > ObservableSource < T > . awaitFirstOrDefault ( default : T ) : T
+
+
+public suspend fun < T > ObservableSource < T > . awaitLast ( ) : T
+public suspend fun < T > ObservableSource < T > . awaitSingle ( ) : T
+fun getTagIfSubject ( ) : KDocTag ?
+fun modifiedLenet5 ( ) : Sequential
+val ( train , test ) = mnist ( )
+val ( train , test ) = mnist ( )
+fun main ( ) : Unit
+expect ( 1 ) val result = withTimeout ( 0 ) { expect ( 2 ) "OK" } assertEquals ( "OK" , result ) finish ( 3 ) }
+fun testAnonymousObjectTypeMetadataKlibWithOldCLIKey ( )
+fun createFreeFakeLambdaDescriptor ( descriptor : FunctionDescriptor , typeApproximator : TypeApproximator ? ) : FunctionDescriptor
+fun createFreeFakeLocalPropertyDescriptor ( descriptor : LocalVariableDescriptor , typeApproximator : TypeApproximator ? ) : PropertyDescriptor
+@ ExperimentalSerializationApi public fun < T > Json . encodeToStream ( serializer : SerializationStrategy < T > , value : T , stream : OutputStream )
+@ ExperimentalSerializationApi public inline fun < reified T > Json . encodeToStream ( value : T , stream : OutputStream ) : Unit
+@ ExperimentalSerializationApi public fun < T > Json . decodeFromStream ( deserializer : DeserializationStrategy < T > , stream : InputStream ) : T
+@ ExperimentalSerializationApi public inline fun < reified T > Json . decodeFromStream ( stream : InputStream ) : T
+
+
+fun mustNotBeWrittenToDecompiledText ( text : String ) : Boolean
+fun thisIsAFunction ( )
+val builder = JsonObjectBuilder ( ) builder . builderAction ( ) val result = builder . build ( ) result
+fun buildJsonArray ( builderAction : JsonArrayBuilder . ( ) -> Unit ) : JsonArray
+public fun put ( key : String , element : JsonElement ) : JsonElement ?
+fun JsonObjectBuilder . putJsonObject ( key : String , builderAction : JsonObjectBuilder . ( ) -> Unit ) : JsonElement ?
+public fun JsonObjectBuilder . putJsonArray ( key : String , builderAction : JsonArrayBuilder . ( ) -> Unit ) : JsonElement ?
+public fun JsonObjectBuilder . put ( key : String , value : Boolean ? ) : JsonElement ?
+put ( key , value )
+public fun JsonObjectBuilder . put ( key : String , value : String ? ) : JsonElement ?
+@ ExperimentalSerializationApi @ Suppress ( "UNUSED_PARAMETER" ) public fun JsonObjectBuilder . put ( key : String , value : Nothing ? ) : JsonElement ?
+public fun add ( element : JsonElement ) : Boolean
+@ ExperimentalSerializationApi public fun addAll ( elements : Collection < JsonElement > ) : Boolean
+if ( value == null ) return false
+if ( value == null ) return false
+fun JsonArrayBuilder . add ( value : String ? ) : Boolean
+@ ExperimentalSerializationApi @ Suppress ( "UNUSED_PARAMETER" ) public fun JsonArrayBuilder . add ( value : Nothing ? ) : Boolean
+fun JsonArrayBuilder . addJsonObject ( builderAction : JsonObjectBuilder . ( ) -> Unit ) : Boolean
+fun JsonArrayBuilder . addJsonArray ( builderAction : JsonArrayBuilder . ( ) -> Unit ) : Boolean
+@ JvmName ( "" ) @ ExperimentalSerializationApi public fun JsonArrayBuilder . addAll ( values : Collection < String ? > ) : Boolean
+@ JvmName ( "" ) @ ExperimentalSerializationApi public fun JsonArrayBuilder . addAll ( values : Collection < Boolean ? > ) : Boolean
+@ JvmName ( "" ) @ ExperimentalSerializationApi public fun JsonArrayBuilder . addAll ( values : Collection < Number ? > ) : Boolean
+internal fun String . toBooleanStrictOrNull ( ) : Boolean ?
+public fun < T > width ( column : ColumnReference < T > , parameters : LetsPlotNonPositionalMappingParametersContinuous < T , Double > ( ) -> Unit = { } ) : NonPositionalMapping < T , Double
+public fun < T > width ( column : KProperty < T > , parameters : LetsPlotNonPositionalMappingParametersContinuous < T , Double > ( ) -> Unit = { } ) : NonPositionalMapping < T , Double
+public fun width ( column : String , parameters : LetsPlotNonPositionalMappingParametersContinuous < Any ? , Double > . ( ) -> Unit = { } ) : NonPositionalMapping < Any ? , Double
+public fun < T > width ( values : Iterable < T > , name : String ? = null , parameters : LetsPlotNonPositionalMappingParametersContinuous < T , Double > ( ) -> Unit = { } ) : NonPositionalMapping < T , Double
+public fun < T > width ( values : DataColumn < T > , parameters : LetsPlotNonPositionalMappingParametersContinuous < T , Double > ( ) -> Unit = { } ) : NonPositionalMapping < T , Double
+public inline fun < T , R > Flow < T > . transform ( @ BuilderInference crossinline transform : suspend FlowCollector < R > . ( value : T ) -> Unit ) : Flow < R
+public fun < T > Flow < T > . onStart ( action : suspend FlowCollector < T > . ( ) -> Unit ) : Flow < T
+
+public fun < T > Flow < T > . onEmpty ( action : suspend FlowCollector < T > . ( ) -> Unit ) : Flow < T
+fun KtDeclaration . resolveToDescriptorIfAny ( resolutionFacade : ResolutionFacade , bodyResolveMode : BodyResolveMode = BodyResolveMode . FINAL ) : DeclarationDescriptor ?
+@ JvmName ( "" ) public fun LinAlg . invF ( mat : MultiArray < Float , D2 > ) : NDArray < Float , D2
+@ JvmName ( "" ) public fun < T : Number > LinAlg . inv ( mat : MultiArray < T , D2 > ) : NDArray < Double , D2
+@ JvmName ( "" ) public fun < T : Complex > LinAlg . inv ( mat : MultiArray < T , D2 > ) : NDArray < T , D2
+@ WasmNoOpCast @ ExcludedFromCodegen public fun < T : JsAny > JsAny . unsafeCast ( ) : T
+@ kotlin . internal . InlineOnly public inline operator fun < T > List < T > . component1 ( ) : T
+@ kotlin . internal . InlineOnly public inline operator fun < T > List < T > . component2 ( ) : T
+@ kotlin . internal . InlineOnly public inline operator fun < T > List < T > . component3 ( ) : T
+@ kotlin . internal . InlineOnly public inline operator fun < T > List < T > . component4 ( ) : T
+@ kotlin . internal . InlineOnly public inline operator fun < T > List < T > . component5 ( ) : T
+@ kotlin . internal . OnlyInputTypes T > Iterable < T > . contains ( element : T ) : Boolean
+public fun < T > Iterable < T > . elementAt ( index : Int ) : T
+@ kotlin . internal . InlineOnly public inline fun < T > List < T > . elementAt ( index : Int ) : T
+public fun < T > Iterable < T > . elementAtOrElse ( index : Int , defaultValue : ( Int ) -> T ) : T
+@ kotlin . internal . InlineOnly public inline fun < T > List < T > . elementAtOrElse ( index : Int , defaultValue : ( Int ) -> T ) : T
+public fun < T > Iterable < T > . elementAtOrNull ( index : Int ) : T ?
+@ kotlin . internal . InlineOnly public inline fun < T > List < T > . elementAtOrNull ( index : Int ) : T ?
+@ kotlin . internal . InlineOnly public inline fun < T > Iterable < T > . find ( predicate : ( T ) -> Boolean ) : T ?
+@ kotlin . internal . InlineOnly public inline fun < T > Iterable < T > . findLast ( predicate : ( T ) -> Boolean ) : T ?
+@ kotlin . internal . InlineOnly public inline fun < T > List < T > . findLast ( predicate : ( T ) -> Boolean ) : T ?
+fun < T > Iterable < T > . first ( ) : T
+@ Suppress ( "UNCHECKED_CAST" ) return if ( isEmpty ( ) ) throw NoSuchElementException ( "" ) else this [ 0 ]
+public inline fun < T > Iterable < T > . first ( predicate : ( T ) -> Boolean ) : T
+fun < T , R : Any > Iterable < T > . firstNotNullOf ( transform : ( T ) -> R ? ) : R
+@ SinceKotlin ( "1.4" ) @ kotlin . internal . InlineOnly public inline fun < T , R : Any > Iterable < T > . firstNotNullOfOrNull ( transform : ( T ) -> R ? ) : R ?
+public fun < T > Iterable < T > . firstOrNull ( ) : T ?
+public fun < T > List < T > . firstOrNull ( ) : T ?
+public inline fun < T > Iterable < T > . firstOrNull ( predicate : ( T ) -> Boolean ) : T ?
+@ kotlin . internal . InlineOnly public inline fun < T > List < T > . getOrElse ( index : Int , defaultValue : ( Int ) -> T ) : T
+public fun < T > List < T > . getOrNull ( index : Int ) : T ?
+public fun < T > Iterable < T > . indexOf ( element : T ) : Int
+@ Suppress ( "" ) public fun < @ kotlin . internal . OnlyInputTypes T > List < T > . indexOf ( element : T ) : Int
+public inline fun < T > Iterable < T > . indexOfFirst ( predicate : ( T ) -> Boolean ) : Int
+public inline fun < T > List < T > . indexOfFirst ( predicate : ( T ) -> Boolean ) : Int
+public inline fun < T > Iterable < T > . indexOfLast ( predicate : ( T ) -> Boolean ) : Int
+public inline fun < T > List < T > . indexOfLast ( predicate : ( T ) -> Boolean ) : Int
+fun < T > Iterable < T > . last ( ) : T
+public fun < T > List < T > . last ( ) : T
+public inline fun < T > Iterable < T > . last ( predicate : ( T ) -> Boolean ) : T
+public inline fun < T > List < T > . last ( predicate : ( T ) -> Boolean ) : T
+@ kotlin . internal . OnlyInputTypes T > Iterable < T > . lastIndexOf ( element : T ) : Int
+@ Suppress ( "" ) public fun < T > List < T > . lastIndexOf ( element : T ) : Int
+public fun < T > Iterable < T > . lastOrNull ( ) : T ?
+public fun < T > List < T > . lastOrNull ( ) : T ?
+public inline fun < T > Iterable < T > . lastOrNull ( predicate : ( T ) -> Boolean ) : T ?
+public inline fun < T > List < T > . lastOrNull ( predicate : ( T ) -> Boolean ) : T ?
+@ SinceKotlin ( "1.3" ) @ kotlin . internal . InlineOnly public inline fun < T > Collection < T > . random ( ) : T
+@ SinceKotlin ( "1.3" ) public fun < T > Collection < T > . random ( random : Random ) : T
+@ SinceKotlin ( "1.4" ) @ kotlin . internal . InlineOnly public inline fun < T > Collection < T > . randomOrNull ( ) : T ?
+@ SinceKotlin ( "1.4" ) public fun < T > Collection < T > . randomOrNull ( random : Random ) : T ?
+fun < T > Iterable < T > . single ( ) : T
+public fun < T > List < T > . single ( ) : T
+public inline fun < T > Iterable < T > . single ( predicate : ( T ) -> Boolean ) : T
+public fun < T > Iterable < T > . singleOrNull ( ) : T ?
+public fun < T > List < T > . singleOrNull ( ) : T ?
+public inline fun < T > Iterable < T > . singleOrNull ( predicate : ( T ) -> Boolean ) : T ?
+public fun < T > Iterable < T > . drop ( n : Int ) : List < T
+public fun < T > List < T > . dropLast ( n : Int ) : List < T
+public inline fun < T > List < T > . dropWhile ( predicate : ( T ) -> Boolean ) : List < T
+public inline fun < T > Iterable < T > . dropWhile ( predicate : ( T ) -> Boolean ) : List < T
+fun filter ( predicate : ( T ) -> Boolean ) : List < T
+fun filterIndexed ( predicate : ( index : Int , T ) -> Boolean ) : List < T
+fun < T , C : MutableCollection < in T > > Iterable < T > . filterIndexedTo ( destination : C , predicate : ( index : Int , T ) -> Boolean ) : C
+public inline fun < reified R > Iterable < * > . filterIsInstance ( ) : List < @ kotlin . internal . NoInfer R
+@ Suppress ( "UNCHECKED_CAST" ) fun < R , C : MutableCollection < in R > > Iterable < * > . filterIsInstanceTo ( destination : C ) : C
+fun filterNot ( predicate : ( T ) -> Boolean ) : List < T
+fun < T : Any > Iterable < T ? > . filterNotNull ( ) : List < T
+@ Suppress ( "UNCHECKED_CAST" ) fun < T : Any > Iterable < T ? > . filterNotNullTo ( destination : C ) : C
+fun < T , C : MutableCollection < in T > > Iterable < T > . filterNotTo ( destination : C , predicate : ( T ) -> Boolean ) : C
+fun < T , C : MutableCollection < in T > > Iterable < T > . filterTo ( destination : C , predicate : ( T ) -> Boolean ) : C
+fun < T > List < T > . slice ( indices : IntRange ) : List < T
+fun < T > List < T > . slice ( indices : Iterable < Int > ) : List < T
+public fun < T > Iterable < T > . take ( n : Int ) : List < T
+public fun < T > List < T > . takeLast ( n : Int ) : List < T
+public inline fun < T > List < T > . takeLastWhile ( predicate : ( T ) -> Boolean ) : List < T
+fun takeWhile ( predicate : ( ) -> Boolean ) : List < Any ?
+expect fun < T > MutableList < T > . reverse ( ) : Unit
+fun < T > Iterable < T > . reversed ( ) : List < T
+@ SinceKotlin ( "1.3" ) public fun < T > MutableList < T > . shuffle ( random : Random ) : Unit
+fun < T , R : Comparable < R > > MutableList < T > . sortBy ( crossinline selector : ( T ) -> R ? ) : Unit
+public inline fun < T , R : Comparable < R > > MutableList < T > . sortByDescending ( crossinline selector : ( T ) -> R ? ) : Unit
+fun < T : Comparable < T > > MutableList < T > . sortDescending ( ) : Unit
+fun < T : Comparable < T > > Iterable < T > . sorted ( ) : List < T
+fun < T , R : Comparable < R > > Iterable < T > . sortedBy ( crossinline selector : ( T ) -> R ? ) : List < T
+fun < T , R : Comparable < R > > Iterable < T > . sortedByDescending ( crossinline selector : ( T ) -> R ? ) : List < T
+fun < T : Comparable < T > > Iterable < T > . sortedDescending ( ) : List < T
+fun < T > Iterable < T > . sortedWith ( comparator : Comparator < in T > ) : List < T
+fun Collection < Boolean > . toBooleanArray ( ) : BooleanArray
+fun Collection < Byte > . toByteArray ( ) : ByteArray
+fun Collection < Char > . toCharArray ( ) : CharArray
+fun Collection < Double > . toDoubleArray ( ) : DoubleArray
+fun Collection < Float > . toFloatArray ( ) : FloatArray
+fun Collection < Int > . toIntArray ( ) : IntArray
+fun Collection < Long > . toLongArray ( ) : LongArray
+fun Collection < Short > . toShortArray ( ) : ShortArray
+fun < T , K , V > Iterable < T > . associate ( transform : ( T ) -> Pair < K , V > ) : Map < K , V
+
+fun < T , K , V > Iterable < T > . associateBy ( keySelector : ( T ) -> K , valueTransform : ( T ) -> V ) : Map < K , V
+fun < T , K , M : MutableMap < in K , in T > > Iterable < T > . associateByTo ( destination : M , keySelector : ( T ) -> K ) : M
+fun < T , K , V , M : MutableMap < in K , in V > > Iterable < T > . associateByTo ( destination : M , keySelector : ( T ) -> K , valueTransform : ( T ) -> V ) : M
+fun < T , K , V , M : MutableMap < in K , in V > > Iterable < T > . associateTo ( destination : M , transform : ( T ) -> Pair < K , V > ) : M
+@ SinceKotlin ( "1.3" ) public inline fun < K , V > Iterable < K > . associateWith ( valueSelector : ( K ) -> V ) : Map < K , V
+@ SinceKotlin ( "1.3" ) public inline fun < K , V , M : MutableMap < in K , in V > > Iterable < K > . associateWithTo ( destination : M , valueSelector : ( K ) -> V ) : M
+fun < T , C : MutableCollection < in T > > Iterable < T > . toCollection ( destination : C ) : C
+fun < T > Iterable < T > . toHashSet ( ) : HashSet < T
+fun < T > Iterable < T > . toList ( ) : List < T
+fun < T > Iterable < T > . toMutableList ( ) : MutableList < T
+fun < T > Collection < T > . toMutableList ( ) : MutableList < T
+fun < T > Iterable < T > . toSet ( ) : Set < T
+fun < T , R > Iterable < T > . flatMap ( transform : ( T ) -> Iterable < R > ) : List < R
+fun < T , R > Iterable < T > . flatMap ( transform : ( T ) -> Sequence < R > ) : List < R
+
+
+
+
+@ Suppress ( "UNCHECKED_CAST" ) fun < T , R , C : MutableCollection < in R > > Iterable < T > . flatMapTo ( destination : C , transform : ( T ) -> Iterable < R > ) : C
+@ SinceKotlin ( "1.4" ) @ OptIn ( kotlin . Experimental . ExperimentalTypeInference :: class ) @ OverloadResolutionByLambdaReturnType @ kotlin . jvm . JvmName ( "" ) public inline fun < T , R , C : MutableCollection < in R > > Iterable < T > . flatMapTo ( destination : C , transform : ( T ) -> Sequence < R > ) : C
+fun < T , K > groupBy ( keySelector : ( T ) -> K ) : Map < K , List < T >
+fun < T , K , V > Iterable < T > . groupBy ( keySelector : ( T ) -> K , valueTransform : ( T ) -> V ) : Map < K , List < V >
+fun < T , K , M : MutableMap < in K , MutableList < T > > > Iterable < T > . groupByTo ( destination : M , keySelector : ( T ) -> K ) : M
+fun < T , K , V , M : MutableMap < in K , MutableList < V > > > Iterable < T > . groupByTo ( destination : M , keySelector : ( T ) -> K , valueTransform : ( T ) -> V ) : M
+@ SinceKotlin ( "1.1" ) public inline fun < T , K > Iterable < T > . groupingBy ( crossinline keySelector : ( T ) -> K ) : Grouping < T , K
+fun < T , R > Iterable < T > . map ( transform : ( T ) -> R ) : List < R
+fun < T , R > Iterable < T > . mapIndexedTo ( destination : List < R > , transform : ( index : Int , T ) -> R ) : List < R
+fun < T , R : Any > Iterable < T > . mapIndexedNotNull ( transform : ( index : Int , T ) -> R ? ) : List < R
+fun < T , R : Any , C : MutableCollection < in R > > Iterable < T > . mapIndexedNotNullTo ( destination : C , transform : ( index : Int , T ) -> R ? ) : C
+fun < T , R , C : MutableCollection < in R > > Iterable < T > . mapIndexedTo ( destination : C , transform : ( index : Int , T ) -> R ) : C
+fun < T , R : Any > Iterable < T > . mapNotNull ( transform : ( T ) -> R ? ) : List < R
+fun < T , R : Any , C : MutableCollection < in R > > Iterable < T > . mapNotNullTo ( destination : C , transform : ( T ) -> R ? ) : C
+fun < T , R , C : MutableCollection < in R > > Iterable < T > . mapTo ( destination : C , transform : ( T ) -> R ) : C
+fun < T > Iterable < T > . withIndex ( ) : Iterable < IndexedValue < T >
+fun < T > Iterable < T > . distinct ( ) : List < T
+fun < T , K > Iterable < T > . distinctBy ( selector : ( T ) -> K ) : List < T
+val set = this . toMutableSet ( ) set . retainAll ( other ) return set }
+@ Suppress ( "UNCHECKED_CAST" ) fun < T > Collection < T > . subtract ( other : Collection < T > ) : Set < T
+fun < T > Iterable < T > . toMutableSet ( ) : MutableSet < T
+fun < T > Iterable < T > . union ( other : Iterable < T > ) : Set < T
+fun < T > Iterable < T > . all ( predicate : ( T ) -> Boolean ) : Boolean
+fun < T > Iterable < T > . any ( ) : Boolean
+public inline fun < T > Iterable < T > . any ( predicate : ( T ) -> Boolean ) : Boolean
+fun < T > Iterable < T > . count ( ) : Int
+@ kotlin . internal . InlineOnly public inline fun < T > Collection < T > . count ( ) : Int
+fun < T > count ( predicate : ( T ) -> Boolean ) : Int
+fun < T , R > Iterable < T > . fold ( initial : R , operation : ( acc : R , T ) -> R ) : R
+fun < T , R > Iterable < T > . foldIndexed ( initial : R , operation : ( index : Int , acc : R , T ) -> R ) : R
+fun < T , R > List < T > . foldRight ( initial : R , operation : ( T , acc : R ) -> R ) : R
+fun < T , R > List < T > . foldRightIndexed ( initial : R , operation : ( index : Int , T , acc : R ) -> R ) : R
+@ kotlin . internal . HidesMembers public inline fun < T > Iterable < T > . forEach ( action : ( T ) -> Unit ) : Unit
+fun < T > Iterable < T > . forEachIndexed ( action : ( index : Int , T ) -> Unit ) : Unit
+fun Iterable < Double > . max ( ) : Double
+val iterator = iterator ( ) if ( ! iterator . hasNext ( ) ) throw NoSuchElementException ( ) var max = iterator . next ( ) while ( iterator . hasNext ( ) ) { val e = iterator . next ( ) max = maxOf ( max , e ) } return max }
+fun < T : Comparable < T > > Iterable < T > . max ( ) : T
+fun < T , R : Comparable < R > > Iterable < T > . maxBy ( selector : ( T ) -> R ) : T
+@ SinceKotlin ( "1.4" ) public inline fun < T , R : Comparable < R > > Iterable < T > . maxByOrNull ( selector : ( T ) -> R ) : T ?
+fun < T > Iterable < T > . maxOf ( selector : ( T ) -> Double ) : Double
+fun < T > Iterable < T > . maxOf ( selector : ( T ) -> Float ) : Float
+fun < T , R : Comparable < R > > Iterable < T > . maxOf ( selector : ( T ) -> R ) : R
+@ SinceKotlin ( "1.4" ) @ OptIn ( kotlin . Experimental . ExperimentalTypeInference :: class ) @ OverloadResolutionByLambdaReturnType @ kotlin . internal . InlineOnly public inline fun < T > Iterable < T > . maxOfOrNull ( selector : ( T ) -> Double ) : Double ?
+@ SinceKotlin ( "1.4" ) @ OptIn ( kotlin . Experimental . ExperimentalTypeInference :: class ) @ OverloadResolutionByLambdaReturnType @ kotlin . internal . InlineOnly public inline fun < T > Iterable < T > . maxOfOrNull ( selector : ( T ) -> Double ) : Double ?
+@ SinceKotlin ( "1.4" ) @ OptIn ( kotlin . Experimental . ExperimentalTypeInference :: class ) @ OverloadResolutionByLambdaReturnType @ kotlin . internal . InlineOnly public inline fun < T , R : Comparable < R > > Iterable < T > . maxOfOrNull ( selector : ( T ) -> R ) : R ?
+fun < T , R > Iterable < T > . maxOfWith ( comparator : Comparator < in R > , selector : ( T ) -> R ) : R
+@ SinceKotlin ( "1.4" ) @ OptIn ( kotlin . Experimental . ExperimentalTypeInference :: class ) @ OverloadResolutionByLambdaReturnType @ kotlin . internal . InlineOnly public inline fun < T , R > Iterable < T > . maxOfWithOrNull ( comparator : Comparator < in R > , selector : ( T ) -> R ) : R ?
+@ SinceKotlin ( "1.4" ) public fun Iterable < Double > . maxOrNull ( ) : Double ?
+@ SinceKotlin ( "1.4" ) public fun Iterable < Float > . maxOrNull ( ) : Float ?
+@ SinceKotlin ( "1.4" ) public fun < T : Comparable < T > > Iterable < T > . maxOrNull ( ) : T ?
+fun < T > Iterable < T > . maxWith ( comparator : Comparator < in T > ) : T
+@ SinceKotlin ( "1.4" ) public fun < T > Iterable < T > . maxWithOrNull ( comparator : Comparator < in T > ) : T ?
+fun Iterable < Double > . min ( ) : Double
+if ( isEmpty ( ) ) throw NoSuchElementException ( ) else var min = this [ 0 ]
+fun < T : Comparable < T > > Iterable < T > . min ( ) : T
+fun < T , R : Comparable < R > > Iterable < T > . minBy ( selector : ( T ) -> R ) : T
+@ SinceKotlin ( "1.4" ) public inline fun < T , R : Comparable < R > > Iterable < T > . minByOrNull ( selector : ( T ) -> R ) : T ?
+fun < T > Iterable < T > . minOf ( selector : ( T ) -> Double ) : Double
+fun < T > Iterable < T > . minOf ( selector : ( T ) -> Float ) : Float
+fun < T , R : Comparable < R > > Iterable < T > . minOf ( selector : ( T ) -> R ) : R
+@ SinceKotlin ( "1.4" ) @ OptIn ( kotlin . Experimental . ExperimentalTypeInference :: class ) @ OverloadResolutionByLambdaReturnType @ kotlin . internal . InlineOnly public inline fun < T > Iterable < T > . minOfOrNull ( selector : ( T ) -> Double ) : Double ?
+@ SinceKotlin ( "1.4" ) @ OptIn ( kotlin . Experimental . ExperimentalTypeInference :: class ) @ OverloadResolutionByLambdaReturnType @ kotlin . internal . InlineOnly public inline fun < T > Iterable < T > . minOfOrNull ( selector : ( T ) -> Double ) : Double ?
+@ SinceKotlin ( "1.4" ) @ OptIn ( kotlin . Experimental . ExperimentalTypeInference :: class ) @ OverloadResolutionByLambdaReturnType @ kotlin . internal . InlineOnly public inline fun < T , R : Comparable < R > > Iterable < T > . minOfOrNull ( selector : ( T ) -> R ) : R ?
+fun < T , R > Iterable < T > . minOfWith ( comparator : Comparator < in R > , selector : ( T ) -> R ) : R
+@ SinceKotlin ( "1.4" ) @ OptIn ( kotlin . Experimental . ExperimentalTypeInference :: class ) @ OverloadResolutionByLambdaReturnType @ kotlin . internal . InlineOnly public inline fun < T , R > Iterable < T > . minOfWithOrNull ( comparator : Comparator < in R > , selector : ( T ) -> R ) : R ?
+@ SinceKotlin ( "1.4" ) public fun Iterable < Double > . minOrNull ( ) : Double ?
+@ SinceKotlin ( "1.4" ) public fun Iterable < Float > . minOrNull ( ) : Float ?
+@ SinceKotlin ( "1.4" ) public fun < T : Comparable < T > > Iterable < T > . minOrNull ( ) : T ?
+fun < T > Iterable < T > . minWith ( comparator : Comparator < in T > ) : T
+@ SinceKotlin ( "1.4" ) public fun < T > Iterable < T > . minWithOrNull ( comparator : Comparator < in T > ) : T ?
+return ! iterator ( ) . hasNext ( )
+public inline fun < T > Iterable < T > . none ( predicate : ( T ) -> Boolean ) : Boolean
+@ SinceKotlin ( "1.1" ) public inline fun < T , C : Iterable < T > > C . onEach ( action : ( T ) -> Unit ) : C
+@ SinceKotlin ( "1.4" ) public inline fun < T , C : Iterable < T > > C . onEachIndexed ( action : ( index : Int , T ) -> Unit ) : C
+fun < S , T : S > Iterable < T > . reduce ( operation : ( acc : S , T ) -> S ) : S
+fun < S , T : S > Iterable < T > . reduceIndexed ( operation : ( index : Int , acc : S , T ) -> S ) : S
+@ SinceKotlin ( "1.4" ) public inline fun < S , T : S > Iterable < T > . reduceIndexedOrNull ( operation : ( index : Int , acc : S , T ) -> S ) : S ?
+@ SinceKotlin ( "1.4" ) public inline fun < S , T : S > Iterable < T > . reduceOrNull ( operation : ( acc : S , T ) -> S ) : S ?
+fun < S , T : S > List < T > . reduceRight ( operation : ( T , acc : S ) -> S ) : S
+fun < S , T : S > List < T > . reduceRightIndexed ( operation : ( index : Int , T , acc : S ) -> S ) : S
+@ SinceKotlin ( "1.4" ) public inline fun < S , T : S > List < T > . reduceRightIndexedOrNull ( operation : ( index : Int , T , acc : S ) -> S ) : S ?
+@ SinceKotlin ( "1.4" ) public inline fun < S , T : S > List < T > . reduceRightOrNull ( operation : ( T , acc : S ) -> S ) : S ?
+@ SinceKotlin ( "1.4" ) public inline fun < T , R > Iterable < T > . runningFold ( initial : R , operation : ( acc : R , T ) -> R ) : List < R
+
+@ SinceKotlin ( "1.4" ) public inline fun < S , T : S > Iterable < T > . runningReduce ( operation : ( acc : S , T ) -> S ) : List < S
+
+@ SinceKotlin ( "1.4" ) public inline fun < T , R > Iterable < T > . scan ( initial : R , operation : ( acc : R , T ) -> R ) : List < R
+@ SinceKotlin ( "1.4" ) public inline fun < T , R > Iterable < T > . scanIndexed ( initial : R , operation : ( index : Int , acc : R , T ) -> R ) : List < R
+@ Deprecated ( "" , ReplaceWith ( "" ) ) @ DeprecatedSinceKotlin ( warningSince = "1.5" ) public inline fun < T > Iterable < T > . sumBy ( selector : ( T ) -> Int ) : Int
+@ Deprecated ( "" , ReplaceWith ( "" ) ) @ DeprecatedSinceKotlin ( warningSince = "1.5" ) public inline fun < T > Iterable < T > . sumByDouble ( selector : ( T ) -> Double ) : Double
+fun < T > Iterable < T > . sumOf ( selector : ( T ) -> Double ) : Double
+fun < T > Iterable < T > . sumOf ( selector : ( T ) -> Int ) : Int
+var sum : Long = 0 . toLong ( )
+fun < T > Iterable < T > . sumOf ( selector : ( T ) -> UInt ) : UInt
+fun < T > Iterable < T > . sumOf ( selector : ( T ) -> ULong ) : ULong
+fun < T : Any > Iterable < T ? > . requireNoNulls ( ) : Iterable < T
+fun < T : Any > List < T ? > . requireNoNulls ( ) : List < T
+@ SinceKotlin ( "1.2" ) public fun < T > Iterable < T > . chunked ( size : Int ) : List < List < T >
+
+public operator fun < T > List < T > . minus ( element : T ) : List < T
+public operator fun < T > List < T > . minus ( elements : Array < out T > ) : List < T
+public operator fun < T > List < T > . minus ( elements : Iterable < T > ) : List < T
+public operator fun < T > List < T > . minus ( elements : Sequence < T > ) : List < T
+@ kotlin . internal . InlineOnly public inline fun < T > Iterable < T > . minusElement ( element : T ) : List < T
+public inline fun < T > Iterable < T > . partition ( predicate : ( T ) -> Boolean ) : Pair < List < T > , List < T >
+operator fun < T > List < T > . plus ( element : T ) : List < T
+public operator fun < T > Collection < T > . plus ( element : T ) : List < T
+operator fun < T > List < T > . plus ( elements : Array < out T > ) : List < T
+@ Suppress ( "UNCHECKED_CAST" ) operator fun < T > List < T > . plus ( elements : Array < out T > ) : List < T
+fun < T > listOf ( vararg elements : T ) : List < T
+public operator fun < T > List < T > . plus ( elements : Iterable < T > ) : List < T
+fun < T > listOf ( vararg elements : T ) : List < T
+public operator fun < T > List < T > . plus ( elements : Sequence < T > ) : List < T
+@ kotlin . internal . InlineOnly public inline fun < T > Iterable < T > . plusElement ( element : T ) : List < T
+@ kotlin . internal . InlineOnly public inline fun < T > Collection < T > . plusElement ( element : T ) : List < T
+@ SinceKotlin ( "1.2" ) public fun < T > Iterable < T > . windowed ( size : Int , step : Int = 1 , partialWindows : Boolean = false ) : List < List < T >
+
+fun < T , R > Iterable < T > . zip ( other : Array < out R > ) : List < Pair < T , R >
+fun < T , R , V > Iterable < T > . zip ( other : Array < out R > , transform : ( a : T , b : R ) -> V ) : List < V
+fun < T , R > Iterable < T > . zip ( other : Iterable < R > ) : List < Pair < T , R >
+fun < T , R , V > Iterable < T > . zip ( other : Iterable < R > , transform : ( a : T , b : R ) -> V ) : List < V
+@ SinceKotlin ( "1.2" ) public fun < T > Iterable < T > . zipWithNext ( ) : List < Pair < T , T >
+@ SinceKotlin ( "1.2" ) public inline fun < T , R > Iterable < T > . zipWithNext ( transform : ( a : T , b : T ) -> R ) : List < R
+
+
+@ kotlin . internal . InlineOnly public inline fun < T > Iterable < T > . asIterable ( ) : Iterable < T
+fun < T > Iterable < T > . asSequence ( ) : Sequence < T
+@ kotlin . jvm . JvmName ( "" ) public fun Iterable < Byte > . average ( ) : Double
+@ kotlin . jvm . JvmName ( "" ) public fun Iterable < Short > . average ( ) : Double
+@ kotlin . jvm . JvmName ( "" ) public fun Iterable < Int > . average ( ) : Double
+@ kotlin . jvm . JvmName ( "" ) public fun Iterable < Long > . average ( ) : Double
+@ kotlin . jvm . JvmName ( "" ) public fun Iterable < Float > . average ( ) : Double
+@ kotlin . jvm . JvmName ( "" ) public fun Iterable < Double > . average ( ) : Double
+@ kotlin . jvm . JvmName ( "" ) public fun Iterable < Byte > . sum ( ) : Int
+@ kotlin . jvm . JvmName ( "" ) public fun Iterable < Short > . sum ( ) : Int
+@ kotlin . jvm . JvmName ( "" ) public fun Iterable < Int > . sum ( ) : Int
+@ kotlin . jvm . JvmName ( "" ) public fun Iterable < Long > . sum ( ) : Long
+@ kotlin . jvm . JvmName ( "" ) public fun Iterable < Float > . sum ( ) : Float
+fun Iterable < Double > . sum ( ) : Double
+internal open suspend fun sendBroadcast ( element : E ) : Boolean
+fun < R > sendImpl ( element : E , waiter : Any ? , onRendezvousOrBuffered : ( ) -> R , onSuspend : ( segm : ChannelSegment < E > , i : Int ) -> R , onClosed : ( ) -> R , onNoWaiterSuspend : ( segm : ChannelSegment < E > , i : Int , element : E , s : Long ) -> R ) : R
+fun updateCellSendSlow ( segment : ChannelSegment < E > , index : Int , element : E , s : Long , waiter : Any ? , closed : Boolean ) : Int
+fun shouldSendSuspend ( curSendersAndCloseStatus : Long ) : Boolean
+fun bufferOrRendezvousSend ( curSenders : Long ) : Boolean
+internal open fun shouldSendSuspend ( ) : Boolean
+fun Any . tryResumeReceiver ( element : E ) : Boolean
+}
+}
+fun dropFirstElementUntilTheSpecifiedCellIsInTheBuffer ( globalCellIndex : Long )
+fun receiveImpl ( ) : R
+var counter = <NUM_LIT:0
+fun waitExpandBufferCompletion ( globalIndex : Long )
+}
+fun closeOrCancelImpl ( cause : Throwable ? , cancel : Boolean ) : Boolean
+fun invokeCloseHandler ( )
+private fun markClosed ( ) : Unit
+private fun markCancelled ( ) : Unit
+fun markCancellationStarted ( ) : Unit
+fun close ( )
+fun completeClose ( senders : Int ) : ChannelSegment < E
+private fun completeCancel ( senders : Int )
+fun closeLinkedList ( ) : ChannelSegment < E
+fun markAllEmptyCellsAsClosed ( lastSegment : ChannelSegment < * > ) : Long
+var removed = false
+while ( true ) { if ( lastSegment . isClosedForReceive ) return if ( sendersCounter == 0 ) return if ( lastSegment . tryReceive ( ) . isSuccess ) { sendersCounter -- return } else { break } }
+@ Suppress ( "INVISIBLE_MEMBER" , "INVISIBLE_REFERENCE" ) internal fun resumeReceiverOnClosedChannel ( exception : Throwable ? ) : Unit
+@ Suppress ( "INVISIBLE_MEMBER" , "INVISIBLE_REFERENCE" ) internal fun resumeSenderOnCancelledChannel ( handler : ( cause : Throwable ? ) -> Unit )
+internal fun hasElements ( ) : Boolean
+fun isCellNonEmpty ( segment : ChannelSegment < E > , index : Int , globalIndex : Long ) : Boolean
+fun findSegmentSend ( id : Long , startFrom : ChannelSegment < * > ) : ChannelSegment < * > ?
+fun findSegmentReceive ( id : Long , startFrom : ChannelSegment < * > ) : ChannelSegment < * > ?
+fun findSegmentBufferEnd ( id : Long , startFrom : ChannelSegment < E > , currentBufferEndCounter : Long ) : ChannelSegment < E > ?
+fun moveSegmentBufferEndToSpecifiedOrLast ( id : Long , startFrom : ChannelSegment < * > )
+fun updateSendersCounterIfLower ( value : Long ) : Unit
+fun updateReceiversCounterIfLower ( value : Long ) : Unit
+fun onCancelledRequest ( index : Int , receiver : Boolean )
+fun < T > CancellableContinuation < T > . tryResume0 ( value : T , onCancellation : ( ( cause : Throwable ) -> Unit ) ? = null ) : Boolean
+public fun wrapUnsafe ( array : ByteArray ) : ByteString
+block ( byteString . toByteArray ( ) )
+@ SinceKotlin ( "1.4" ) @ kotlin . internal . InlineOnly public actual inline fun StringBuilder . appendLine ( value : Byte ) : StringBuilder
+@ SinceKotlin ( "1.4" ) @ kotlin . internal . InlineOnly public actual inline fun StringBuilder . appendLine ( value : Short ) : StringBuilder
+append ( value ) . appendLine ( )
+append ( value ) . appendLine ( )
+append ( value ) . appendLine ( )
+@ SinceKotlin ( "1.4" ) @ kotlin . internal . InlineOnly public actual inline fun StringBuilder . appendLine ( value : Double ) : StringBuilder
+fun isDeclaredFunctionAvailable ( function : SimpleFunctionDescriptor ) : Boolean
+fun computeNonDeclaredFunctions ( name : Name , functions : MutableList < SimpleFunctionDescriptor > )
+fun computeNonDeclaredProperties ( name : Name , descriptors : MutableList < PropertyDescriptor > )
+fun < T : DeclarationDescriptor > computeNonDeclaredDescriptors ( name : Name , declaredDescriptors : List < T > , computeNonDeclared : ( Name , MutableList < T > ) -> Unit ) : List < T
+internal fun FirClassSymbol < * > . isSerializableEnum ( session : FirSession ) : Boolean
+fun < T > emptyArray ( ) : Array < T
+override fun tryToMatch ( startIndex : Int , testString : CharSequence , matchResult : MatchResultImpl ) : Int
+override fun tryToMatch ( startIndex : Int , testString : CharSequence , matchResult : MatchResultImpl ) : Int
+fun parseKotlinVersion ( fullVersionString : String ) : KotlinVersion ?
+public fun < T : Number , D : Dimension > exp ( a : MultiArray < T , D > ) : NDArray < Double , D
+public fun < D : Dimension > expF ( a : MultiArray < Float , D > ) : NDArray < Float , D
+public fun < D : Dimension > expCF ( a : MultiArray < ComplexFloat , D > ) : NDArray < ComplexFloat , D
+public fun < D : Dimension > expCD ( a : MultiArray < ComplexDouble , D > ) : NDArray < ComplexDouble , D
+public fun < T : Number , D : Dimension > log ( a : MultiArray < T , D > ) : NDArray < Double , D
+public fun < D : Dimension > logF ( a : MultiArray < Float , D > ) : NDArray < Float , D
+public fun < D : Dimension > logCF ( a : MultiArray < ComplexFloat , D > ) : NDArray < ComplexFloat , D
+public fun < D : Dimension > logCD ( a : MultiArray < ComplexDouble , D > ) : NDArray < ComplexDouble , D
+public fun < T : Number , D : Dimension > sin ( a : MultiArray < T , D > ) : NDArray < Double , D
+public fun < D : Dimension > sinF ( a : MultiArray < Float , D > ) : NDArray < Float , D
+public fun < D : Dimension > sinCF ( a : MultiArray < ComplexFloat , D > ) : NDArray < ComplexFloat , D
+public fun < D : Dimension > sinCD ( a : MultiArray < ComplexDouble , D > ) : NDArray < ComplexDouble , D
+public fun < T : Number , D : Dimension > cos ( a : MultiArray < T , D > ) : NDArray < Double , D
+public fun < D : Dimension > cosF ( a : MultiArray < Float , D > ) : NDArray < Float , D
+public fun < D : Dimension > cosCF ( a : MultiArray < ComplexFloat , D > ) : NDArray < ComplexFloat , D
+public fun < D : Dimension > cosCD ( a : MultiArray < ComplexDouble , D > ) : NDArray < ComplexDouble , D
+fun registerAddedOrChangedFile ( outputFile : Path , text : String )
+fun deleteFile ( inputFile : Path )
+fun markAsSuccessful ( )
+for ( ( key , value ) in changes ) { val file = key . file ? : continue if ( ! file . exists ( ) ) continue val oldValue = value val newValue = removeChanges ( file , key ) if ( oldValue != null && newValue != null ) { file . delete ( ) } }
+if ( ! _stash . delete ( ) ) { }
+val test = objCExportHeaderGeneratorTest ( taskName , testDisplayNameTag , configure )
+
+internal fun < R > scopedFlow ( @ BuilderInference block : suspend CoroutineScope . ( FlowCollector < R > ) -> Unit ) : Flow < R
+@ DelicateSymbolTableApi fun forEachDeclarationSymbol ( block : ( IrSymbol ) -> Unit )
+fun < K , V > Map < K , V > . shouldContainAll ( expected : Collection < Pair < K , V > > ) : Unit
+fun < K , V > Map < K , V > . shouldContainExactly ( vararg expected : Pair < K , V > ) : Unit
+fun < T > Sequence < T > . shouldBeSingleton ( match : ( T ) -> Unit )
+public fun < T > y ( column : ColumnReference < T > , parameters : LetsPlotPositionalMappingParametersContinuous < T > . ( ) -> Unit = { } ) : PositionalMapping < T
+public fun < T > y ( column : KProperty < T > , parameters : LetsPlotPositionalMappingParametersContinuous < T > . ( ) -> Unit = { } ) : PositionalMapping < T
+public fun y ( column : String , parameters : LetsPlotPositionalMappingParametersContinuous < Any ? > . ( ) -> Unit = { } ) : PositionalMapping < Any ?
+public fun < T > y ( values : Iterable < T > , name : String ? = null , parameters : LetsPlotPositionalMappingParametersContinuous < T > . ( ) -> Unit = { } ) : PositionalMapping < T
+public fun < T > y ( values : DataColumn < T > , parameters : LetsPlotPositionalMappingParametersContinuous < T > . ( ) -> Unit = { } ) : PositionalMapping < T
+y ( parameters )
+
+@ SinceKotlin ( "" ) @ ExperimentalEncodingApi public fun InputStream . decodingWith ( base64 : Base64 ) : InputStream
+@ SinceKotlin ( "" ) @ ExperimentalEncodingApi public fun OutputStream . encodingWith ( base64 : Base64 ) : OutputStream
+fun SimpleFunctionDescriptor . shouldBeVisibleAsOverrideOfBuiltInWithErasedValueParameters ( ) : Boolean
+fun KtSourceElement . isSourceForCompoundAccess ( fir : FirElement ) : Boolean
+fun FirElement . getFallbackCompoundCalleeName ( ) : Name ?
+fun applyHierarchyTemplate ( template : KotlinHierarchyTemplate )
+fun applyHierarchyTemplate ( template : KotlinHierarchyTemplate , extension : KotlinHierarchyBuilder . Root . ( ) -> Unit )
+
+fun ClassName . isLocalClassName ( ) : Boolean
+fun passAsArgumentToMainFunction ( jsExpression : String )
+val evaluator = createEvaluator ( )
+fun test ( ) { val scope = createTestCoroutineScope ( ) var result = false scope . launch { delay ( 0 ) result = true } assertFalse ( result ) assertFailsWith < AssertionError > { scope . cleanupTestCoroutines ( ) } }
+@ Test fun `launchInStage AfterEvaluate` ( )
+val scope = createTestCoroutineScope ( ) var result = false scope . launch { delay ( 0 ) result = true } assertFalse ( result ) assertFailsWith < AssertionError > { scope . cleanupTestCoroutines ( ) } assertFalse ( result ) }
+val project = setupKmpProject { kotlin { val exception = TestException ( "test" ) throw exception } } project . runLifecycle ( "" ) { val exception = TestException ( "test" ) throw exception } }
+@ Test fun `exception thrown in buildscript evaluation - inside user buildscript` ( )
+
+@ Test fun `exception thrown in AfterEvaluateBuildscript` ( )
+fun test ( ) { val stage = CompletableFuture . completedStage ( "OK" ) assertEquals ( "OK" , stage . await ( ) ) }
+val errorString = "" val exception = TestException ( errorString ) testResultMap ( { try { it ( ) fail ( "" ) } catch ( e : Throwable ) { assertEquals ( e . message ! ! , e . toString ( ) ) assertEquals ( errorString , e . message ) } } ) { runTest { delay ( 0 ) throw exception } } }
+fun IrExpression . insertSpecialCast ( expression : FirExpression , valueType : ConeKotlinType , expectedType : ConeKotlinType , ) : IrExpression
+
+
+fun < T > NamedDomainObjectContainer < T > . getOrCreate ( name : String , action : Action < in T > ) : T
+fun onlyIf ( spec : Spec < in KonanTarget > )
+fun main ( action : Action < in SourceSet > ) : SourceSet
+fun testFixtures ( action : Action < in SourceSet > ) : SourceSet
+fun test ( action : Action < in SourceSet > ) : SourceSet
+fun onlyIf ( spec : Spec < in KonanTarget > )
+fun sourceSets ( action : Action < in SourceSets > )
+public fun detectLandmarks ( image : I ) : List < Landmark
+
+
+internal fun noImpl ( ) : Nothing
+@ Deprecated ( message = "" , level = DeprecationLevel . ERROR ) public fun < T > Flow < T > . observeOn ( context : CoroutineContext ) : Flow < T
+@ Deprecated ( message = "" , level = DeprecationLevel . ERROR ) public fun < T > Flow < T > . publishOn ( context : CoroutineContext ) : Flow < T
+
+@ Deprecated ( level = DeprecationLevel . ERROR , message = "" , replaceWith = ReplaceWith ( "" ) ) public fun < T > Flow < T > . onErrorResume ( fallback : Flow < T > ) : Flow < T
+@ Deprecated ( level = DeprecationLevel . ERROR , message = "" , replaceWith = ReplaceWith ( "" ) ) public fun < T > Flow < T > . onErrorResumeNext ( fallback : Flow < T > ) : Flow < T
+
+@ Deprecated ( message = "" , level = DeprecationLevel . ERROR ) public fun < T > Flow < T > . subscribe ( onEach : suspend ( T ) -> Unit ) : Unit
+@ Deprecated ( message = "" , level = DeprecationLevel . ERROR ) public fun < T > Flow < T > . subscribe ( onEach : suspend ( T ) -> Unit , onError : suspend ( Throwable ) -> Unit ) : Unit
+@ Deprecated ( level = DeprecationLevel . ERROR , message = "" , replaceWith = ReplaceWith ( "" ) ) public fun < T , R > Flow < T > . flatMap ( mapper : suspend ( T ) -> Flow < R > ) : Flow < R
+fun < T , R > Flow < T > . concatMap ( mapper : ( T ) -> Flow < R > ) : Flow < R
+@ Deprecated ( level = DeprecationLevel . ERROR , message = "" , replaceWith = ReplaceWith ( "" ) ) public fun < T > Flow < Flow < T > > . merge ( ) : Flow < T
+@ Deprecated ( level = DeprecationLevel . ERROR , message = "" , replaceWith = ReplaceWith ( "" ) ) public fun < T > Flow < Flow < T > > . flatten ( ) : Flow < T
+@ Deprecated ( level = DeprecationLevel . ERROR , message = "" , replaceWith = ReplaceWith ( "" ) ) public fun < T , R > Flow < T > . compose ( transformer : Flow < T > . ( ) -> Flow < R > ) : Flow < R
+@ Deprecated ( level = DeprecationLevel . ERROR , message = "" , replaceWith = ReplaceWith ( "" ) ) public fun < T > Flow < T > . skip ( count : Int ) : Flow < T
+@ Deprecated ( level = DeprecationLevel . ERROR , message = "" , replaceWith = ReplaceWith ( "" ) ) public fun < T > Flow < T > . forEach ( action : suspend ( value : T ) -> Unit ) : Unit
+fun < T , R > Flow < T > . scanFold ( initial : R , @ BuilderInference operation : suspend ( accumulator : R , value : T ) -> R ) : Flow < R
+@ Deprecated ( level = DeprecationLevel . ERROR , message = "" , replaceWith = ReplaceWith ( "" ) ) public fun < T > Flow < T > . onErrorReturn ( fallback : T ) : Flow < T
+@ Deprecated ( level = DeprecationLevel . ERROR , message = "" , replaceWith = ReplaceWith ( "" ) ) public fun < T > Flow < T > . onErrorReturn ( fallback : T , predicate : ( Throwable ) -> Boolean = { true } ) : Flow < T
+@ Deprecated ( level = DeprecationLevel . ERROR , message = "" , replaceWith = ReplaceWith ( "" ) ) public fun < T > Flow < T > . startWith ( value : T ) : Flow < T
+@ Deprecated ( level = DeprecationLevel . ERROR , message = "" , replaceWith = ReplaceWith ( "" ) ) public fun < T > Flow < T > . startWith ( other : Flow < T > ) : Flow < T
+@ Deprecated ( level = DeprecationLevel . ERROR , message = "" , replaceWith = ReplaceWith ( "" ) ) public fun < T > Flow < T > . concatWith ( value : T ) : Flow < T
+@ Deprecated ( level = DeprecationLevel . ERROR , message = "" , replaceWith = ReplaceWith ( "" ) ) public fun < T > Flow < T > . concatWith ( other : Flow < T > ) : Flow < T
+fun < T1 , T2 , R > Flow < T1 > . combineLatest ( other : Flow < T2 > , transform : suspend ( T1 , T2 ) -> R ) : Flow < R
+public fun < T1 , T2 , T3 , R > Flow < T1 > . combineLatest ( other : Flow < T2 > , other2 : Flow < T3 > , transform : suspend ( T1 , T2 , T3 ) -> R )
+fun < T1 , T2 , T3 , T4 , R > Flow < T1 > . combineLatest ( other : Flow < T2 > , other2 : Flow < T3 > , other3 : Flow < T4 > , transform : suspend ( T1 , T2 , T3 , T4 ) -> R )
+fun < T1 , T2 , T3 , T4 , T5 , R > Flow < T1 > . combineLatest ( other : Flow < T2 > , other2 : Flow < T3 > , other3 : Flow < T4 > , other4 : Flow < T5 > , transform : suspend ( T1 , T2 , T3 , T4 , T5 ) -> R ) : Flow < R
+@ Deprecated ( level = DeprecationLevel . ERROR , message = "" , replaceWith = ReplaceWith ( "" ) ) public fun < T > Flow < T > . delayFlow ( timeMillis : Long ) : Flow < T
+@ Deprecated ( level = DeprecationLevel . ERROR , message = "" , replaceWith = ReplaceWith ( "" ) ) public fun < T > Flow < T > . delayEach ( timeMillis : Long ) : Flow < T
+fun < T , R > Flow < T > . switchMap ( transform : suspend ( value : T ) -> Flow < R > ) : Flow < R
+fun < T > Flow < T > . scanReduce ( operation : suspend ( accumulator : T , value : T ) -> T ) : Flow < T
+fun < T > Flow < T > . publish ( ) : Flow < T
+public fun < T > Flow < T > . publish ( bufferSize : Int ) : Flow < T
+fun < T > Flow < T > . replay ( ) : Flow < T
+fun < T > Flow < T > . replay ( bufferSize : Int ) : Flow < T
+fun < T > Flow < T > . cache ( ) : Flow < T
+@ Composable fun VerticalGrid ( modifier : Modifier = Modifier , columns : Int = 2 , content : @ Composable ( ) -> Unit )
+public inline operator fun < reified T > ColumnReference < T > . invoke ( ) : ColumnAccessor < T
+fun testDelayInArbitraryContext ( ctx : Context ) { assertFailsWith < IllegalArgumentException > { ctx . delay ( Long . MAX_VALUE ) } }
+
+
+set ( project , extensions )
+fun IrSimpleType . argumentTypesOrUpperBounds ( ) : List < IrType
+@ SinceKotlin ( "1.4" ) @ LowPriorityInOverloadResolution public fun < T : Any > KClass < T > . cast ( value : Any ? ) : T
+@ SinceKotlin ( "1.4" ) @ LowPriorityInOverloadResolution public fun < T : Any > KClass < T > . safeCast ( value : Any ? ) : T ?
+fun run ( session : Session )
+fill ( data , session )
+fun initializeRepo ( )
+fun StubContainer . computeNamesToBeDeclared ( pkgName : String ) : List < String
+fun File . deleteDirectoryContents ( )
+val suppressedExceptions = this . deleteRecursively ( ) if ( suppressedExceptions . isNotEmpty ( ) ) throw FileSystemException ( "" ) . apply { suppressedExceptions . forEach { addSuppressed ( it ) } }
+@ Suppress ( "" ) fun File . createDirectory ( )
+constraintsCache . clear ( )
+fun source ( sources : List < Any > )
+fun setSource ( sources : List < Any > )
+@ Internal override fun getExcludes ( ) : MutableSet < String
+@ Internal override fun getExcludes ( ) : MutableSet < String
+fun resolveAllSupertypesForOuterClass ( outerClass : FirClass )
+fun resolveSpecificClassLikeSupertypes ( classLikeDeclaration : FirClassLikeDeclaration , supertypeRefs : List < FirTypeRef > , ) : List < FirResolvedTypeRef
+}
+fun breakLoopFor ( declaration : FirClassLikeDeclaration , session : FirSession , visited : MutableSet < FirClassLikeDeclaration > , looped : MutableSet < FirClassLikeDeclaration > , pathSet : MutableSet < FirClassLikeDeclaration > , path : MutableList < FirClassLikeDeclaration > , )
+fun js ( )
+fun shared ( )
+fun String . myExtension ( )
+fun buildCompileList ( source : Path , outputDirectory : String , defaultModule : TestModule = TestModule . default ( ) ) : List < TestFile
+fun writeTextToFile ( text : String )
+fun pathToPlatformSdk ( platformName : String ) : String
+fun g ( )
+fun getFunctionKindPackageNames ( ) : Set < FqName
+fun hasExtensionKinds ( ) : Boolean
+
+@ Suppress ( "DEPRECATION" ) addAll ( current . incoming . artifactView { view -> view . filter { it . file . absolutePath == "" } } ) if ( koverDisabled . orNull ) { return@addAll } addAll ( current . files ) }
+@ SinceKotlin ( "1.3" ) @ Suppress ( "DEPRECATION" ) public fun < T > sequence ( block : suspend SequenceScope < T > . ( ) -> Unit ) : Sequence < T
+fun < T > iterator ( block : suspend SequenceScope < T > . ( ) -> Unit ) : Iterator < T
+public abstract suspend fun yield ( value : T )
+public abstract suspend fun yieldAll ( iterator : Iterator < T > )
+public suspend fun yieldAll ( elements : Iterable < T > )
+public suspend fun yieldAll ( sequence : Sequence < T > ) : Unit
+public fun labels ( zeroIndexed : Boolean = false ) : Map < Int , String
+fun getCallExpressionTypeInfo ( callExpression : KtCallExpression , receiver : Receiver ? , callOperationNode : ASTNode ? , context : ExpressionTypingContext , initialDataFlowInfoForArguments : DataFlowInfo ) : KotlinTypeInfo
+fun getQualifiedExpressionTypeInfo ( expression : KtQualifiedExpression , context : ExpressionTypingContext ) : KotlinTypeInfo
+
+fun reportMetric ( name : String , value : String , subprojectName : String ? = null )
+fun reportMetric ( name : String , value : Number , subprojectName : String ? = null )
+fun reportMetric ( name : String , value : Boolean , subprojectName : String ? = null )
+val a = mk . ndarray ( mk [ mk [ 0 , 0 , 0 ] , mk [ 0 , 0 , 0 ] , mk [ 0 , 0 , 0 ] ] )
+public fun < T > explode ( column : ColumnReference < T > ) : PositionalMapping < T
+public fun < T > explode ( column : KProperty < T > ) : PositionalMapping < T
+public fun explode ( column : String ) : PositionalMapping < Any ?
+public fun < T > explode ( values : Iterable < T > ) : PositionalMapping < T
+public fun < T > explode ( values : DataColumn < T > ) : PositionalMapping < T
+public infix fun UByte . until ( to : UByte ) : UIntRange
+public infix fun UInt . until ( to : UInt ) : UIntRange
+public infix fun ULong . until ( to : ULong ) : ULongRange
+public infix fun UShort . until ( to : UShort ) : UIntRange
+fun PsiInlineDocTag . toHtml ( javadocTag : JavadocTag ? ) : String ?
+fun PsiElement . shouldHaveSpaceAtTheEnd ( ) : Boolean
+internal fun Char . isWhitespaceImpl ( ) : Boolean
+fun api ( sourceSetName : String , name : String , version : String ) : Unit
+fun assertSourceSetDependenciesResolution ( expectedFilePath : String , withProject : ProjectInternal ? = null , configure : SourceSetDependenciesDsl . ( Project ) -> Unit )
+internal actual fun < K , V > createMapForCache ( initialCapacity : Int ) : MutableMap < K , V
+fun columnPlot ( plots : Iterable < Plot > , columns : Int , imageSize : Int ) : Figure
+
+
+
+
+fun CInteropMetadataDependencyTransformationTask . configureTaskOrder ( ) : Unit
+fun invoke ( cause : Throwable ? )
+handler ( cause )
+
+
+fun invokeAll ( vararg tasks : String )
+}
+internal fun l2Normalize ( scope : Scope ? , x : Operand < Float > , axis : IntArray ? ) : Operand < Float
+public fun batchDot ( scope : Scope ? , x : Operand < Float > , y : Operand < Float > , axis : IntArray ) : Operand < Float
+fun doBefore ( )
+@ Suppress ( "DEPRECATION" ) run { }
+fun run ( )
+{ }
+fun doBeforeClass ( )
+fun doAfterClass ( )
+fun FirQualifiedAccessExpression . createConeSubstitutorFromTypeArguments ( callableSymbol : FirCallableSymbol < * > , session : FirSession , discardErrorTypes : Boolean = false , ) : ConeSubstitutor
+fun < T : IrElement > T . patchDeclarationParents ( initialParent : IrDeclarationParent ? = null ) : T
+@ SinceKotlin ( "1.1" ) public actual fun < T : Comparable < T > > maxOf ( a : T , b : T ) : T
+@ SinceKotlin ( "1.1" ) @ kotlin . internal . InlineOnly public actual inline fun maxOf ( a : Byte , b : Byte ) : Byte
+@ SinceKotlin ( "1.1" ) @ kotlin . internal . InlineOnly public actual inline fun maxOf ( a : Short , b : Short ) : Short
+@ SinceKotlin ( "1.1" ) @ kotlin . internal . InlineOnly public actual inline fun maxOf ( a : Int , b : Int ) : Int
+@ SinceKotlin ( "1.1" ) @ kotlin . internal . InlineOnly public actual inline fun maxOf ( a : Long , b : Long ) : Long
+@ SinceKotlin ( "1.1" ) @ kotlin . internal . InlineOnly public actual inline fun maxOf ( a : Float , b : Float ) : Float
+@ SinceKotlin ( "1.1" ) @ kotlin . internal . InlineOnly public actual inline fun maxOf ( a : Double , b : Double ) : Double
+@ SinceKotlin ( "1.1" ) public actual fun < T : Comparable < T > > maxOf ( a : T , b : T , c : T ) : T
+fun maxOf ( a : Byte , b : Byte , c : Byte ) : Byte
+fun maxOf ( a : Short , b : Short , c : Short ) : Short
+fun maxOf ( a : Int , b : Int , c : Int ) : Int
+fun maxOf ( a : Long , b : Long , c : Long ) : Long
+fun maxOf ( a : Float , b : Float , c : Float ) : Float
+fun maxOf ( a : Double , b : Double , c : Double ) : Double
+@ SinceKotlin ( "1.4" ) public actual fun < T : Comparable < T > > maxOf ( a : T , vararg other : T ) : T
+fun maxOf ( a : Byte , vararg other : Byte ) : Byte
+fun maxOf ( a : Short , vararg other : Short ) : Short
+@ SinceKotlin ( "1.4" ) public actual fun maxOf ( a : Int , vararg other : Int ) : Int
+fun maxOf ( a : Long , vararg other : Long ) : Long
+fun maxOf ( a : Float , vararg other : Float ) : Float
+fun maxOf ( a : Double , vararg other : Double ) : Double
+@ SinceKotlin ( "1.1" ) public actual fun < T : Comparable < T > > minOf ( a : T , b : T ) : T
+@ SinceKotlin ( "1.1" ) @ kotlin . internal . InlineOnly public actual inline fun minOf ( a : Byte , b : Byte ) : Byte
+@ SinceKotlin ( "1.1" ) @ kotlin . internal . InlineOnly public actual inline fun minOf ( a : Short , b : Short ) : Short
+@ SinceKotlin ( "1.1" ) @ kotlin . internal . InlineOnly public actual inline fun minOf ( a : Int , b : Int ) : Int
+@ SinceKotlin ( "1.1" ) @ kotlin . internal . InlineOnly public actual inline fun minOf ( a : Long , b : Long ) : Long
+@ SinceKotlin ( "1.1" ) @ kotlin . internal . InlineOnly public actual inline fun minOf ( a : Float , b : Float ) : Float
+@ SinceKotlin ( "1.1" ) @ kotlin . internal . InlineOnly public actual inline fun minOf ( a : Double , b : Double ) : Double
+fun < T : Comparable < T > > minOf ( a : T , b : T , c : T ) : T
+fun minOf ( a : Byte , b : Byte , c : Byte ) : Byte
+fun minOf ( a : Short , b : Short , c : Short ) : Short
+fun minOf ( a : Int , b : Int , c : Int ) : Int
+fun minOf ( a : Long , b : Long , c : Long ) : Long
+fun minOf ( a : Float , b : Float , c : Float ) : Float
+fun minOf ( a : Double , b : Double , c : Double ) : Double
+@ SinceKotlin ( "1.4" ) public actual fun < T : Comparable < T > > minOf ( a : T , vararg other : T ) : T
+fun minOf ( a : Byte , vararg other : Byte ) : Byte
+fun minOf ( a : Short , vararg other : Short ) : Short
+@ SinceKotlin ( "1.4" ) public actual fun minOf ( a : Int , vararg other : Int ) : Int
+fun minOf ( a : Long , vararg other : Long ) : Long
+fun minOf ( a : Float , vararg other : Float ) : Float
+@ SinceKotlin ( "1.4" ) public actual fun minOf ( a : Double , vararg other : Double ) : Double
+fun renderResult ( host : ExecutionHost , field : FieldValue , ) : Any ?
+fun register ( renderer : RendererFieldHandler ) : Code ?
+open fun generate ( valueArgumentsByIndex : List < ResolvedValueArgument > , actualArgs : List < ResolvedValueArgument > , calleeDescriptor : CallableDescriptor ? ) : DefaultCallArg
+fun findMemoryAccessFunction ( isRead : Boolean , valueType : IrType ) : IrFunction
+@ Suppress ( "UNCHECKED_CAST" ) fun castToBoolean ( sourceClass : IrClassSymbol , value : IrExpression ) : IrExpression
+@ Suppress ( "UNCHECKED_CAST" ) fun castFromBoolean ( targetClass : IrClassSymbol , value : IrExpression ) : IrExpression
+
+fun loadModuleMetadata ( name : String ) : SerializedMetadata
+fun testTouchLibCommon ( gradleVersion : GradleVersion )
+fun testTouchLibPlatform ( gradleVersion : GradleVersion )
+fun testTouchAppCommon ( gradleVersion : GradleVersion )
+fun testTouchAppPlatform ( gradleVersion : GradleVersion )
+internal fun buildThrowableAsErrorMethod ( ) : ObjCMethod
+@ Test fun `test - simple project - jvmTarget is explicit - and uses correct default` ( )
+public expect fun CoroutineScope . newCoroutineContext ( context : CoroutineContext ) : CoroutineContext
+@ InternalCoroutinesApi public expect fun CoroutineContext . newCoroutineContext ( addedContext : CoroutineContext ) : CoroutineContext
+fun theAnswer ( )
+fun provideApplicationContext ( ) : Context
+val modelHub = ONNXModelHub ( cacheDirectory = File ( "" ) )
+fun main ( ) : Unit
+override fun toString ( )
+fun computeLinesDiff ( oldLines : List < String > , newLines : List < String > , limit : Int = DIFF_LIMIT ) : ComputedLinesDiff
+
+
+
+
+
+
+fun stack1 ( pointer : Layer , filters : Int , blocks : Int , stride1 : Int = 2 , name : String , ) : Layer
+fun stack2 ( pointer : Layer , filters : Int , blocks : Int , stride1 : Int = 2 , name : String ) : Layer
+
+public fun matchEntire ( input : CharSequence ) : MatchResult ?
+fun matches ( input : CharSequence ) : Boolean
+@ SinceKotlin ( "1.4" ) @ WasExperimental ( ExperimentalStdlibApi :: class ) public fun matchAt ( input : CharSequence , index : Int ) : MatchResult ?
+@ SinceKotlin ( "1.4" ) @ WasExperimental ( ExperimentalStdlibApi :: class ) public fun matchesAt ( input : CharSequence , index : Int ) : Boolean
+fun containsMatchIn ( input : CharSequence ) : Boolean
+
+fun replace ( input : CharSequence , transform : ( MatchResult ) -> CharSequence ) : String
+
+public fun find ( input : CharSequence , startIndex : Int = 0 ) : MatchResult ?
+public fun findAll ( input : CharSequence , startIndex : Int = 0 ) : Sequence < MatchResult
+public fun split ( input : CharSequence , limit : Int = 0 ) : List < String
+@ SinceKotlin ( "1.6" ) @ WasExperimental ( ExperimentalStdlibApi :: class ) public fun splitToSequence ( input : CharSequence , limit : Int = 0 ) : Sequence < String
+public fun fromLiteral ( literal : String ) : Regex
+fun escape ( literal : String ) : String
+fun escapeReplacement ( literal : String ) : String
+public expect fun Char . isHighSurrogate ( ) : Boolean
+public expect fun Char . isLowSurrogate ( ) : Boolean
+@ SinceKotlin ( "1.2" ) @ Deprecated ( "" , ReplaceWith ( "" ) ) @ DeprecatedSinceKotlin ( warningSince = "1.4" , errorSince = "1.5" ) public expect fun String ( chars : CharArray ) : String
+@ SinceKotlin ( "1.2" ) @ Deprecated ( "" , ReplaceWith ( "" ) ) @ DeprecatedSinceKotlin ( warningSince = "1.4" , errorSince = "1.5" ) public expect fun String ( chars : CharArray , offset : Int , length : Int ) : String
+@ SinceKotlin ( "1.4" ) public expect fun CharArray . concatToString ( ) : String
+@ SinceKotlin ( "1.4" ) public expect fun CharArray . concatToString ( startIndex : Int = 0 , endIndex : Int = this . size ) : String
+@ SinceKotlin ( "1.4" ) public expect fun String . toCharArray ( ) : CharArray
+@ SinceKotlin ( "1.4" ) public expect fun String . toCharArray ( startIndex : Int = 0 , endIndex : Int = length ) : CharArray
+
+@ SinceKotlin ( "1.4" ) public expect fun ByteArray . decodeToString ( ) : String
+@ SinceKotlin ( "1.4" ) public expect fun ByteArray . decodeToString ( startIndex : Int = 0 , endIndex : Int = this . size , throwOnInvalidSequence : Boolean = false ) : String
+@ SinceKotlin ( "1.4" ) public expect fun String . encodeToByteArray ( ) : ByteArray
+@ SinceKotlin ( "1.4" ) public expect fun String . encodeToByteArray ( startIndex : Int = 0 , endIndex : Int = length , throwOnInvalidSequence : Boolean = false ) : ByteArray
+public expect fun CharSequence . repeat ( n : Int ) : String
+public expect fun String . replace ( oldChar : Char , newChar : Char , ignoreCase : Boolean = false ) : String
+public expect fun String . replace ( oldValue : String , newValue : String , ignoreCase : Boolean = false ) : String
+public expect fun String . replaceFirst ( oldChar : Char , newChar : Char , ignoreCase : Boolean = false ) : String
+public expect fun String . replaceFirst ( oldValue : String , newValue : String , ignoreCase : Boolean = false ) : String
+public expect fun String ? . equals ( other : String ? , ignoreCase : Boolean = false ) : Boolean
+@ SinceKotlin ( "1.2" ) public expect fun String . compareTo ( other : String , ignoreCase : Boolean = false ) : Int
+public expect fun CharSequence . regionMatches ( thisOffset : Int , other : CharSequence , otherOffset : Int , length : Int , ignoreCase : Boolean = false ) : Boolean
+@ SinceKotlin ( "1.9" ) public expect fun String . regionMatches ( thisOffset : Int , other : String , otherOffset : Int , length : Int , ignoreCase : Boolean = false ) : Boolean
+@ SinceKotlin ( "1.4" ) public expect fun String ? . toBoolean ( ) : Boolean
+public expect fun String . toByte ( ) : Byte
+public expect fun String . toByte ( radix : Int ) : Byte
+fun String . toShort ( ) : Short
+public expect fun String . toShort ( radix : Int ) : Short
+public expect fun String . toInt ( ) : Int
+public expect fun String . toInt ( radix : Int ) : Int
+public expect fun String . toLong ( ) : Long
+public expect fun String . toLong ( radix : Int ) : Long
+public expect fun String . toDouble ( ) : Double
+public expect fun String . toFloat ( ) : Float
+public expect fun String . toDoubleOrNull ( ) : Double ?
+public expect fun String . toFloatOrNull ( ) : Float ?
+@ SinceKotlin ( "1.2" ) public expect fun Byte . toString ( radix : Int ) : String
+@ SinceKotlin ( "1.2" ) public expect fun Short . toString ( radix : Int ) : String
+@ SinceKotlin ( "1.2" ) public expect fun Int . toString ( radix : Int ) : String
+@ SinceKotlin ( "1.2" ) public expect fun Long . toString ( radix : Int ) : String
+
+
+if ( jacocoVersion != null ) { jacocoVersion = "" } logger . debug ( "" ) }
+fun useJacoco ( version : String )
+}
+
+
+fun joinFlow ( flows : Collection < PersistentFlow > , statementFlows : Collection < PersistentFlow > , union : Boolean ) : MutableFlow
+public fun < T > createValueColumn ( name : String , values : List < T > , type : KType , infer : Infer = Infer . None , defaultValue : T ? = null , ) : ValueColumn < T
+
+fun getQualifiedClassName ( index : Int ) : String
+fun ControlFlowGraph . contains ( firCandidates : Set < FirElement > ) : Boolean
+fun findLast ( fir : FirElement ) : CFGNode < * > ?
+internal fun processEvent ( marker : Any )
+override fun scheduleResumeAfterDelay ( timeMillis : Long , continuation : CancellableContinuation < Unit > )
+override fun invokeOnTimeout ( timeMillis : Long , block : Runnable , context : CoroutineContext ) : DisposableHandle
+@ Suppress ( "" ) public override fun timeoutMessage ( timeout : Duration ) : String
+public operator fun < T > java . util . Enumeration < T > . iterator ( ) : Iterator < T
+
+
+
+fun InputStreamReader . readSourceFileWithMapping ( ) : Pair < CharSequence , KtSourceFileLinesMapping
+fun CharSequence . toSourceLinesMapping ( ) : KtSourceFileLinesMapping
+fun api ( dependencyNotation : Any ) : Dependency ?
+fun api ( dependencyNotation : String , configure : ExternalModuleDependency . ( ) -> Unit ) : ExternalModuleDependency
+fun api ( dependencyNotation : String , configure : Action < ExternalModuleDependency > ) : ExternalModuleDependency
+fun < T : Dependency > api ( dependency : T , configure : T . ( ) -> Unit ) : T
+fun < T : Dependency > api ( dependency : T , configure : Action < T > )
+fun implementation ( dependencyNotation : Any ) : Dependency ?
+fun implementation ( dependencyNotation : String , configure : ExternalModuleDependency . ( ) -> Unit ) : ExternalModuleDependency
+fun implementation ( dependencyNotation : String , configure : Action < ExternalModuleDependency > )
+fun < T : Dependency > implementation ( dependency : T , configure : T . ( ) -> Unit ) : T
+fun < T : Dependency > implementation ( dependency : T , configure : Action < T > )
+fun compileOnly ( dependencyNotation : Any ) : Dependency ?
+fun compileOnly ( dependencyNotation : String , configure : ExternalModuleDependency . ( ) -> Unit ) : ExternalModuleDependency
+fun compileOnly ( dependencyNotation : String , configure : Action < ExternalModuleDependency > )
+fun < T : Dependency > compileOnly ( dependency : T , configure : T . ( ) -> Unit ) : T
+fun < T : Dependency > compileOnly ( dependency : T , configure : Action < T > )
+fun runtimeOnly ( dependencyNotation : Any ) : Dependency ?
+fun runtimeOnly ( dependencyNotation : String , configure : ExternalModuleDependency . ( ) -> Unit ) : ExternalModuleDependency
+fun runtimeOnly ( dependencyNotation : String , configure : Action < ExternalModuleDependency > )
+fun < T : Dependency > runtimeOnly ( dependency : T , configure : T . ( ) -> Unit ) : T
+fun < T : Dependency > runtimeOnly ( dependency : T , configure : Action < T > )
+
+
+fun project ( path : String , configuration : String ? = null ) : ProjectDependency
+fun project ( notation : Map < String , Any ? > ) : ProjectDependency
+fun enforcedPlatform ( notation : Any ) : Dependency
+fun enforcedPlatform ( notation : Any , configureAction : Action < in Dependency > ) : Dependency
+@ Deprecated ( "" , replaceWith = ReplaceWith ( "" ) ) fun platform ( notation : Any ) : Dependency
+fun platform ( notation : Any , configureAction : Action < in Dependency > ) : Dependency
+@ Deprecated ( "" ) fun npm ( name : String , version : String , generateExternals : Boolean ) : Dependency
+fun npm ( name : String , version : String ) : Dependency
+fun npm ( name : String , directory : File , generateExternals : Boolean ) : Dependency
+fun npm ( name : String , directory : File ) : Dependency
+@ Deprecated ( "" ) fun npm ( directory : File , generateExternals : Boolean ) : Dependency
+fun npm ( directory : File ) : Dependency
+fun devNpm ( name : String , version : String ) : Dependency
+
+
+@ Deprecated ( "" ) fun optionalNpm ( name : String , version : String , generateExternals : Boolean ) : Dependency
+fun optionalNpm ( name : String , version : String ) : Dependency
+@ Deprecated ( "" ) fun optionalNpm ( name : String , directory : File , generateExternals : Boolean ) : Dependency
+
+@ Deprecated ( "" ) fun optionalNpm ( directory : File , generateExternals : Boolean ) : Dependency
+fun optionalNpm ( directory : File ) : Dependency
+fun peerNpm ( name : String , version : String ) : Dependency
+
+@ InternalCoroutinesApi public fun tryResume ( value : T , idempotent : Any ? = null ) : Any ?
+@ InternalCoroutinesApi public fun tryResume ( value : T , idempotent : Any ? , onCancellation : ( ( cause : Throwable ) -> Unit ) ? ) : Any ?
+@ InternalCoroutinesApi public fun tryResumeWithException ( exception : Throwable ) : Any ?
+@ InternalCoroutinesApi public fun completeResume ( token : Any )
+@ InternalCoroutinesApi public fun initCancellability ( )
+public fun cancel ( cause : Throwable ? = null ) : Boolean
+
+@ ExperimentalCoroutinesApi public fun CoroutineDispatcher . resumeUndispatched ( value : T )
+@ ExperimentalCoroutinesApi public fun CoroutineDispatcher . resumeUndispatchedWithException ( exception : Throwable )
+
+internal fun < T > CancellableContinuation < T > . invokeOnCancellation ( handler : ( cause : Throwable ) -> Unit )
+
+internal suspend inline fun < T > suspendCancellableCoroutineReusable ( crossinline block : ( CancellableContinuationImpl < T > ) -> Unit ) : T
+
+fun Any ? . transformKotlinToJvm ( expectedType : Class < * > ) : Any ?
+public fun Buffer . snapshot ( ) : ByteString
+public fun Buffer . indexOf ( byte : Byte , startIndex : Long = 0 , endIndex : Long = size ) : Long
+fun encodeBufferedImage ( image : BufferedImage ) : JsonPrimitive
+@ kotlin . internal . InlineOnly public inline operator fun < V , V1 : V > Map < in String , @ Exact V > . getValue ( thisRef : Any ? , property : KProperty < * > ) : V1
+fun < V , V1 : V > MutableMap < in String , out V > . getValue ( thisRef : Any ? , property : KProperty < * > ) : V1
+put ( thisRef , value )
+public fun Source . readShortLe ( ) : Short
+public fun Source . readIntLe ( ) : Int
+public fun Source . readLongLe ( ) : Long
+@ OptIn ( InternalIoApi :: class ) public fun Source . readDecimalLong ( ) : Long
+@ OptIn ( InternalIoApi :: class ) public fun Source . readHexadecimalUnsignedLong ( ) : Long
+
+public fun Source . readByteArray ( ) : ByteArray
+public fun Source . readByteArray ( byteCount : Int ) : ByteArray
+
+public fun Source . readUByte ( ) : UByte
+public fun Source . readUShort ( ) : UShort
+public fun Source . readUInt ( ) : UInt
+public fun Source . readULong ( ) : ULong
+fun Source . readUShortLe ( ) : UShort
+public fun Source . readUIntLe ( ) : UInt
+public fun Source . readULongLe ( ) : ULong
+public fun Source . readFloat ( ) : Float
+public fun Source . readDouble ( ) : Double
+public fun Source . readFloatLe ( ) : Float
+public fun Source . readDoubleLe ( ) : Double
+@ OptIn ( InternalIoApi :: class ) public fun Source . startsWith ( byte : Byte ) : Boolean
+internal fun Ops . withExpandedDimensions ( input : Operand < Float > , operation : ( Operand < Float > ) -> Operand < Float > ) : Operand < Float
+@ ExperimentalForeignApi public fun asCPointer ( ) : COpaquePointer ?
+@ FreezingIsDeprecated @ ObsoleteWorkersApi public inline fun < reified T > DetachedObjectGraph < T > . attach ( ) : T
+fun getStackTraceElement ( ) : StackTraceElement ?
+fun upSample ( tf : Ops , input : Operand < Float > ) : Operand < Float
+internal fun repeat ( tf : Ops , value : Operand < Float > , repeats : Int , axis : Int ) : Operand < Float
+fun IrBuilderWithScope . add ( sourceFile : SourceFile , node : ExpressionNode , variables : List < IrTemporaryVariable > , call : IrBuilderWithScope . ( IrExpression , List < IrTemporaryVariable > ) -> IrExpression , ) : IrExpression
+fun IrBuilderWithScope . nested ( sourceFile : SourceFile , node : AndNode , index : Int , variables : List < IrTemporaryVariable > , call : IrBuilderWithScope . ( IrExpression , List < IrTemporaryVariable > ) -> IrExpression , ) : IrExpression
+fun IrBuilderWithScope . nested ( sourceFile : SourceFile , node : OrNode , index : Int , variables : List < IrTemporaryVariable > , call : IrBuilderWithScope . ( IrExpression , List < IrTemporaryVariable > ) -> IrExpression , ) : IrExpression
+fun refineDeclarationModality ( modifierListOwner : KtModifierListOwner , declaration : DeclarationDescriptor ? , containingDeclaration : DeclarationDescriptor ? , currentModality : Modality , isImplicitModality : Boolean ) : Modality ?
+fun List < Documentable > . filterOutActualTypeAlias ( ) : List < Documentable
+public open fun pageForClasslikes ( documentables : List < Documentable > ) : ClasslikePageNode
+fun contentForClasslikesAndEntries ( documentables : List < Documentable > ) : ContentGroup
+fun sortDivergentElementsDeterministically ( elements : List < Documentable > ) : List < Documentable
+val scope = SupervisorScope ( )
+fun PsiClass . createDefaultConstructor ( ) : PsiMethod
+fun Collection < PsiAnnotation > . findJvmFieldAnnotation ( ) : Annotations . Annotation ?
+fun JvmAnnotationAttributeValue . toValue ( ) : AnnotationParameterValue ?
+fun Scheduler . asCoroutineDispatcher ( ) : CoroutineDispatcher
+fun CoroutineDispatcher . asScheduler ( ) : Scheduler
+fun scheduleTask ( block : Runnable , delayMillis : Long , adaptForScheduling : ( Task ) -> Runnable ) : Disposable
+override fun dispatch ( context : CoroutineContext , block : Runnable )
+override fun scheduleResumeAfterDelay ( timeMillis : Long , continuation : CancellableContinuation < Unit > )
+override fun invokeOnTimeout ( timeMillis : Long , block : Runnable , context : CoroutineContext ) : DisposableHandle
+override fun equals ( other : Any ? ) : Boolean
+override fun hashCode ( ) : Int
+fun < R , D > accept ( visitor : IrElementVisitor < R , D > , data : D ) : R
+fun < D > transform ( transformer : IrElementTransformer < D > , data : D ) : IrElement
+fun < D > acceptChildren ( visitor : IrElementVisitor < Unit , D > , data : D )
+fun < D > transformChildren ( transformer : IrElementTransformer < D > , data : D )
+fun fixOffsetRepresentation ( isoString : String ) : String
+fun instrument ( resultDir : File , originalDirs : List < File ? > , filters : ClassFilters , countHits : Boolean )
+
+generateHtmlReport ( htmlDir , charsetName , binaryReports , classfileDirs , sourceDirs , title , filters )
+fun verify ( rules : List < Rule > , tempDir : File , filters : ClassFilters , binaryReports : List < File > , classfileDirs : List < File > ) : List < RuleViolations
+fun aggregateIc ( icFile : File , filters : ClassFilters , tempDir : File , binaryReports : List < File > , classfileDirs : List < File > )
+
+internal fun getOutputDepth ( numberOfChannels : Long ) : Long
+internal fun computeKernelShape ( numberOfChannels : Long ) : Shape
+protected open fun computeBiasShape ( numberOfChannels : Long ) : Shape
+}
+}
+protected abstract fun convImplementation ( tf : Ops , input : Operand < Float > ) : Operand < Float
+
+fun loadClass ( ) : Class < *
+public fun < T > predict ( inputData : FloatData , extractResult : ( R ) -> T ) : T
+public fun < T > predict ( inputs : Map < String , FloatData > , outputs : List < String > , extractResult : ( R ) -> T ) : T
+}
+public inline fun < D : Dimension > dimensionOf ( dim : Int ) : D
+public inline fun < reified D : Dimension > dimensionClassOf ( dim : Int = - 1 ) : D
+fun < T : Any > KtNDArray < T > . all ( ) : Boolean
+fun < T : Any > KtNDArray < T > . all ( axis : IntArray ) : KtNDArray < Boolean
+fun < T : Any > KtNDArray < T > . all ( predicate : ( T ) -> Boolean ) : Boolean
+fun < T : Any > KtNDArray < T > . any ( ) : Boolean
+fun < T : Any > KtNDArray < T > . any ( axis : Int ) : KtNDArray < Boolean
+fun < T : Any > KtNDArray < T > . any ( predicate : ( T ) -> Boolean ) : Boolean
+fun < T : Number > KtNDArray < T > . argMax ( ) : Long
+fun < T : Number > KtNDArray < T > . argMax ( axis : Int ) : KtNDArray < Long
+fun < T : Number > KtNDArray < T > . argMin ( ) : Long
+fun < T : Number > KtNDArray < T > . argMin ( axis : Int ) : KtNDArray < Long
+fun < T : Any > KtNDArray < T > . argSort ( axis : Int ? = - 1 , kind : String ? = null ) : KtNDArray < Long
+fun < T : Any > KtNDArray < T > . byteSwap ( inplace : Boolean = false ) : KtNDArray < T
+fun < E : Number , T : Number > KtNDArray < T > . choose ( choices : Array < E > , mode : Mode = Mode .RAISE ) : KtNDArray < T
+fun < T : Any > KtNDArray < T > . clip ( min : T ? = null , max : T ? = null ) : KtNDArray < T
+fun < T : Any > KtNDArray < T > . compress ( condition : BooleanArray , axis : Int ? = null ) : KtNDArray < T
+fun < T : Any > KtNDArray < T > . copy ( order : Order = Order . C ) : KtNDArray < T
+fun < T : Any > KtNDArray < T > . cumProd ( axis : Int ? = null ) : KtNDArray < T
+fun < T : Any > KtNDArray < T > . cumSum ( axis : Int ? = null ) : KtNDArray < T
+fun < T : Any > KtNDArray < T > . diagonal ( offset : Int = 0 , axis1 : Int = 0 , axis2 : Int = 1 ) : KtNDArray < T
+fun < T : Number > KtNDArray < Byte > . dot ( b : KtNDArray < T > ) : KtNDArray < T
+fun < T : Any > KtNDArray < T > . dump ( file : String )
+fun < T : Any > KtNDArray < T > . dump ( ) : String
+fill ( this , value )
+fun < T : Any > KtNDArray < T > . flatten ( order : Order = Order . C ) : KtNDArray < T
+fun < T : Any , reified R : Any > KtNDArray < T > . getfield ( offset : Int = 0 ) : KtNDArray < R
+inline fun < reified T : Any > KtNDArray < T > . item ( vararg arg : Int ) : T
+fun < reified T : Number > KtNDArray < T > . max ( ) : T ?
+fun < T : Number > KtNDArray < T > . mean ( ) : Double
+fun < T : Number > KtNDArray < T > . mean ( axis : IntArray ) : KtNDArray < Double
+inline fun < reified T : Any > KtNDArray < T > . min ( ) : T ?
+fun < T : Any > KtNDArray < T > . min ( axis : Int ) : KtNDArray < T
+fun < T : Any > KtNDArray < T > . nonZero ( ) : Array < Any
+fun < T : Any > KtNDArray < T > . partition ( kth : IntArray , axis : Int = - 1 , kind : String = "" )
+inline fun < reified T : Number > KtNDArray < T > . prod ( ) : T
+fun < T : Number > KtNDArray < T > . prod ( axis : Int ) : KtNDArray < T
+fun < T : Number > KtNDArray < T > . ptp ( vararg axis : Int ? = emptyArray ( ) ) : KtNDArray < T
+fun < T : Any > KtNDArray < T > . put ( indices : IntArray , values : Array < T > , mode : Mode = Mode .RAISE )
+fun < T : Any > KtNDArray < T > . ravel ( order : Order = Order . C ) : KtNDArray < T
+fun < T : Any > KtNDArray < T > . repeat ( reps : Int , axis : Int ? = null ) : KtNDArray < T
+fun < T : Any > KtNDArray < T > . reshape ( vararg dims : Int , order : Order = Order . C ) : KtNDArray < T
+fun < T : Any > KtNDArray < T > . resize ( vararg dims : Int )
+fun < T : Number > KtNDArray < T > . round ( decimals : Int = 0 ) : KtNDArray < T
+fun < T : Any > KtNDArray < T > . searchSorted ( v : Int , side : String = "" ) : Long
+fun < T : Any , reified R : Any > KtNDArray < T > . setfield ( value : R , offset : Int = 0 )
+fun < T : Any > KtNDArray < T > . setFlags ( write : Int ? = null , align : Int ? = null , uic : Int ? = null )
+fun < T : Any > KtNDArray < T > . sort ( axis : Int = - 1 , kind : KindSort ? = null )
+fun < T : Any > KtNDArray < T > . squeeze ( axis : Int ? = null ) : KtNDArray < T
+fun < T : Number > KtNDArray < T > . std ( ddof : Int = 0 ) : Double
+fun < T : Number > KtNDArray < T > . sum ( ) : T ?
+fun < T : Number > KtNDArray < T > . sum ( axis : Int ) : KtNDArray < T
+fun < T : Any > KtNDArray < T > . swapAxes ( axis1 : Int , axis2 : Int ) : KtNDArray < T
+fun < T : Any > KtNDArray < T > . take ( indices : KtNDArray < Long > , axis : Int ? = null , mode : Mode = Mode .RAISE ) : KtNDArray < T
+fun < T : Any > KtNDArray < T > . toBytes ( order : Order = Order . C ) : ByteArray
+fun < T : Any > KtNDArray < T > . toFile ( file : File , sep : String = "" , format : String = "" )
+fun < T : Any > KtNDArray < T > . trace ( offset : Int = 0 , axis1 : Int = 0 , axis2 : Int = 1 ) : KtNDArray < T
+fun < T : Any > KtNDArray < T > . transpose ( vararg axes : Int ? = emptyArray ( ) ) : KtNDArray < T
+fun < T : Number > KtNDArray < T > . `var` ( ddof : Int = 0 ) : Double
+fun < T : Any ,NT : Any > KtNDArray < T > . view ( ) : KtNDArray <NT
+@ Deprecated ( "" , ReplaceWith ( "" ) , DeprecationLevel . ERROR ) fun postProcess ( )
+val ( train , test ) = mnist ( )
+fun main ( ) : Unit
+fun analyze ( project : Project , configuration : CompilerConfiguration ) : Boolean ?
+abstract fun isApplicable ( configuration : CompilerConfiguration ) : Boolean
+abstract fun doAnalysis ( configuration : CompilerConfiguration ) : Boolean
+
+
+
+
+fun isValid ( sqlQuery : String ) : Boolean
+
+public fun DataFrame . Companion . readResultSet ( resultSet : ResultSet , connection : Connection , limit : Int = DEFAULT_LIMIT ) : AnyFrame
+
+
+fun getSchemaForSqlTable ( dbConfig : DatabaseConfiguration , tableName : String ) : DataFrameSchema
+
+fun getSchemaForSqlQuery ( dbConfig : DatabaseConfiguration , sqlQuery : String ) : DataFrameSchema
+
+fun getSchemaForResultSet ( resultSet : ResultSet , dbType : DbType ) : DataFrameSchema
+fun getSchemaForResultSet ( resultSet : ResultSet , connection : Connection ) : DataFrameSchema
+fun getSchemaForAllSqlTables ( dbConfig : DatabaseConfiguration ) : List < DataFrameSchema
+fun getSchemaForAllSqlTables ( connection : Connection ) : List < DataFrameSchema
+
+fun getTableColumnsMetadata ( rs : ResultSet ) : MutableList < TableColumnMetadata
+fun manageColumnNameDuplication ( columnNameCounter : MutableMap < String , Int > , originalName : String ) : String
+
+fun generateKType ( dbType : DbType , tableColumnMetadata : TableColumnMetadata ) : KType
+fun makeCommonSqlToKTypeMapping ( tableColumnMetadata : TableColumnMetadata ) : KType
+fun CPointer < CPointed > . customExtension ( )
+
+fun main ( ) : Unit
+fun IrFunction . wasAlreadyCalled ( ) : Boolean
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . a ( href : String ? = null , target : String ? = null , classes : String ? = null , crossinline block : A . ( ) -> Unit = { } , ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . abbr ( classes : String ? = null , crossinline block : ABBR . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . address ( classes : String ? = null , crossinline block : ADDRESS . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . area ( shape : AreaShape ? = null , alt : String ? = null , classes : String ? = null , crossinline block : AREA . ( ) -> Unit = { } , ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . article ( classes : String ? = null , crossinline block : ARTICLE . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . aside ( classes : String ? = null , crossinline block : ASIDE . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . audio ( classes : String ? = null , crossinline block : AUDIO . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . b ( classes : String ? = null , crossinline block : B . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . base ( classes : String ? = null , crossinline block : BASE . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . bdi ( classes : String ? = null , crossinline block : BDI . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . bdo ( classes : String ? = null , crossinline block : BDO . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . blockQuote ( classes : String ? = null , crossinline block : BLOCKQUOTE . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . body ( classes : String ? = null , crossinline block : BODY . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . br ( classes : String ? = null , crossinline block : BR . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . button ( formEncType : ButtonFormEncType ? = null , formMethod : ButtonFormMethod ? = null , name : String ? = null , type : ButtonType ? = null , classes : String ? = null , crossinline block : BUTTON . ( ) -> Unit = { } , ) : T
+@ HtmlTagMarker public fun < T , C : TagConsumer < T > > C . canvas ( classes : String ? = null , content : String = "" ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . canvas ( classes : String ? = null , crossinline block : CANVAS . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . caption ( classes : String ? = null , crossinline block : CAPTION . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . cite ( classes : String ? = null , crossinline block : CITE . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . code ( classes : String ? = null , crossinline block : CODE . ( ) -> Unit = { } ) : T
+
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . colGroup ( classes : String ? = null , crossinline block : COLGROUP . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . dataList ( classes : String ? = null , crossinline block : DATALIST . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . dd ( classes : String ? = null , crossinline block : DD . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . DEL ( classes : String ? = null , crossinline block : DEL . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . details ( classes : String ? = null , crossinline block : DETAILS . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . dfn ( classes : String ? = null , crossinline block : DFN . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . dialog ( classes : String ? = null , crossinline block : DIALOG . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . div ( classes : String ? = null , crossinline block : DIV . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . dl ( classes : String ? = null , crossinline block : DL . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . dt ( classes : String ? = null , crossinline block : DT . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . em ( classes : String ? = null , crossinline block : EM . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . embed ( classes : String ? = null , crossinline block : EMBED . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . fieldSet ( classes : String ? = null , crossinline block : FIELDSET . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . FIGCAPTION ( classes : String ? = null , crossinline block : FIGCAPTION . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . figure ( classes : String ? = null , crossinline block : FIGURE . ( ) -> Unit = { } ) : T
+
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . form ( action : String ? = null , encType : FormEncType ? = null , method : FormMethod ? = null , classes : String ? = null , crossinline block : FORM . ( ) -> Unit = { } , ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . h1 ( classes : String ? = null , crossinline block : H1 . ( ) -> Unit = { } ) : T
+class H2 ( attributesMapOf ( "class" , classes ) , consumer ) . visit ( block )
+class H3 ( attributesMapOf ( "class" , classes ) , consumer ) . visitAndFinalize ( this , block )
+class H4 ( attributesMapOf ( "class" , classes ) , consumer ) . visitAndFinalize ( this , block )
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . h5 ( classes : String ? = null , crossinline block : H5 . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . h6 ( classes : String ? = null , crossinline block : H6 . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker @ Suppress ( "DEPRECATION" ) @ Deprecated ( "" ) public fun < T , C : TagConsumer < T > > C . head ( content : String = "" ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . head ( crossinline block : HEAD . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . `header` ( classes : String ? = null , crossinline block : HEADER . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . hr ( classes : String ? = null , crossinline block : HR . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker @ Suppress ( "DEPRECATION" ) @ Deprecated ( "" ) public fun < T , C : TagConsumer < T > > C . html ( content : String = "" , namespace : String ? = null ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . html ( namespace : String ? = null , crossinline block : HTML . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . i ( classes : String ? = null , crossinline block : I . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public fun < T , C : TagConsumer < T > > C . iframe ( sandbox : IframeSandbox ? = null , classes : String ? = null , content : String = "" , ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . iframe ( sandbox : IFRAME ? = null , classes : String ? = null , crossinline block : IFRAME . ( ) -> Unit = { } , ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . img ( alt : String ? = null , src : String ? = null , loading ? : ImgLoading ? = null , classes : String ? = null , crossinline block : IMG . ( ) -> Unit = { } , ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . input ( type : InputType ? = null , formEncType : InputFormEncType ? = null , formMethod : InputFormMethod ? = null , name : String ? = null , classes : String ? = null , crossinline block : INPUT . ( ) -> Unit = { } , ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . ins ( classes : String ? = null , crossinline block : INS . ( ) -> Unit = { } ) : T
+class KBD ( attributesMapOf ( "class" , classes ) , consumer ) . visit ( block )
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . keyGen ( keyType : KeyGenKeyType ? = null , classes : String ? = null , crossinline block : KEYGEN . ( ) -> Unit = { } , ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . label ( classes : String ? = null , crossinline block : LABEL . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . legend ( classes : String ? = null , crossinline block : LEGEND . ( ) -> Unit = { } ) : T
+class LI ( attributesMapOf ( "class" , classes ) , consumer ) . visit ( block )
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . link ( href : String ? = null , rel : String ? = null , type : String ? = null , crossinline block : LINK . ( ) -> Unit = { } , ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . main ( classes : String ? = null , crossinline block : MAIN . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . map ( name : String ? = null , classes : String ? = null , crossinline block : MAP . ( ) -> Unit = { } , ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . mark ( classes : String ? = null , crossinline block : MARK . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . mETA ( name : String ? = null , content : String ? = null , charset : String ? = null , crossinline block : META . ( ) -> Unit = { } , ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . meter ( classes : String ? = null , crossinline block : METER . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . nav ( classes : String ? = null , crossinline block : NAV . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . noScript ( classes : String ? = null , crossinline block : NOSCRIPT . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . htmlObject ( classes : String ? = null , crossinline block : OBJECT . ( ) -> Unit = { } ) : T
+class OL ( attributesMapOf ( "class" , classes ) , consumer ) . visit ( block )
+OPTGROUP ( attributesMapOf ( "" , label , "class" , classes ) , consumer ) . visit ( block )
+@ HtmlTagMarker public fun < T , C : TagConsumer < T > > C . option ( classes : String ? = null , content : String = "" ) : T
+OPTION ( attributesMapOf ( "class" , classes ) , consumer ) . visit ( block )
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . output ( classes : String ? = null , crossinline block : OUTPUT . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . p ( classes : String ? = null , crossinline block : P . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . `param` ( name : String ? = null , `value` : String ? = null , crossinline block : PARAM . ( ) -> Unit = { } , ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . picture ( crossinline block : PICTURE . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . pre ( classes : String ? = null , crossinline block : PRE . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . progress ( classes : String ? = null , crossinline block : PROGRESS . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . q ( classes : String ? = null , crossinline block : Q . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . rp ( classes : String ? = null , crossinline block : RP . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . rt ( classes : String ? = null , crossinline block : RT . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . ruby ( classes : String ? = null , crossinline block : RUBY . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . s ( classes : String ? = null , crossinline block : S . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . samp ( classes : String ? = null , crossinline block : SAMP . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker @ Suppress ( "DEPRECATION" ) @ Deprecated ( "" ) public fun < T , C : TagConsumer < T > > C . script ( type : String ? = null , src : String ? = null , crossorigin : ScriptCrossorigin ? = null , content : String = "" , ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . script ( type : String ? = null , src : String ? = null , crossorigin : ScriptCrossorigin ? = null , crossinline block : SCRIPT . ( ) -> Unit = { } , ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . section ( classes : String ? = null , crossinline block : SECTION . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . select ( classes : String ? = null , crossinline block : SELECT . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . small ( classes : String ? = null , crossinline block : SMALL . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . source ( classes : String ? = null , crossinline block : SOURCE . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . span ( classes : String ? = null , crossinline block : SPAN . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . strong ( classes : String ? = null , crossinline block : STRONG . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker @ Suppress ( "DEPRECATION" ) @ Deprecated ( "" ) public fun < T , C : TagConsumer < T > > C . style ( type : String ? = null , content : String = "" ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . style ( type : String ? = null , crossinline block : STYLE . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . sub ( classes : String ? = null , crossinline block : SUB . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . summary ( classes : String ? = null , crossinline block : SUMMARY . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . sup ( classes : String ? = null , crossinline block : SUP . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . table ( classes : String ? = null , crossinline block : TABLE . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . tbody ( classes : String ? = null , crossinline block : TBODY . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . td ( classes : String ? = null , crossinline block : TD . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . template ( classes : String ? = null , crossinline block : TEMPLATE . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public fun < T , C : TagConsumer < T > > C . textArea ( rows : String ? = null , cols : String ? = null , wrap : TextAreaWrap ? = null , classes : String ? = null , content : String = "" , ) : T
+TEXTAREA ( attributesMapOf ( "" , rows , "" , cols , "" , wrap ? . enumEncode ( ) , "class" , classes ) , consumer ) . visit ( block )
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . tfoot ( classes : String ? = null , crossinline block : TFOOT . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . th ( scope : ThScope ? = null , classes : String ? = null , crossinline block : TH . ( ) -> Unit = { } , ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . thead ( classes : String ? = null , crossinline block : THEAD . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . time ( classes : String ? = null , crossinline block : TIME . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public fun < T , C : TagConsumer < T > > C . title ( content : String = "" ) : T
+. TITLE ( emptyMap , this ) . visitAndFinalize ( this , block )
+. TR ( attributesMapOf ( "class" , classes ) , consumer ) . visit ( block )
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . u ( classes : String ? = null , crossinline block : U . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . ul ( classes : String ? = null , crossinline block : UL . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . htmlVar ( classes : String ? = null , crossinline block : VAR . ( ) -> Unit = { } ) : T
+@ HtmlTagMarker public inline fun < T , C : TagConsumer < T > > C . video ( classes : String ? = null , crossinline block : VIDEO . ( ) -> Unit = { } ) : T
+override fun toString ( ) : String
+internal fun toStringInternalImpl ( ) : String ?
+val ktFile = tmpdir . resolve ( "" ) . also { it . writeText ( "" ) } val classFile = tmpdir . resolve ( "" ) AbstractCliTest . executeCompilerGrabOutput ( K2JSCompiler ( ) , listOf ( ktFile . path , "-d" , classFile . path , "" ) ) assertEquals ( "" , classFile . readText ( ) ) }
+val fooKt = tmpdir . resolve ( "" ) . also { it . writeText ( "" ) }
+fun reset ( )
+fun saveGlobalState ( )
+fun restoreGlobalState ( )
+resources . clear ( )
+fun findCommonSuperTypeOrIntersectionType ( types : Collection < SimpleType > , mode : Mode ) : SimpleType ?
+fun CompiledProject . assertTestResults ( testReportName : String , vararg testReports : TestReport )
+fun CompiledProject . getOutputForTask ( taskPath : String ) : String
+fun BaseContinuationImpl . getStackTraceElementImpl ( ) : StackTraceElement ?
+fun BaseContinuationImpl . getSpilledVariableFieldMapping ( ) : Array < String > ?
+fun resolveAndCheckFir ( session : FirSession , firFiles : List < FirFile > , diagnosticsReporter : BaseDiagnosticsCollector ) : ModuleCompilerAnalyzedOutput
+val modelHub = ONNXModelHub ( cacheDirectory = File ( "" ) )
+fun main ( ) : Unit
+
+fun main ( ) : Unit
+val getter = this . fir . getter ? : return null
+fun ImageRecognitionModelBase < Bitmap > . predictObject ( imageProxy : ImageProxy ) : String
+public fun ImageRecognitionModelBase < Bitmap > . predictTopNLabels ( imageProxy : ImageProxy , topN : Int = 5 ) : List < Pair < String , Float >
+fun ByteString . decodeToString ( charset : Charset ) : String
+public fun String . encodeToByteString ( charset : Charset ) : ByteString
+public fun < T > alpha ( column : ColumnReference < T > , parameters : LetsPlotNonPositionalMappingParametersContinuous < T , Double > ( ) -> Unit = { } ) : NonPositionalMapping < T , Double
+public fun < T > alpha ( column : KProperty < T > , parameters : LetsPlotNonPositionalMappingParametersContinuous < T , Double > ( ) -> Unit = { } ) : NonPositionalMapping < T , Double
+public fun alpha ( column : String , parameters : LetsPlotNonPositionalMappingParametersContinuous < Any ? , Double > ( ) -> Unit = { } ) : NonPositionalMapping < Any ? , Double
+public fun < T > alpha ( values : Iterable < T > , name : String ? = null , parameters : LetsPlotNonPositionalMappingParametersContinuous < T , Double > ( ) -> Unit = { } ) : NonPositionalMapping < T , Double
+public fun < T > alpha ( values : DataColumn < T > , parameters : LetsPlotNonPositionalMappingParametersContinuous < T , Double > ( ) -> Unit = { } ) : NonPositionalMapping < T , Double
+fun createDetectedObjectsPanel ( bufferedImage : BufferedImage , detectedObjects : List < DetectedObject > ) : JPanel
+fun createDetectedPosePanel ( bufferedImage : BufferedImage , detectedPose : DetectedPose ) : JPanel
+
+
+}
+}
+resumeWith ( result )
+public fun < R > start ( start : CoroutineStart , receiver : R , block : suspend R . ( ) -> T )
+fun DefaultKotlinSourceSet . addDependencyForLegacyImport ( libraries : FileCollection )
+funQualifyInternalName ( declaration : IrDeclaration ) : String
+fun Any . toHtmlLikeString ( ) : String
+@ SinceKotlin ( "1.4" ) public fun IntProgression . first ( ) : Int
+@ SinceKotlin ( "1.4" ) public fun LongProgression . first ( ) : Long
+@ SinceKotlin ( "1.4" ) public fun CharProgression . first ( ) : Char
+@ SinceKotlin ( "1.4" ) public fun IntProgression . firstOrNull ( ) : Int ?
+@ SinceKotlin ( "1.4" ) public fun LongProgression . firstOrNull ( ) : Long ?
+@ SinceKotlin ( "1.4" ) public fun CharProgression . firstOrNull ( ) : Char ?
+@ SinceKotlin ( "1.4" ) public fun IntProgression . last ( ) : Int
+@ SinceKotlin ( "1.4" ) public fun LongProgression . last ( ) : Long
+@ SinceKotlin ( "1.4" ) public fun CharProgression . last ( ) : Char
+@ SinceKotlin ( "1.4" ) public fun IntProgression . lastOrNull ( ) : Int ?
+@ SinceKotlin ( "1.4" ) public fun LongProgression . lastOrNull ( ) : Long ?
+@ SinceKotlin ( "1.4" ) public fun CharProgression . lastOrNull ( ) : Char ?
+@ SinceKotlin ( "1.3" ) @ kotlin . internal . InlineOnly public inline fun IntRange . random ( ) : Int
+@ SinceKotlin ( "1.3" ) @ kotlin . internal . InlineOnly public inline fun LongRange . random ( ) : Long
+@ SinceKotlin ( "1.3" ) @ kotlin . internal . InlineOnly public inline fun CharRange . random ( ) : Char
+@ SinceKotlin ( "1.3" ) public fun IntRange . random ( random : Random ) : Int
+@ SinceKotlin ( "1.3" ) public fun LongRange . random ( random : Random ) : Long
+
+@ SinceKotlin ( "1.4" ) @ kotlin . internal . InlineOnly public inline fun IntRange . randomOrNull ( ) : Int ?
+@ SinceKotlin ( "1.4" ) @ kotlin . internal . InlineOnly public inline fun LongRange . randomOrNull ( ) : Long ?
+@ SinceKotlin ( "1.4" ) @ kotlin . internal . InlineOnly public inline fun CharRange . randomOrNull ( ) : Char ?
+@ SinceKotlin ( "1.4" ) public fun IntRange . randomOrNull ( random : Random ) : Int ?
+@ SinceKotlin ( "1.4" ) public fun LongRange . randomOrNull ( random : Random ) : Long ?
+@ SinceKotlin ( "1.4" ) public fun CharRange . randomOrNull ( random : Random ) : Char ?
+@ SinceKotlin ( "1.3" ) @ kotlin . internal . InlineOnly public inline operator fun IntRange . contains ( element : Int ? ) : Boolean
+@ SinceKotlin ( "1.3" ) @ kotlin . internal . InlineOnly public inline operator fun LongRange . contains ( element : Long ? ) : Boolean
+@ SinceKotlin ( "1.3" ) @ kotlin . internal . InlineOnly public inline operator fun CharRange . contains ( element : Char ? ) : Boolean
+@ kotlin . jvm . JvmName ( "" ) public operator fun ClosedRange < Int > . contains ( value : Byte ) : Boolean
+@ kotlin . jvm . JvmName ( "" ) public operator fun ClosedRange < Long > . contains ( value : Byte ) : Boolean
+@ kotlin . jvm . JvmName ( "" ) public operator fun ClosedRange < Short > . contains ( value : Byte ) : Boolean
+@ Deprecated ( "" ) @ DeprecatedSinceKotlin ( warningSince = "1.3" , errorSince = "1.4" , hiddenSince = "1.5" ) @ kotlin . jvm . JvmName ( "" ) public operator fun ClosedRange < Double > . contains ( value : Byte ) : Boolean
+@ Deprecated ( "" ) @ DeprecatedSinceKotlin ( warningSince = "1.3" , errorSince = "1.4" , hiddenSince = "1.5" ) @ kotlin . jvm . JvmName ( "" ) public operator fun ClosedRange < Float > . contains ( value : Byte ) : Boolean
+@ kotlin . jvm . JvmName ( "" ) @ SinceKotlin ( "1.9" ) @ WasExperimental ( ExperimentalStdlibApi :: class ) public operator fun OpenEndRange < Int > . contains ( value : Byte ) : Boolean
+@ kotlin . jvm . JvmName ( "" ) @ SinceKotlin ( "1.9" ) @ WasExperimental ( ExperimentalStdlibApi :: class ) public operator fun OpenEndRange < Long > . contains ( value : Byte ) : Boolean
+@ kotlin . jvm . JvmName ( "" ) @ SinceKotlin ( "1.9" ) @ WasExperimental ( ExperimentalStdlibApi :: class ) public operator fun OpenEndRange < Short > . contains ( value : Byte ) : Boolean
+@ kotlin . internal . InlineOnly public inline operator fun IntRange . contains ( value : Byte ) : Boolean
+@ kotlin . internal . InlineOnly public inline operator fun LongRange . contains ( value : Byte ) : Boolean
+@ Deprecated ( "" ) @ DeprecatedSinceKotlin ( warningSince = "1.3" , errorSince = "1.4" , hiddenSince = "1.5" ) @ kotlin . jvm . JvmName ( "" ) public operator fun ClosedRange < Int > . contains ( value : Double ) : Boolean
+@ Deprecated ( "" ) @ DeprecatedSinceKotlin ( warningSince = "1.3" , errorSince = "1.4" , hiddenSince = "1.5" ) @ kotlin . jvm . JvmName ( "" ) public operator fun ClosedRange < Long > . contains ( value : Double ) : Boolean
+@ Deprecated ( "" ) @ DeprecatedSinceKotlin ( warningSince = "1.3" , errorSince = "1.4" , hiddenSince = "1.5" ) @ kotlin . jvm . JvmName ( "" ) public operator fun ClosedRange < Byte > . contains ( value : Double ) : Boolean
+@ Deprecated ( "" ) @ DeprecatedSinceKotlin ( warningSince = "1.3" , errorSince = "1.4" , hiddenSince = "1.5" ) @ kotlin . jvm . JvmName ( "" ) public operator fun ClosedRange < Short > . contains ( value : Double ) : Boolean
+@ kotlin . jvm . JvmName ( "" ) public operator fun ClosedRange < Float > . contains ( value : Double ) : Boolean
+@ Deprecated ( "" ) @ DeprecatedSinceKotlin ( warningSince = "1.3" , errorSince = "1.4" , hiddenSince = "1.5" ) @ kotlin . jvm . JvmName ( "" ) public operator fun ClosedRange < Int > . contains ( value : Float ) : Boolean
+@ Deprecated ( "" ) @ DeprecatedSinceKotlin ( warningSince = "1.3" , errorSince = "1.4" , hiddenSince = "1.5" ) @ kotlin . jvm . JvmName ( "" ) public operator fun ClosedRange < Long > . contains ( value : Float ) : Boolean
+@ Deprecated ( "" ) @ DeprecatedSinceKotlin ( warningSince = "1.3" , errorSince = "1.4" , hiddenSince = "1.5" ) @ kotlin . jvm . JvmName ( "" ) public operator fun ClosedRange < Byte > . contains ( value : Float ) : Boolean
+@ Deprecated ( "" ) @ DeprecatedSinceKotlin ( warningSince = "1.3" , errorSince = "1.4" , hiddenSince = "1.5" ) @ kotlin . jvm . JvmName ( "" ) public operator fun ClosedRange < Short > . contains ( value : Float ) : Boolean
+@ kotlin . jvm . JvmName ( "" ) public operator fun ClosedRange < Double > . contains ( value : Float ) : Boolean
+@ kotlin . jvm . JvmName ( "" ) @ SinceKotlin ( "1.9" ) @ WasExperimental ( ExperimentalStdlibApi :: class ) public operator fun OpenEndRange < Double > . contains ( value : Float ) : Boolean
+@ kotlin . jvm . JvmName ( "" ) public operator fun ClosedRange < Long > . contains ( value : Int ) : Boolean
+@ kotlin . jvm . JvmName ( "" ) public operator fun ClosedRange < Byte > . contains ( value : Int ) : Boolean
+@ kotlin . jvm . JvmName ( "" ) public operator fun ClosedRange < Short > . contains ( value : Int ) : Boolean
+@ Deprecated ( "" ) @ DeprecatedSinceKotlin ( warningSince = "1.3" , errorSince = "1.4" , hiddenSince = "1.5" ) @ kotlin . jvm . JvmName ( "" ) public operator fun ClosedRange < Double > . contains ( value : Int ) : Boolean
+@ Deprecated ( "" ) @ DeprecatedSinceKotlin ( warningSince = "1.3" , errorSince = "1.4" , hiddenSince = "1.5" ) @ kotlin . jvm . JvmName ( "" ) public operator fun ClosedRange < Float > . contains ( value : Int ) : Boolean
+@ kotlin . jvm . JvmName ( "" ) @ SinceKotlin ( "1.9" ) @ WasExperimental ( ExperimentalStdlibApi :: class ) public operator fun OpenEndRange < Long > . contains ( value : Int ) : Boolean
+@ kotlin . jvm . JvmName ( "" ) @ SinceKotlin ( "1.9" ) @ WasExperimental ( ExperimentalStdlibApi :: class ) public operator fun OpenEndRange < Byte > . contains ( value : Int ) : Boolean
+@ kotlin . jvm . JvmName ( "" ) @ SinceKotlin ( "1.9" ) @ WasExperimental ( ExperimentalStdlibApi :: class ) public operator fun OpenEndRange < Short > . contains ( value : Int ) : Boolean
+@ kotlin . internal . InlineOnly public inline operator fun LongRange . contains ( value : Int ) : Boolean
+@ kotlin . jvm . JvmName ( "" ) public operator fun ClosedRange < Int > . contains ( value : Long ) : Boolean
+@ kotlin . jvm . JvmName ( "" ) public operator fun ClosedRange < Byte > . contains ( value : Long ) : Boolean
+@ kotlin . jvm . JvmName ( "" ) public operator fun ClosedRange < Short > . contains ( value : Long ) : Boolean
+@ Deprecated ( "" ) @ DeprecatedSinceKotlin ( warningSince = "1.3" , errorSince = "1.4" , hiddenSince = "1.5" ) @ kotlin . jvm . JvmName ( "" ) public operator fun ClosedRange < Double > . contains ( value : Long ) : Boolean
+@ Deprecated ( "" ) @ DeprecatedSinceKotlin ( warningSince = "1.3" , errorSince = "1.4" , hiddenSince = "1.5" ) @ kotlin . jvm . JvmName ( "" ) public operator fun ClosedRange < Float > . contains ( value : Long ) : Boolean
+@ kotlin . jvm . JvmName ( "" ) @ SinceKotlin ( "1.9" ) @ WasExperimental ( ExperimentalStdlibApi :: class ) public operator fun OpenEndRange < Int > . contains ( value : Long ) : Boolean
+@ kotlin . jvm . JvmName ( "" ) @ SinceKotlin ( "1.9" ) @ WasExperimental ( ExperimentalStdlibApi :: class ) public operator fun OpenEndRange < Byte > . contains ( value : Long ) : Boolean
+@ kotlin . jvm . JvmName ( "" ) @ SinceKotlin ( "1.9" ) @ WasExperimental ( ExperimentalStdlibApi :: class ) public operator fun OpenEndRange < Short > . contains ( value : Long ) : Boolean
+@ kotlin . internal . InlineOnly public inline operator fun IntRange . contains ( value : Long ) : Boolean
+@ kotlin . jvm . JvmName ( "" ) public operator fun ClosedRange < Int > . contains ( value : Short ) : Boolean
+@ kotlin . jvm . JvmName ( "" ) public operator fun ClosedRange < Long > . contains ( value : Short ) : Boolean
+@ kotlin . jvm . JvmName ( "" ) public operator fun ClosedRange < Byte > . contains ( value : Short ) : Boolean
+@ Deprecated ( "" ) @ DeprecatedSinceKotlin ( warningSince = "1.3" , errorSince = "1.4" , hiddenSince = "1.5" ) @ kotlin . jvm . JvmName ( "" ) public operator fun ClosedRange < Double > . contains ( value : Short ) : Boolean
+@ Deprecated ( "" ) @ DeprecatedSinceKotlin ( warningSince = "1.3" , errorSince = "1.4" , hiddenSince = "1.5" ) @ kotlin . jvm . JvmName ( "" ) public operator fun ClosedRange < Float > . contains ( value : Short ) : Boolean
+@ kotlin . jvm . JvmName ( "" ) @ SinceKotlin ( "1.9" ) @ WasExperimental ( ExperimentalStdlibApi :: class ) public operator fun OpenEndRange < Int > . contains ( value : Short ) : Boolean
+@ kotlin . jvm . JvmName ( "" ) @ SinceKotlin ( "1.9" ) @ WasExperimental ( ExperimentalStdlibApi :: class ) public operator fun OpenEndRange < Long > . contains ( value : Short ) : Boolean
+@ kotlin . jvm . JvmName ( "" ) @ SinceKotlin ( "1.9" ) @ WasExperimental ( ExperimentalStdlibApi :: class ) public operator fun OpenEndRange < Byte > . contains ( value : Short ) : Boolean
+@ kotlin . internal . InlineOnly public inline operator fun IntRange . contains ( value : Short ) : Boolean
+@ kotlin . internal . InlineOnly public inline operator fun LongRange . contains ( value : Short ) : Boolean
+public infix fun Int . downTo ( to : Byte ) : IntProgression
+public infix fun Long . downTo ( to : Byte ) : LongProgression
+public infix fun Byte . downTo ( to : Byte ) : IntProgression
+public infix fun Short . downTo ( to : Byte ) : IntProgression
+public infix fun Char . downTo ( to : Char ) : CharProgression
+public infix fun Int . downTo ( to : Int ) : IntProgression
+public infix fun Long . downTo ( to : Int ) : LongProgression
+public infix fun Byte . downTo ( to : Int ) : IntProgression
+public infix fun Short . downTo ( to : Int ) : IntProgression
+public infix fun Int . downTo ( to : Long ) : LongProgression
+public infix fun Long . downTo ( to : Long ) : LongProgression
+public infix fun Byte . downTo ( to : Long ) : LongProgression
+public infix fun Short . downTo ( to : Long ) : LongProgression
+public infix fun Int . downTo ( to : Byte ) : IntProgression
+public infix fun Long . downTo ( to : Byte ) : LongProgression
+public infix fun Byte . downTo ( to : Byte ) : IntProgression
+public infix fun Short . downTo ( to : Short ) : IntProgression
+public fun IntProgression . reversed ( ) : IntProgression
+public fun LongProgression . reversed ( ) : LongProgression
+public fun CharProgression . reversed ( ) : CharProgression
+public infix fun IntProgression . step ( step : Int ) : IntProgression
+public infix fun LongProgression . step ( step : Long ) : LongProgression
+public infix fun CharProgression . step ( step : Int ) : CharProgression
+public infix fun Int . until ( to : Byte ) : IntRange
+public infix fun Long . until ( to : Byte ) : LongRange
+public infix fun Byte . until ( to : Byte ) : IntRange
+public infix fun Short . until ( to : Byte ) : IntRange
+public infix fun Char . until ( to : Char ) : CharRange
+public infix fun Int . until ( to : Int ) : IntRange
+public infix fun Long . until ( to : Int ) : LongRange
+public infix fun Byte . until ( to : Int ) : IntRange
+public infix fun Short . until ( to : Int ) : IntRange
+public infix fun Int . until ( to : Long ) : LongRange
+public infix fun Long . until ( to : Long ) : LongRange
+public infix fun Byte . until ( to : Long ) : LongRange
+public infix fun Short . until ( to : Long ) : LongRange
+public infix fun Int . until ( to : Short ) : IntRange
+public infix fun Long . until ( to : Short ) : LongRange
+public infix fun Byte . until ( to : Short ) : IntRange
+public infix fun Short . until ( to : Short ) : IntRange
+fun < T : Comparable < T > > T . coerceAtLeast ( minimumValue : T ) : T
+public fun Byte . coerceAtLeast ( minimumValue : Byte ) : Byte
+public fun Short . coerceAtLeast ( minimumValue : Short ) : Short
+public fun Int . coerceAtLeast ( minimumValue : Int ) : Int
+public fun Long . coerceAtLeast ( minimumValue : Long ) : Long
+public fun Float . coerceAtLeast ( minimumValue : Float ) : Float
+public fun Double . coerceAtLeast ( minimumValue : Double ) : Double
+fun < T : Comparable < T > > T . coerceAtMost ( maximumValue : T ) : T
+fun Byte . coerceAtMost ( maximumValue : Byte ) : Byte
+fun Short . coerceAtMost ( maximumValue : Short ) : Short
+public fun Int . coerceAtMost ( maximumValue : Int ) : Int
+public fun Long . coerceAtMost ( maximumValue : Long ) : Long
+public fun Float . coerceAtMost ( maximumValue : Float ) : Float
+public fun Double . coerceAtMost ( maximumValue : Double ) : Double
+fun < T : Comparable < T > > T . coerceIn ( minimumValue : T ? , maximumValue : T ? ) : T
+fun Byte . coerceIn ( minimumValue : Byte , maximumValue : Byte ) : Byte
+public fun Short . coerceIn ( minimumValue : Short , maximumValue : Short ) : Short
+public fun Int . coerceIn ( minimumValue : Int , maximumValue : Int ) : Int
+public fun Long . coerceIn ( minimumValue : Long , maximumValue : Long ) : Long
+public fun Float . coerceIn ( minimumValue : Float , maximumValue : Float ) : Float
+public fun Double . coerceIn ( minimumValue : Double , maximumValue : Double ) : Double
+@ SinceKotlin ( "1.1" ) public fun < T : Comparable < T > > T . coerceIn ( range : ClosedFloatingPointRange < T > ) : T
+public fun < T : Comparable < T > > T . coerceIn ( range : ClosedRange < T > ) : T
+public fun Int . coerceIn ( range : ClosedRange < Int > ) : Int
+public fun Long . coerceIn ( range : ClosedRange < Long > ) : Long
+@ ExperimentalSerializationApi public fun < T > decodeFromConfig ( deserializer : DeserializationStrategy < T > , config : Config ) : T
+@ ExperimentalSerializationApi public fun < T > encodeToConfig ( serializer : SerializationStrategy < T > , value : T ) : Config
+
+@ ExperimentalSerializationApi public inline fun < reified T > Hocon . encodeToConfig ( value : T ) : Config
+@ ExperimentalSerializationApi public fun Hocon ( from : Hocon = Hocon , builderAction : HoconBuilder . ( ) -> Unit ) : Hocon
+
+
+
+@ InternalCoroutinesApi public open fun dispatchYield ( context : CoroutineContext , block : Runnable ) : Unit
+public final override fun < T > interceptContinuation ( continuation : Continuation < T > ) : Continuation < T
+@ Suppress ( "" ) @ Deprecated ( message = "" + "" + "" , level = DeprecationLevel . ERROR ) public operator fun plus ( other : CoroutineDispatcher ) : CoroutineDispatcher
+override fun toString ( ) : String
+
+
+
+@ SinceKotlin ( "1.2" ) public expect fun sin ( x : Double ) : Double
+@ SinceKotlin ( "1.2" ) public expect fun cos ( x : Double ) : Double
+@ SinceKotlin ( "1.2" ) public expect fun tan ( x : Double ) : Double
+@ SinceKotlin ( "1.2" ) public expect fun asin ( x : Double ) : Double
+
+@ SinceKotlin ( "1.2" ) public expect fun atan ( x : Double ) : Double
+
+@ SinceKotlin ( "1.2" ) public expect fun sinh ( x : Double ) : Double
+@ SinceKotlin ( "1.2" ) public expect fun cosh ( x : Double ) : Double
+@ SinceKotlin ( "1.2" ) public expect fun tanh ( x : Double ) : Double
+@ SinceKotlin ( "1.2" ) public expect fun asinh ( x : Double ) : Double
+@ SinceKotlin ( "1.2" ) public expect fun acosh ( x : Double ) : Double
+@ SinceKotlin ( "1.2" ) public expect fun atanh ( x : Double ) : Double
+@ SinceKotlin ( "1.2" ) public expect fun hypot ( x : Double , y : Double ) : Double
+@ SinceKotlin ( "1.2" ) public expect fun sqrt ( x : Double ) : Double
+@ SinceKotlin ( "1.2" ) public expect fun exp ( x : Double ) : Double
+@ SinceKotlin ( "1.2" ) public expect fun expm1 ( x : Double ) : Double
+
+@ SinceKotlin ( "1.2" ) public expect fun ln ( x : Double ) : Double
+@ SinceKotlin ( "1.2" ) public expect fun log10 ( x : Double ) : Double
+@ SinceKotlin ( "1.2" ) public expect fun log2 ( x : Double ) : Double
+@ SinceKotlin ( "1.2" ) public expect fun ln1p ( x : Double ) : Double
+@ SinceKotlin ( "1.2" ) public expect fun ceil ( x : Double ) : Double
+@ SinceKotlin ( "1.2" ) public expect fun floor ( x : Double ) : Double
+@ SinceKotlin ( "1.2" ) public expect fun truncate ( x : Double ) : Double
+@ SinceKotlin ( "1.2" ) public expect fun round ( x : Double ) : Double
+@ SinceKotlin ( "1.2" ) public expect fun abs ( x : Double ) : Double
+@ SinceKotlin ( "1.2" ) public expect fun sign ( x : Double ) : Double
+@ SinceKotlin ( "1.2" ) public expect fun min ( a : Double , b : Double ) : Double
+@ SinceKotlin ( "1.2" ) public expect fun max ( a : Double , b : Double ) : Double
+
+@ SinceKotlin ( "1.2" ) public expect fun Double . pow ( x : Double ) : Double
+@ SinceKotlin ( "1.2" ) public expect fun Double . pow ( n : Int ) : Double
+@ SinceKotlin ( "1.2" ) public expect fun Double . withSign ( sign : Double ) : Double
+@ SinceKotlin ( "1.2" ) public expect fun Double . withSign ( sign : Int ) : Double
+@ SinceKotlin ( "1.2" ) public expect fun Double . nextUp ( ) : Double
+@ SinceKotlin ( "1.2" ) public expect fun Double . nextDown ( ) : Double
+@ SinceKotlin ( "1.2" ) public expect fun Double . nextTowards ( to : Double ) : Double
+@ SinceKotlin ( "1.2" ) public expect fun Double . roundToInt ( ) : Int
+@ SinceKotlin ( "1.2" ) public expect fun Double . roundToLong ( ) : Long
+@ SinceKotlin ( "1.2" ) public expect fun sin ( x : Float ) : Float
+@ SinceKotlin ( "1.2" ) public expect fun cos ( x : Float ) : Float
+@ SinceKotlin ( "1.2" ) public expect fun tan ( x : Float ) : Float
+@ SinceKotlin ( "1.2" ) public expect fun asin ( x : Float ) : Float
+@ SinceKotlin ( "1.2" ) public expect fun acos ( x : Float ) : Float
+@ SinceKotlin ( "1.2" ) public expect fun atan ( x : Float ) : Float
+
+@ SinceKotlin ( "1.2" ) public expect fun sinh ( x : Float ) : Float
+@ SinceKotlin ( "1.2" ) public expect fun cosh ( x : Float ) : Float
+@ SinceKotlin ( "1.2" ) public expect fun tanh ( x : Float ) : Float
+@ SinceKotlin ( "1.2" ) public expect fun asinh ( x : Float ) : Float
+@ SinceKotlin ( "1.2" ) public expect fun acosh ( x : Float ) : Float
+@ SinceKotlin ( "1.2" ) public expect fun atanh ( x : Float ) : Float
+@ SinceKotlin ( "1.2" ) public expect fun hypot ( x : Float , y : Float ) : Float
+@ SinceKotlin ( "1.2" ) public expect fun sqrt ( x : Float ) : Float
+@ SinceKotlin ( "1.2" ) public expect fun exp ( x : Float ) : Float
+@ SinceKotlin ( "1.2" ) public expect fun expm1 ( x : Float ) : Float
+
+@ SinceKotlin ( "1.2" ) public expect fun ln ( x : Float ) : Float
+@ SinceKotlin ( "1.2" ) public expect fun log10 ( x : Float ) : Float
+@ SinceKotlin ( "1.2" ) public expect fun log2 ( x : Float ) : Float
+@ SinceKotlin ( "1.2" ) public expect fun ln1p ( x : Float ) : Float
+@ SinceKotlin ( "1.2" ) public expect fun ceil ( x : Float ) : Float
+
+@ SinceKotlin ( "1.2" ) public expect fun truncate ( x : Float ) : Float
+@ SinceKotlin ( "1.2" ) public expect fun round ( x : Float ) : Float
+@ SinceKotlin ( "1.2" ) public expect fun abs ( x : Float ) : Float
+@ SinceKotlin ( "1.2" ) public expect fun sign ( x : Float ) : Float
+@ SinceKotlin ( "1.2" ) public expect fun min ( a : Float , b : Float ) : Float
+@ SinceKotlin ( "1.2" ) public expect fun max ( a : Float , b : Float ) : Float
+@ SinceKotlin ( "2.0" ) @ WasExperimental ( ExperimentalStdlibApi :: class ) public expect fun cbrt ( x : Float ) : Float
+@ SinceKotlin ( "1.2" ) public expect fun Float . pow ( x : Float ) : Float
+@ SinceKotlin ( "1.2" ) public expect fun Float . pow ( n : Int ) : Float
+@ SinceKotlin ( "1.2" ) public expect fun Float . withSign ( sign : Float ) : Float
+@ SinceKotlin ( "1.2" ) public expect fun Float . withSign ( sign : Int ) : Float
+@ SinceKotlin ( "1.2" ) public expect fun Float . roundToInt ( ) : Int
+@ SinceKotlin ( "1.2" ) public expect fun Float . roundToLong ( ) : Long
+@ SinceKotlin ( "1.2" ) public expect fun abs ( n : Int ) : Int
+@ SinceKotlin ( "1.2" ) public expect fun min ( a : Int , b : Int ) : Int
+@ SinceKotlin ( "1.2" ) public expect fun max ( a : Int , b : Int ) : Int
+@ SinceKotlin ( "1.2" ) public expect fun abs ( n : Long ) : Long
+@ SinceKotlin ( "1.2" ) public expect fun min ( a : Long , b : Long ) : Long
+@ SinceKotlin ( "1.2" ) public expect fun max ( a : Long , b : Long ) : Long
+override fun processSecondPass ( ) : AbstractSet
+internal fun awaitReusability ( )
+internal fun tryReleaseClaimedContinuation ( continuation : CancellableContinuation < * > ) : Throwable ?
+internal fun postponeCancellation ( cause : Throwable ) : Boolean
+@ InternalCoroutinesApi public fun < T > Continuation < T > . resumeCancellableWith ( result : Result < T > , onCancellation : ( ( cause : Throwable ) -> Unit ) ? = null ) : Unit
+fun DispatchedContinuation < * > . executeUnconfined ( contState : Any ? , mode : Int , doYield : Boolean = false , block : ( ) -> Unit ) : Boolean
+fun FirSimpleFunction . substituteOrNull ( substitutor : AbstractConeSubstitutor , context : CheckerContext , ) : FirSimpleFunction ?
+private fun FirProperty . substituteOrNull ( substitutor : ConeSubstitutor , context : CheckerContext , ) : FirProperty ?
+abstract fun getFileName ( ) : String
+abstract fun getFilePackageName ( ) : FqName
+public abstract fun getTopLevelClassifierNames ( ) : Set < Name
+public abstract fun getTopLevelCallableNames ( ) : Set < Name
+public abstract fun buildFileText ( ) : String
+
+@ ExperimentalMultikApi @ JvmName ( "" ) public inline fun < reified T : Number > Multik . createAlignedNDArray ( data : List < List < T > > , filling : Double = 0.0 ) : D2Array < T
+@ ExperimentalMultikApi @ JvmName ( "" ) public inline fun < reified T : Number > Multik . createAlignedNDArray ( data : Array < Array < T > > , filling : Double = 0.0 ) : D2Array < T
+@ ExperimentalMultikApi @ JvmName ( "" ) public inline fun < reified T : Number > Multik . createAlignedNDArray ( data : List < List < List < T > > > , filling : Double = 0.0 ) : D3Array < T
+@ ExperimentalMultikApi @ JvmName ( "" ) public inline fun < reified T : Number > Multik . createAlignedNDArray ( data : Array < Array < Array < T > > > , filling : Double = 0.0 ) : D3Array < T
+@ ExperimentalMultikApi @ JvmName ( "" ) public inline fun < reified T : Number > Multik . createAlignedNDArray ( data : List < List < List < List < T > > > > , filling : Double = 0.0 ) : D4Array < T
+@ ExperimentalMultikApi @ JvmName ( "" ) public inline fun < reified T : Number > Multik . createAlignedNDArray ( data : Array < Array < Array < Array < T > > > , filling : Double = 0.0 ) : D4Array < T
+
+public fun predict ( input : I ) : R
+abstract fun isImplies ( other : ESEffect ) : Boolean ?
+val classLikeSymbol : KtClassLikeSymbol = withValidityAssertion { analysisSession . samResolverProvider . getSamConstructor ( this ) }
+fun supertypes ( type : CirTypeAliasType ) : Set < CirTypeAliasType
+fun setExecutionSourceFrom ( classpath : FileCollection , testClasses : FileCollection )
+fun KtType . translateType ( ) : SirType
+
+
+fun ConeKotlinType . fullyExpandedType ( useSiteSession : FirSession ) : ConeKotlinType
+fun ConeSimpleKotlinType . fullyExpandedType ( useSiteSession : FirSession ) : ConeSimpleKotlinType
+fun FirTypeAlias . fullyExpandedConeType ( useSiteSession : FirSession ) : ConeClassLikeType ?
+fun FirTypeAlias . fullyExpandedClass ( session : FirSession ) : FirClassLikeDeclaration ?
+@ ExperimentalReflectionOnLambdas fun < R > Function < R > . reflect ( ) : KFunction < R > ?
+
+public fun append ( data : MutableData ) : Unit
+public fun append ( data : ByteArray , fromIndex : Int = 0 , toIndex : Int = data . size ) : Unit
+public fun append ( data : COpaquePointer ? , count : Int ) : Unit
+public fun copyInto ( output : ByteArray , destinationIndex : Int , startIndex : Int , endIndex : Int ) : Unit
+public operator fun get ( index : Int ) : Byte
+fun < R > withPointerLocked ( block : ( COpaquePointer , dataSize : Int ) -> R ) : R
+fun < R > withBufferLocked ( block : ( array : ByteArray , dataSize : Int ) -> R ) : R
+fun upperHessenbergFloat ( a : MultiArray < ComplexFloat , D2 > ) : Pair < D2Array < ComplexFloat > , D2Array < ComplexFloat >
+dataFlowAnalyzer . jumpDataFlowFromPostponedLambdas ( symbol )
+fun FirClass . firstInPlaceInitializer ( ) : FirDeclaration ?
+fun exitEqualityOperatorCall ( equalityOperatorCall : FirEqualityOperatorCall ) : Pair < CFGNode < * > , EqualityOperatorCallNode
+fun completeFunctionCall ( node : FunctionCallNode ) : Boolean
+fun exitCallExplicitReceiver ( )
+fun extensionReceiverType ( type : ConeKotlinType )
+fun extensionReceiverType ( typeProvider : ( List < FirTypeParameter > ) -> ConeKotlinType )
+fun FirExtension . createMemberFunction ( owner : FirClassSymbol < * > , key : GeneratedDeclarationKey , name : Name , returnType : ConeKotlinType , config : SimpleFunctionBuildingContext . ( ) -> Unit = { } ) : FirSimpleFunction
+fun FirExtension . createMemberFunction ( owner : FirClassSymbol < * > , key : GeneratedDeclarationKey , name : Name , returnTypeProvider : ( List < FirTypeParameter > ) -> ConeKotlinType , config : SimpleFunctionBuildingContext . ( ) -> Unit = { } ) : FirSimpleFunction
+@ ExperimentalTopLevelDeclarationsGenerationApi public fun FirExtension . createTopLevelFunction ( key : GeneratedDeclarationKey , callableId : CallableId , returnType : ConeKotlinType , config : SimpleFunctionBuildingContext . ( ) -> Unit = { } ) : FirSimpleFunction
+@ ExperimentalTopLevelDeclarationsGenerationApi public fun FirExtension . createTopLevelFunction ( key : GeneratedDeclarationKey , callableId : CallableId , returnTypeProvider : ( List < FirTypeParameter > ) -> ConeKotlinType , config : SimpleFunctionBuildingContext . ( ) -> Unit = { } ) : FirSimpleFunction
+public fun allocateVectorSchemaRoot ( ) : VectorSchemaRoot
+fun writeArrowIPC ( channel : ReadOnlyByteChannel )
+fun writeArrowIPC ( stream : OutputStream )
+fun writeArrowIPC ( file : File , append : Boolean = true )
+fun saveArrowIPCToByteArray ( ) : ByteArray
+override fun close ( ) { }
+public fun writeArrowFeather ( stream : OutputStream )
+writeArrowFeather ( file , null )
+public fun saveArrowFeatherToByteArray ( ) : ByteArray
+fun testSimpleMatch ( ) { var regex : Regex var result : List < String > regex = "" . toRegex ( ) result = regex . allGroups ( "" ) assertEquals ( 2 , result . count ( ) ) assertEquals ( "" , result [ 0 ] ) regex = "" . toRegex ( ) result = regex . allGroups ( "" ) assertEquals ( 2 , result . count ( ) ) assertEquals ( "" , result [ 0 ] ) }
+fun toHTML ( configuration : DisplayConfiguration = DisplayConfiguration . DEFAULT ) : DataFrameHtmlData
+fun toStandaloneHTML ( configuration : DisplayConfiguration = DisplayConfiguration . DEFAULT ) : DataFrameHtmlData
+val scope = createTestCoroutineScope ( ) var result = false scope . launch { result = true } assertFalse ( result ) assertFailsWith < AssertionError > { scope . cleanupTestCoroutines ( ) } assertFalse ( result ) }
+val scope = createTestCoroutineScope ( ) var result = false scope . launch { result = true } assertFalse ( result ) assertFailsWith < AssertionError > { scope . cleanupTestCoroutines ( ) } assertFalse ( result ) }
+@ Test fun testYield ( )
+val dispatcher1 = StandardTestDispatcher ( ) val dispatcher2 = UnconfinedTestDispatcher ( ) assertSame ( dispatcher1 . scheduler , dispatcher2 . scheduler ) }
+val javaHome = System . getenv ( "" ) ? : File ( javaHome )
+{ addProjectWithKover { sourcesFrom ( "simple" ) } }
+val modelHub = ONNXModelHub ( cacheDirectory = File ( "" ) )
+fun loadVariables ( variableNames : Collection < String > , getData : ( String , Shape ) -> Any )
+fun isOptimizerVariable ( variableName : String ) : Boolean
+fun loadVariablesFromTxt ( pathToModelDirectory : String , loadOptimizerState : Boolean )
+fun loadVariablesFromTxt ( pathToModelDirectory : String , predicate : ( String ) -> Boolean )
+override fun assignVariable ( variableName : String , variableShape : Shape , data : Any )
+override fun close ( )
+override fun close ( )
+fun get ( project : Project ) : List < T
+fun register ( project : Project , extension : T )
+public fun OrtSession . Result . getFloatArrayWithShape ( index : Int ) : Pair < FloatArray , LongArray
+fun OrtSession . Result . getFloatArray ( index : Int ) : FloatArray
+val result = getFloatArray ( name )
+fun OrtSession . Result . getFloatArray ( name : String ) : FloatArray
+public fun OrtSession . Result . getDoubleArrayWithShape ( index : Int ) : Pair < DoubleArray , LongArray
+public fun OrtSession . Result . getDoubleArray ( index : Int ) : DoubleArray
+public fun OrtSession . Result . getDoubleArrayWithShape ( name : String ) : Pair < DoubleArray , LongArray
+public fun OrtSession . Result . getDoubleArray ( name : String ) : DoubleArray
+public fun OrtSession . Result . getLongArrayWithShape ( index : Int ) : Pair < LongArray , LongArray
+public fun OrtSession . Result . getLongArray ( index : Int ) : LongArray
+public fun OrtSession . Result . getLongArrayWithShape ( name : String ) : Pair < LongArray , LongArray
+public fun OrtSession . Result . getLongArray ( name : String ) : LongArray
+public fun OrtSession . Result . getIntArrayWithShape ( index : Int ) : Pair < IntArray , LongArray
+public fun OrtSession . Result . getIntArray ( index : Int ) : IntArray
+fun Result . getIntArrayWithShape ( name : String ) : Pair < IntArray , LongArray
+public fun OrtSession . Result . getIntArray ( name : String ) : IntArray
+public fun OrtSession . Result . getShortArrayWithShape ( index : Int ) : Pair < ShortArray , LongArray
+fun OrtSession . Result . getShortArray ( index : Int ) : ShortArray
+val result = runBlocking { ktorResponse . getShortArrayWithShape ( name ) }
+fun OrtSession . Result . getShortArray ( name : String ) : ShortArray
+public fun OrtSession . Result . getByteArrayWithShape ( index : Int ) : Pair < ByteArray , LongArray
+public fun OrtSession . Result . getByteArray ( index : Int ) : ByteArray
+public fun OrtSession . Result . getByteArrayWithShape ( name : String ) : Pair < ByteArray , LongArray
+fun OrtSession . Result . getByteArray ( name : String ) : ByteArray
+val result = getFloatArray ( name )
+public fun OrtSession . Result . get2DFloatArray ( index : Int ) : Array < FloatArray
+
+if ( type != null && ! type . isNullable ( ) ) { throw IllegalArgumentException ( "" + "" ) } else { throw IllegalArgumentException ( "" + "" ) }
+fun JsNode . any ( predicate : ( JsNode ) -> Boolean ) : Boolean
+}
+public fun build ( tf : Ops ) : Placeholder < Float
+@ JvmStatic fun mapClass ( classId : String ) : String
+fun collectDesignationPath ( firFile : FirFile , containerClassId : ClassId ? , expectedDeclarationAcceptor : ( FirDeclaration ) -> Boolean , ) : FirDesignation ?
+private fun Project . findPropertySafe ( propertyName : String ) : Any ?
+fun Tuple1 < * > . zip ( other : Tuple1 < * > ) : Tuple1 < *
+public fun < T > type ( column : ColumnReference < T > , parameters : LetsPlotNonPositionalMappingParametersCategorical < T , LineType > ( ) -> Unit = { } ) : NonPositionalMapping < T , LineType
+public fun < T > type ( column : KProperty < T > , parameters : LetsPlotNonPositionalMappingParametersCategorical < T , LineType > ( ) -> Unit = { } ) : NonPositionalMapping < T , LineType
+public fun type ( column : String , parameters : LetsPlotNonPositionalMappingParametersCategorical < Any ? , LineType > ( ) -> Unit = { } ) : NonPositionalMapping < Any ? , LineType
+public fun < T > type ( values : Iterable < T > , name : String ? = null , parameters : LetsPlotNonPositionalMappingParametersCategorical < T , LineType > ( ) -> Unit = { } ) : NonPositionalMapping < T , LineType
+public fun < T > type ( values : DataColumn < T > , parameters : LetsPlotNonPositionalMappingParametersCategorical < T , LineType > ( ) -> Unit = { } ) : NonPositionalMapping < T , LineType
+fun test ( ) { val scope = createTestCoroutineScope ( ) var result = false scope . launch { result = true } assertFalse ( result ) assertFailsWith < AssertionError > { scope . cleanupTestCoroutines ( ) } }
+@ Test fun `Java primitive annotations work` ( )
+
+}
+}
+fun noImpl ( element : Element )
+fun impl ( element : Element , name : String ? = null , config : ImplementationContext . ( ) -> Unit = { } ) : Implementation
+fun allImplOf ( element : Element , config : ElementContext . ( ) -> Unit )
+fun inheritImplementationFieldSpecifications ( elements : List < Element > )
+
+fun configureAllImplementations ( implementationPredicate : ( Implementation ) -> Boolean = { true } , config : ImplementationContext . ( ) -> Unit , )
+fun isMutable ( vararg fields : String )
+fun isLateinit ( vararg fields : String )
+fun default ( field : String , value : String , withGetter : Boolean = false )
+fun defaultTrue ( vararg fields : String , withGetter : Boolean = false )
+fun defaultFalse ( vararg fields : String , withGetter : Boolean = false )
+fun defaultNull ( vararg fields : String , withGetter : Boolean = false )
+fun defaultEmptyList ( vararg fields : String , withGetter : Boolean = false )
+DefaultValueContext ( getField ( field ) ) . apply ( init ) . apply ( )
+fun delegateFields ( fields : List < String > , delegate : String )
+fun optInToInternals ( )
+fun publicImplementation ( )
+fun additionalImports ( vararg importables : Importable )
+public fun KtCallableSymbol . getAllOverriddenSymbols ( ) : List < KtCallableSymbol
+public fun KtCallableSymbol . getDirectlyOverriddenSymbols ( ) : List < KtCallableSymbol
+public fun KtClassOrObjectSymbol . isSubClassOf ( superClass : KtClassOrObjectSymbol ) : Boolean
+public fun KtClassOrObjectSymbol . isDirectSubClassOf ( superClass : KtClassOrObjectSymbol ) : Boolean
+fun Project . transformMetadataLibrariesForIde ( resolution : MetadataDependencyResolution . ChooseVisibleSourceSets ) : Map < String , Iterable < File >
+fun ObjectFactory . transformMetadataLibrariesForBuild ( resolution : MetadataDependencyResolution . ChooseVisibleSourceSets , outputDirectory : File , materializeFiles : Boolean ) : Iterable < File
+
+internal fun < C > SingleColumn < DataRow < * > > . valueCol ( valueCol : ColumnAccessor < C > ) : SingleColumn < C
+internal fun < C > AnyColumnGroupAccessor . valueCol ( valueCol : ColumnAccessor < C > ) : ColumnAccessor < C
+fun < C > String . valueCol ( valueCol : ColumnAccessor < C > ) : ColumnAccessor < C
+fun < C > KProperty < * > . valueCol ( valueCol : ColumnAccessor < C > ) : ColumnAccessor < C
+fun < C > ColumnPath . valueCol ( valueCol : ColumnAccessor < C > ) : ColumnAccessor < C
+
+public fun < C > valueCol ( name : String ) : ColumnAccessor < C
+@ Suppress ( "" ) @ JvmName ( "" ) public fun SingleColumn < DataRow < * > > . valueCol ( name : String ) : SingleColumn < *
+public fun < C > SingleColumn < DataRow < * > > . valueCol ( name : String ) : SingleColumn < C
+@ Suppress ( "" ) @ JvmName ( "" ) public fun AnyColumnGroupAccessor . valueCol ( name : String ) : ColumnAccessor < *
+internal fun < C > AnyColumnGroupAccessor . valueCol ( name : String ) : ColumnAccessor < C
+
+public fun < C > String . valueCol ( name : String ) : ColumnAccessor < C
+
+public fun < C > KProperty < * > . valueCol ( name : String ) : ColumnAccessor < C
+fun ColumnPath . valueCol ( name : String ) : ColumnAccessor < *
+public fun < C > ColumnPath . valueCol ( name : String ) : ColumnAccessor < C
+}
+public fun < C > valueColumn ( path : ColumnPath ) : ColumnAccessor < C
+@ Suppress ( "" ) @ JvmName ( "" ) public fun SingleColumn < DataRow < * > > . valueCol ( path : ColumnPath ) : SingleColumn < *
+public fun < C > SingleColumn < DataRow < * > > . valueCol ( path : ColumnPath ) : SingleColumn < C
+@ Suppress ( "" ) @ JvmName ( "" ) public fun AnyColumnGroupAccessor . valueCol ( path : ColumnPath ) : ColumnAccessor < *
+internal fun < C > AnyColumnGroupAccessor . valueCol ( path : ColumnPath ) : ColumnAccessor < C
+
+public fun < C > String . valueCol ( path : ColumnPath ) : ColumnAccessor < C
+
+public fun < C > KProperty < * > . valueColumn ( path : ColumnPath ) : ColumnAccessor < C
+fun ColumnPath . valueCol ( path : ColumnPath ) : ColumnAccessor < *
+public fun < C > ColumnPath . valueCol ( path : ColumnPath ) : ColumnAccessor < C
+= columnGroup ( property ) . ensureIsColumnGroup ( )
+internal fun SingleColumn < DataRow < * > > . valueCol ( property : KProperty < * > ) : SingleColumn < *
+public fun < C > AnyColumnGroupAccessor . valueCol ( property : KProperty < C > ) : ColumnAccessor < C
+fun < C > String . valueCol ( property : KProperty < C > ) : ColumnAccessor < C
+public fun < C > KProperty < * > . valueColumn ( column : ColumnAccessor < C > ) : ColumnAccessor < C
+public fun < C > ColumnPath . valueCol ( property : KProperty < C > ) : ColumnAccessor < C
+internal fun < C > ColumnSet < C > . valueCol ( index : Int ) : SingleColumn < C
+@ Suppress ( "" ) @ JvmName ( "" ) public fun ColumnsSelectionDsl < * > . valueCol ( index : Int ) : SingleColumn < *
+public fun < C > ColumnsSelectionDsl < * > . valueCol ( index : Int ) : SingleColumn < C
+@ Suppress ( "" ) @ JvmName ( "" ) public fun SingleColumn < DataRow < * > > . valueCol ( index : Int ) : SingleColumn < *
+public fun < C > SingleColumn < DataRow < * > > . valueCol ( index : Int ) : SingleColumn < C
+@ Suppress ( "" ) @ JvmName ( "" ) public fun String . valueCol ( index : Int ) : SingleColumn < *
+public fun < C > String . valueCol ( index : Int ) : SingleColumn < C
+@ Suppress ( "" ) @ JvmName ( "" ) public fun KProperty < * > . valueCol ( index : Int ) : SingleColumn < *
+public fun < C > KProperty < * > . valueCol ( index : Int ) : SingleColumn < C
+@ Suppress ( "" ) @ JvmName ( "" ) public fun ColumnPath . valueCol ( index : Int ) : SingleColumn < *
+public fun < C > ColumnPath . valueCol ( index : Int ) : SingleColumn < C
+internal fun < C > SingleColumn < C > . ensureIsValueColumn ( ) : SingleColumn < C
+internal fun < C > ColumnAccessor < C > . ensureIsValueColumn ( ) : ColumnAccessor < C
+fun TypeSystemInferenceExtensionContext . isProperTypeForFixation ( type : KotlinTypeMarker , notFixedTypeVariables : Set < TypeConstructorMarker > , isProper : ( KotlinTypeMarker ) -> Boolean ) : Boolean
+fun sortClassMembers ( classNode : ClassNode )
+fun PsiElement . isOptInAllowed ( annotationFqName : FqName , languageVersionSettings : LanguageVersionSettings , bindingContext : BindingContext ) : Boolean
+
+fun klibFile ( file : Any )
+fun klib ( lib : KonanLibrary )
+fun klib ( lib : KonanInteropLibrary )
+fun artifact ( libraryProject : Project , name : String , friend : Boolean )
+fun artifact ( name : String , friend : Boolean )
+fun artifact ( artifact : KonanLibrary )
+fun artifact ( artifact : KonanInteropLibrary )
+fun allLibrariesFrom ( libraryProject : LibraryProject )
+fun allInteropLibrariesFrom ( libraryProject : LibraryProject )
+fun makeIncrementalCompilationFeatures ( ) : IncrementalCompilationFeature
+internal abstract fun callCompilerAsync ( args : T , inputChanges : InputChanges , taskOutputsBackup : TaskOutputsBackup ? )
+var removed : Boolean = false
+@ SinceKotlin ( "1.4" ) public fun Element . appendText ( text : String ) : Element
+fun Project . dokkaBuild ( configure : DokkaBuildProperties . ( ) -> Unit )
+fun collectKotlinSupertypesWithKind ( documentable : Iterable < Documentable > , sourceSet : DokkaConfiguration . DokkaSourceSet ) : Map < DRI , SuperclassesWithKind
+fun String . cleanContentPreservingLinesLayout ( start : Int = 0 , end : Int = this . length )
+fun File . toScriptSource ( ) : SourceCode
+fun String . toScriptSource ( name : String ? = null ) : SourceCode
+
+public fun < I , FloatData > Operation < I , FloatData > . rescale ( block : Rescaling . ( ) -> Unit ) : Operation < I , FloatData
+@ PublishedApi internal actual fun < T : Throwable > checkResultIsFailure ( exceptionClass : KClass < T > , message : String ? , blockResult : Result < Unit > ) : T
+@ Suppress ( "" , level = DeprecationLevel . HIDDEN ) @ JvmName ( "" ) public fun assertFailsNoInline ( block : ( ) -> Unit ) : Throwable
+@ Suppress ( "" , level = DeprecationLevel . HIDDEN ) @ JvmName ( "" ) public fun assertFailsNoInline ( message : String ? , block : ( ) -> Unit ) : Throwable
+fun < T : Throwable > assertFailsWithNoInline ( exceptionClass : KClass < T > , block : ( ) -> Unit ) : T
+@ Suppress ( "" , level = DeprecationLevel . HIDDEN ) @ JvmName ( "" ) public fun < T : Throwable > assertFailsWithNoInline ( exceptionClass : KClass < T > , message : String ? , block : ( ) -> Unit ) : T
+
+@ Suppress ( "INVISIBLE_REFERENCE" , "INVISIBLE_MEMBER" ) @ InlineOnly public inline fun currentStackTrace ( ) : Array < StackTraceElement
+internal actual fun AssertionErrorWithCause ( message : String ? , cause : Throwable ? ) : AssertionError
+fun registerReplacement ( original : IrValueDeclaration , replacement : IrValueDeclaration )
+fun registerReplacement ( original : IrValueDeclaration , replacement : ValueDeclarationMfvcNodeInstance )
+fun makeFlattenedExpressionsWithGivenSafety ( node : MfvcNode , safe : Boolean , expression : IrExpression )
+fun IrBuilderWithScope . removeExtraSetVariablesFromExpressionList ( block : IrContainerExpression , variables : List < IrVariable > ) : List < IrExpression
+fun IrBlockBuilder . flattenExpression ( expression : IrExpression ) : List < IrExpression
+when ( expression ) { is IrGetValue -> + expression . shallowCopy ( ) else -> + expression }
+var removed : Boolean = false
+fun findNearestBlocksForVariables ( variables : Set < IrVariable > , body : BlockOrBody ) : Map < IrVariable , BlockOrBody ?
+fun BlockOrBody . makeBodyWithAddedVariables ( context : JvmBackendContext , variables : Set < IrVariable > , symbol : IrSymbol ) : IrElement
+public fun < I , FloatData > Operation < I , FloatData > . transpose ( sharpBlock : Transpose . ( ) -> Unit ) : Operation < I , FloatData
+internal expect fun < T > commonThreadLocal ( name : String ) : CommonThreadLocal < T
+override fun matches ( startIndex : Int , testString : CharSequence , matchResult : MatchResultImpl ) : Int
+fun HTMLTag . unsafe ( block : Unsafe . ( ) -> Unit ) : Unit
+fun KtSourceElement . forEachChildOfType ( types : Set < IElementType > , depth : Int = - 1 , reverse : Boolean = false , processChild : ( KtSourceElement ) -> Unit , )
+fun PsiElement . forEachChildOfType ( types : Set < IElementType > , depth : Int = - 1 , reverse : Boolean = false , processChild : ( PsiElement ) -> Unit , )
+fun LighterASTNode . forEachChildOfType ( types : Set < IElementType > , depth : Int = - 1 , reverse : Boolean = false , treeStructure : FlyweightCapableTreeStructure < LighterASTNode > , processChild : ( LighterASTNode ) -> Unit , )
+fun KtLightSourceElement . buildChildSourceElement ( childNode : LighterASTNode ) : KtLightSourceElement
+fun FirImport . getSourceForImportSegment ( indexFromLast : Int ) : KtSourceElement ?
+fun FirImport . getLastImportedFqNameSegmentSource ( ) : KtSourceElement ?
+
+fun main ( ) : Unit
+{ if ( value == null ) { return } remove ( value ) }
+operator fun get ( key : K ) : V ?
+fun computeIfAbsent ( key : K , computeValue : ( K ) -> V ) : V
+fun compute ( key : K , computeValue : ( K , V ? ) -> V ? ) : V ?
+fun put ( key : K , value : V ) : V ?
+fun remove ( key : K ) : V ?
+fun clear ( )
+fun isEmpty ( ) : Boolean
+build ( "" ) { assertTasksInBuildOutput ( "" , "" ) }
+fun findMetadata ( classId : ClassId ) : InputStream ?
+fun hasMetadataPackage ( fqName : FqName ) : Boolean
+fun findBuiltInsData ( packageFqName : FqName ) : InputStream ?
+fun KtUserType . classId ( ) : ClassId
+fun tmpdir ( ) : String ?
+fun platform ( ) : String
+
+
+fun findReceiverFirExpression ( receiverExpression : KtExpression ) : FirExpression ?
+internal fun < T : Any > registerEvent ( dispatcher : TestDispatcher , timeDeltaMillis : Long , marker : T , context : CoroutineContext , isCancelled : ( T ) -> Boolean ) : DisposableHandle
+internal fun tryRunNextTaskUnless ( condition : ( ) -> Boolean ) : Boolean
+fun advanceUntilIdle ( ) : Unit
+while ( true ) { val oldTime = schedulerTime if ( condition ( ) ) { schedulerTime = 0L return } else { schedulerTime = oldTime return } }
+}
+
+advanceTimeBy ( delayTime . coerceToMillis ( ) )
+internal fun isIdle ( strict : Boolean = true ) : Boolean
+internal fun sendDispatchEvent ( context : CoroutineContext )
+internal suspend fun receiveDispatchEvent ( )
+fun < R > Sequence < * > . filterIsInstance ( klass : Class < R > ) : Sequence < R
+fun < C : MutableCollection < in R > , R > Sequence < * > . filterIsInstanceTo ( destination : C , klass : Class < R > ) : C
+fun < T : Comparable < T > > Sequence < T > . toSortedSet ( ) : java . util . SortedSet < T
+fun < T > Sequence < T > . toSortedSet ( comparator : Comparator < in T > ) : java . util . SortedSet < T
+fun < T > Sequence < T > . sumOf ( selector : ( T ) -> java . math . BigDecimal ) : java . math . BigDecimal
+fun < T > Sequence < T > . sumOf ( selector : ( T ) -> java . math . BigInteger ) : java . math . BigInteger
+fun g ( )
+fun resolveSupertypesTree ( values : List < Supertypes > ) : List < SupertypesTree
+fun buildSupertypesGroups ( trees : List < SupertypesTree > ) : List < SupertypesGroup
+public fun < C > ColumnSet < C ? > . withoutNulls ( ) : ColumnSet < C
+fun ColumnsSelectionDsl < * > . withoutNulls ( ) : ColumnSet < Any
+internal fun SingleColumn < DataRow < * > > . colsWithoutNulls ( ) : ColumnSet < Any
+fun String . colsWithoutNulls ( ) : ColumnSet < Any
+fun KProperty < * > . colsWithoutNulls ( ) : ColumnSet < Any
+fun ColumnPath . colsWithoutNulls ( ) : ColumnSet < Any
+override fun fullyExpandedType ( type : KtType ) : KtType
+
+fun irisClassification ( )
+fun main ( ) : Unit
+override fun dispatch ( context : CoroutineContext , block : Runnable ) : Unit
+override fun scheduleResumeAfterDelay ( timeMillis : Long , continuation : CancellableContinuation < Unit > )
+override fun invokeOnTimeout ( timeMillis : Long , block : Runnable , context : CoroutineContext ) : DisposableHandle
+fun isCastToAForwardDeclaration ( forwardDeclarationType : KotlinType ) : Boolean
+internal fun encodeDuration ( value : Duration ) : String
+internal fun Config . decodeJavaDuration ( path : String ) : JDuration
+fun getArchiveTaskOrNull ( kotlinCompilation : KotlinCompilation < * > ) : TaskProvider < out AbstractArchiveTask > ?
+fun Iterable < Pair < String , String > > . aligned ( ) : List < String
+
+fun isCaseMissedByK1Intersector ( a : TypeInfo , b : TypeInfo )
+internal fun isCaseMissedByAdditionalK1IncompatibleEnumsCheck ( a : ConeKotlinType , b : ConeKotlinType , session : FirSession ) : Boolean
+
+override fun ContentPage . displayableName ( ) : String
+fun buildSession ( environment : OrtEnvironment , options : SessionOptions ) : OrtSession
+public override fun initializeWith ( vararg executionProviders : ExecutionProvider )
+public fun predictRaw ( inputData : FloatData ) : Map < String , Any
+public override fun < R > predict ( inputData : FloatData , extractResult : ( OrtSession . Result ) -> R ) : R
+fun < R > predict ( inputs : Map < String , FloatData > , extractResult : ( OrtSession . Result ) -> R ) : R
+}
+
+public fun load ( modelBytes : ByteArray , vararg executionProviders : ExecutionProvider = arrayOf ( CPU ( true ) ) ) : OnnxInferenceModel
+fun captureOutput ( name : String , stdoutEnabled : Boolean = STDOUT_ENABLED_DEFAULT , main : ( out : PrintStream ) -> Unit ) : List < String
+val outputLines = captureOutput ( ) . lines ( )
+val outputLines = captureOutput ( ) . lines ( )
+fun FirSession . doUnify ( originalTypeProjection : ConeTypeProjection , typeWithParametersProjection : ConeTypeProjection , targetTypeParameters : Set < FirTypeParameterSymbol > , result : MutableMap < FirTypeParameterSymbol , ConeTypeProjection > , ) : Boolean
+
+
+
+
+setMain ( dispatcher )
+@ ExperimentalCoroutinesApi public fun Dispatchers . resetMain ( )
+assertFileExists ( file )
+assertFileExists ( pathToFile )
+val projectPath = pathToFile . relativeTo ( projectPath )
+}
+assert ( output . contains ( pathToFile ) ) { printBuildOutput ( ) "" }
+assertDirectoryInProjectExists ( pathToDir )
+assertDirectoryExists ( File ( dirPath ) , message )
+fun GradleProject . assertFileInProjectContains ( pathToFile : String , vararg expectedText : String , )
+val projectPath = projectPath . resolve ( pathToFile ) . absolutePath
+fun assertFileContains ( file : Path , vararg expectedText : String , ) : String
+fun assertFilesCombinedContains ( files : List < Path > , vararg expectedText : String , ) : String
+assert ( ! File ( file ) . exists ( ) ) { printBuildOutput ( "" ) }
+fun assertFilesContentEquals ( expected : Path , actual : Path )
+fun invoke ( phaseConfig : PhaseConfigurationService , phaserState : PhaserState < Input > , context : Context , input : Input ) : Output
+fun IdeaModule . excludeGeneratedGradleDsl ( layout : ProjectLayout )
+fun Project . initIdeProjectLogo ( vararg layers : Layer )
+fun generatePrimaryConstructorOverloadsIfNeeded ( constructorDescriptor : ConstructorDescriptor , classBuilder : ClassBuilder , memberCodegen : MemberCodegen < * > , contextKind : OwnerKind , classOrObject : KtPureClassOrObject )
+
+
+fun Project . kotlinTest ( suffix : String ? = null , classifier : String ? = null ) : Any
+val ( train , test ) = fashionMnist ( )
+fun main ( ) : Unit
+fun withFile ( firFile : FirFile , action : ( ) -> Unit ) : Unit
+fun withRegularClass ( firClass : FirRegularClass , action : ( ) -> Unit ) : Unit
+fun withScript ( firScript : FirScript , action : ( ) -> Unit ) : Unit
+fun performAction ( element : FirElementWithResolveState )
+fun String . splitQUotedArgs ( ) : List < String
+fun KotlinNativeArtifactConfig . withPodspec ( configure : KotlinArtifactsPodspecExtension . ( ) -> Unit )
+fun getSession ( module : KtModule ) : LLFirSession
+fun getResolvableSession ( module : KtModule ) : LLFirResolvableModuleSession
+public fun RegExp . reset ( )
+public inline operator fun RegExpMatch . get ( index : Int ) : String ?
+public inline fun RegExpMatch . asArray ( ) : Array < out String ?
+
+@ InternalForKotlinNative @ OptIn ( kotlin . native . runtime . NativeRuntimeApi :: class , ObsoleteWorkersApi :: class ) public fun performGCOnCleanerWorker ( ) : Unit
+@ InternalForKotlinNative @ OptIn ( ObsoleteWorkersApi :: class ) public fun waitCleanerWorker ( ) : Unit
+fun < T : Parcelable > parcelableCreator ( ) : Parcelable . Creator < T
+@ Throws ( IOException :: class ) public fun detectObjects ( imageFile : File , topK : Int = 5 ) : List < DetectedObject
+val ( train , test ) = mnist ( )
+fun main ( ) : Unit
+fun getTypeAsList ( nullableArray : kotlin . Boolean , typeFqName : kotlin . String ) : FieldType . ValueFieldType
+fun getTypeAsFrame ( nullable : kotlin . Boolean , markerName : kotlin . String ) : FieldType . FrameFieldType
+object ListFieldType : FieldType . ValueFieldType
+public fun < T > label ( column : ColumnReference < T > , ) : NonPositionalMapping < T , String
+public fun < T > label ( column : KProperty < T > , ) : NonPositionalMapping < T , String
+public fun label ( column : String , ) : NonPositionalMapping < Any ? , String
+public fun < T > label ( values : Iterable < T > , name : String ? = null , ) : NonPositionalMapping < T , String
+public fun < T > label ( values : DataColumn < T > , ) : NonPositionalMapping < T , String
+fun BaseKotlinScope . createProjectHierarchyWithPluginOnSub2 ( )
+
+fun decodeCDPResponse ( message : String , serializerForMessageId : ( Int ) -> CDPMethodCallEncodingInfo ) : CDPResponse
+fun encodeCDPMethodCall ( messageId : Int , methodName : String , params : Params ? ) : Pair < String , CDPMethodCallEncodingInfo
+suspend fun genericEvaluateRequest ( encodeMethodCallWithMessageId : ( Int ) -> Pair < String , CDPMethodCallEncodingInfo > ) : CDPMethodInvocationResult
+fun enable ( )
+suspend fun runIfWaitingForDebugger ( )
+suspend fun evaluate ( expression : String , contextId : ExecutionContextId ? = null )
+fun enable ( )
+suspend fun resume ( )
+
+fun setBreakpoint ( scriptId : Runtime . ScriptId , lineNumber : Int , columnNumber : Int ? = null , condition : String ? = null )
+suspend fun setSkipAllPauses ( skip : Boolean )
+suspend fun stepInto ( )
+fun evaluateOnCallFrame ( callFrameId : CallFrameId , expression : String , returnByValue : Boolean ? = null , )
+@ BetaInteropApi public fun getOriginalKotlinClass ( objCClass : ObjCClass ) : KClass < * > ?
+@ BetaInteropApi public fun getOriginalKotlinClass ( objCProtocol : ObjCProtocol ) : KClass < * > ?
+fun format ( columnSeparator : String = "U+0020" , lineSeparatorSymbol : Char = '_' , thickLineSeparatorSymbol : Char = '' ) : List < String
+
+val modelHub = ONNXModelHub ( cacheDirectory = File ( "" ) )
+fun main ( ) : Unit
+fun createSettingsXml ( ) : String
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalStdlibApi :: class ) @ kotlin . internal . InlineOnly public inline fun Char ( code : Int ) : Char
+@ SinceKotlin ( "1.5" ) @ WasExperimental ( ExperimentalStdlibApi :: class ) @ Suppress ( "" ) public expect fun Char ( code : UShort ) : Char
+internal fun < T > KotlinGradlePluginExtensionPoint ( ) : KotlinGradlePluginExtensionPoint < T
+fun createExtensionCandidateChecker ( originalFile : KtFile , nameExpression : KtSimpleNameExpression , explicitReceiver : KtExpression ? ) : KtCompletionExtensionCandidateChecker
+suspend fun acquire ( )
+fun tryAcquire ( ) : Boolean
+release ( null )
+@ Suppress ( "FunctionName" ) public fun Semaphore ( permits : Int , acquiredPermits : Int = 0 ) : Semaphore
+@ OptIn ( ExperimentalContracts :: class ) public suspend inline fun < T > Semaphore . withPermit ( action : ( ) -> T ) : T
+fun decPermits ( ) : Int
+if ( permits == 0 ) { throw IllegalArgumentException ( "" ) }
+fun addAcquireToQueue ( waiter : Waiter ) : Boolean
+fun asReversed ( ) : HeaderInfo ?
+fun matchIterable ( expression : E ) : Boolean
+fun matchIteratorCall ( call : IrCall ) : Boolean
+fun build ( expression : E , data : D , scopeOwner : IrSymbol ) : HeaderInfo ?
+override fun visitCall ( expression : IrCall , data : IrCall ? ) : HeaderInfo ?
+override fun visitExpression ( expression : IrExpression , data : IrCall ? ) : HeaderInfo ?
+fun GradleRunner . withEnvironment ( build : MutableMap < String , String ? > . ( ) -> Unit ) : GradleRunner
+fun GradleRunner . addArguments ( vararg arguments : String ) : GradleRunner
+internal fun < T : Task , R : Any > TaskCollection < T > . implementing ( kclass : KClass < R > ) : TaskCollection < T
+
+override fun invokeOnTimeout ( timeMillis : Long , block : Runnable , context : CoroutineContext ) : DisposableHandle
+{ val columnID = datasetHandler . addColumn ( x ) addFormat ( columnID , format ) addScalesSharing ( columnID , scalesSharing ) }
+@ Suppress ( "" ) addLayer ( Y , y , scaleSharing , order , format )
+
+
+fun produceAdditionalFiles ( globalDirectives : RegisteredDirectives , module : TestModule ) : List < TestFile
+fun referenceUndiscoveredExpectSymbols ( files : Collection < KtFile > , bindingContext : BindingContext )
+fun inv ( n : Int , mat : FloatArray , lda : Int ) : Int
+fun solve ( n : Int , nrhs : Int , a : FloatArray , lda : Int , b : FloatArray , ldb : Int ) : Int
+
+fun dotMV ( transA : Boolean , offsetA : Int , a : FloatArray , m : Int , n : Int , lda : Int , offsetX : Int , x : FloatArray , incX : Int , y : FloatArray )
+fun dotVV ( n : Int , offsetX : Int , x : FloatArray , incX : Int , offsetY : Int , y : FloatArray , incY : Int ) : Float
+fun collectSessionsAndPublishInvalidationEvent ( action : ( ) -> Unit )
