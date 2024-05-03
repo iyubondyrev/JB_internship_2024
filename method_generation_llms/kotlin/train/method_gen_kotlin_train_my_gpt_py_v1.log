@@ -1,0 +1,298 @@
+[50258, 23748, 995, 50261, 50525, 50257, 220, 50259]
+GPT2Config {
+  "_name_or_path": "iyubondyrev/jb_2024_kotlin_gpt",
+  "activation_function": "gelu_new",
+  "architectures": [
+    "GPT2LMHeadModel"
+  ],
+  "attn_pdrop": 0.1,
+  "bos_token_id": 50258,
+  "embd_pdrop": 0.1,
+  "eos_token_id": 50259,
+  "gradient_checkpointing": false,
+  "initializer_range": 0.02,
+  "layer_norm_epsilon": 1e-05,
+  "model_type": "gpt2",
+  "n_ctx": 1024,
+  "n_embd": 768,
+  "n_head": 12,
+  "n_inner": null,
+  "n_layer": 12,
+  "n_positions": 1024,
+  "pad_token_id": 50257,
+  "reorder_and_upcast_attn": false,
+  "resid_pdrop": 0.1,
+  "scale_attn_by_inverse_layer_idx": false,
+  "scale_attn_weights": true,
+  "summary_activation": null,
+  "summary_first_dropout": 0.1,
+  "summary_proj_to_labels": true,
+  "summary_type": "cls_index",
+  "summary_use_proj": true,
+  "task_specific_params": {
+    "text-generation": {
+      "do_sample": true,
+      "max_length": 50
+    }
+  },
+  "torch_dtype": "float32",
+  "transformers_version": "4.40.1",
+  "use_cache": true,
+  "vocab_size": 50527
+}
+
+Model has a total of 124647168 trainable parameters
+Training/evaluation parameters Namespace(data_dir='../../../datasets/method_generation_dataset/kotlin', output_dir='save_gpt/', model_type='gpt2', pretrain_dir='iyubondyrev/jb_2024_kotlin_gpt', config_dir=None, tokenizer_dir=None, load_name='pretrained', lit_file='../../../datasets/method_generation_dataset/kotlin/literals.json', mlm=False, mlm_probability=0.15, cache_dir='', block_size=1024, do_train=True, do_eval=False, do_infer=False, evaluate_during_training=True, do_lower_case=False, per_gpu_train_batch_size=4, per_gpu_eval_batch_size=12, gradient_accumulation_steps=1, learning_rate=3e-05, weight_decay=0.01, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=6.0, max_steps=-1, warmup_steps=1000, logging_steps=100, save_steps=1000, save_total_limit=None, eval_all_checkpoints=False, no_cuda=False, overwrite_output_dir=True, overwrite_cache=False, seed=42, fp16=False, fp16_opt_level='O1', local_rank=-1, node_index=0, gpu_per_node=1, server_ip='', server_port='', log_file='method_gen_kotlin_train_my_gpt_py.log', tensorboard_dir=None, lang='kotlin', n_gpu=1, device=device(type='cuda'), start_step=0)
+Creating features from dataset file at ../../../datasets/method_generation_dataset/kotlin/train.jsonl
+Data size: 10597
+Rank 0, load 0
+Rank 0, load 10
+Rank 0, load 20
+Rank 0, load 30
+Rank 0, load 40
+Rank 0, load 50
+Rank 0, load 60
+Rank 0, load 70
+Rank 0, load 80
+Rank 0, load 90
+Rank 0, load 100
+Rank 0 Training 10597 samples
+Saving features into cached file save_gpt/train_blocksize_1024_wordsize_1_rank_0
+***** Running training *****
+  Num examples = 10597
+  Num epoch = 5
+  Instantaneous batch size per GPU = 4
+  Total train batch size (w. parallel, distributed & accumulation) = 4
+  Gradient Accumulation steps = 1
+  Total optimization steps = 15894
+  steps: 100  lr: 3e-06  loss: 4.2801
+  steps: 200  lr: 6e-06  loss: 2.8515
+  steps: 300  lr: 9e-06  loss: 2.6295
+  steps: 400  lr: 1.2e-05  loss: 2.469
+  steps: 500  lr: 1.5e-05  loss: 2.3487
+  steps: 600  lr: 1.8e-05  loss: 2.5199
+  steps: 700  lr: 2.1e-05  loss: 2.4119
+  steps: 800  lr: 2.4e-05  loss: 2.1273
+  steps: 900  lr: 2.7e-05  loss: 2.2371
+  steps: 1000  lr: 3e-05  loss: 2.2024
+Data size: 669
+Rank 0, load 0
+Rank 0, load 10
+Rank 0, load 20
+Rank 0, load 30
+Rank 0, load 40
+Rank 0, load 50
+Rank 0, load 60
+Rank 0, load 70
+Rank 0, load 80
+Rank 0, load 90
+Rank 0, load 100
+Eval steps: 0
+  perplexity = 2.0731
+Saving model checkpoint to save_gpt/checkpoint-1000-2.0731
+Saving optimizer states to save_gpt/checkpoint-last
+  steps: 1100  lr: 3e-05  loss: 2.189
+  steps: 1200  lr: 3e-05  loss: 2.1247
+  steps: 1300  lr: 2.9e-05  loss: 2.2166
+  steps: 1400  lr: 2.9e-05  loss: 2.1433
+  steps: 1500  lr: 2.9e-05  loss: 2.2268
+  steps: 1600  lr: 2.9e-05  loss: 2.1672
+  steps: 1700  lr: 2.9e-05  loss: 2.0689
+  steps: 1800  lr: 2.8e-05  loss: 2.1802
+  steps: 1900  lr: 2.8e-05  loss: 2.1565
+  steps: 2000  lr: 2.8e-05  loss: 1.9403
+Eval steps: 0
+  perplexity = 1.9522
+Saving model checkpoint to save_gpt/checkpoint-2000-1.9522
+Saving optimizer states to save_gpt/checkpoint-last
+  steps: 2100  lr: 2.8e-05  loss: 2.1339
+  steps: 2200  lr: 2.8e-05  loss: 2.0887
+  steps: 2300  lr: 2.7e-05  loss: 2.0301
+  steps: 2400  lr: 2.7e-05  loss: 1.9322
+  steps: 2500  lr: 2.7e-05  loss: 2.0394
+  steps: 2600  lr: 2.7e-05  loss: 2.0815
+  steps: 2700  lr: 2.7e-05  loss: 1.9299
+  steps: 2800  lr: 2.6e-05  loss: 1.8343
+  steps: 2900  lr: 2.6e-05  loss: 1.8221
+  steps: 3000  lr: 2.6e-05  loss: 1.7753
+Eval steps: 0
+  perplexity = 1.8987
+Saving model checkpoint to save_gpt/checkpoint-3000-1.8987
+Saving optimizer states to save_gpt/checkpoint-last
+  steps: 3100  lr: 2.6e-05  loss: 1.873
+  steps: 3200  lr: 2.6e-05  loss: 1.8053
+  steps: 3300  lr: 2.5e-05  loss: 1.8824
+  steps: 3400  lr: 2.5e-05  loss: 1.8276
+  steps: 3500  lr: 2.5e-05  loss: 1.9023
+  steps: 3600  lr: 2.5e-05  loss: 1.7795
+  steps: 3700  lr: 2.5e-05  loss: 1.8284
+  steps: 3800  lr: 2.4e-05  loss: 1.84
+  steps: 3900  lr: 2.4e-05  loss: 1.7515
+  steps: 4000  lr: 2.4e-05  loss: 1.8889
+Eval steps: 0
+  perplexity = 1.8631
+Saving model checkpoint to save_gpt/checkpoint-4000-1.8631
+Saving optimizer states to save_gpt/checkpoint-last
+  steps: 4100  lr: 2.4e-05  loss: 1.7832
+  steps: 4200  lr: 2.4e-05  loss: 1.7541
+  steps: 4300  lr: 2.3e-05  loss: 1.9297
+  steps: 4400  lr: 2.3e-05  loss: 1.7056
+  steps: 4500  lr: 2.3e-05  loss: 1.7517
+  steps: 4600  lr: 2.3e-05  loss: 1.7535
+  steps: 4700  lr: 2.3e-05  loss: 1.7751
+  steps: 4800  lr: 2.2e-05  loss: 1.8285
+  steps: 4900  lr: 2.2e-05  loss: 1.7917
+  steps: 5000  lr: 2.2e-05  loss: 1.8116
+Eval steps: 0
+  perplexity = 1.8739
+Saving model checkpoint to save_gpt/checkpoint-5000-1.8739
+Saving optimizer states to save_gpt/checkpoint-last
+  steps: 5100  lr: 2.2e-05  loss: 1.8057
+  steps: 5200  lr: 2.2e-05  loss: 1.7683
+  steps: 5300  lr: 2.1e-05  loss: 1.831
+  steps: 5400  lr: 2.1e-05  loss: 1.6663
+  steps: 5500  lr: 2.1e-05  loss: 1.6894
+  steps: 5600  lr: 2.1e-05  loss: 1.6317
+  steps: 5700  lr: 2.1e-05  loss: 1.655
+  steps: 5800  lr: 2e-05  loss: 1.6614
+  steps: 5900  lr: 2e-05  loss: 1.7017
+  steps: 6000  lr: 2e-05  loss: 1.5531
+Eval steps: 0
+  perplexity = 1.8993
+Saving model checkpoint to save_gpt/checkpoint-6000-1.8993
+Saving optimizer states to save_gpt/checkpoint-last
+  steps: 6100  lr: 2e-05  loss: 1.6731
+  steps: 6200  lr: 2e-05  loss: 1.6109
+  steps: 6300  lr: 1.9e-05  loss: 1.5739
+  steps: 6400  lr: 1.9e-05  loss: 1.6401
+  steps: 6500  lr: 1.9e-05  loss: 1.6675
+  steps: 6600  lr: 1.9e-05  loss: 1.58
+  steps: 6700  lr: 1.9e-05  loss: 1.6884
+  steps: 6800  lr: 1.8e-05  loss: 1.6433
+  steps: 6900  lr: 1.8e-05  loss: 1.6839
+  steps: 7000  lr: 1.8e-05  loss: 1.7005
+Eval steps: 0
+  perplexity = 1.8637
+Saving model checkpoint to save_gpt/checkpoint-7000-1.8637
+Saving optimizer states to save_gpt/checkpoint-last
+  steps: 7100  lr: 1.8e-05  loss: 1.674
+  steps: 7200  lr: 1.8e-05  loss: 1.6248
+  steps: 7300  lr: 1.7e-05  loss: 1.614
+  steps: 7400  lr: 1.7e-05  loss: 1.5906
+  steps: 7500  lr: 1.7e-05  loss: 1.5906
+  steps: 7600  lr: 1.7e-05  loss: 1.6172
+  steps: 7700  lr: 1.7e-05  loss: 1.6491
+  steps: 7800  lr: 1.6e-05  loss: 1.6189
+  steps: 7900  lr: 1.6e-05  loss: 1.6066
+  steps: 8000  lr: 1.6e-05  loss: 1.5464
+Eval steps: 0
+  perplexity = 1.8894
+Saving model checkpoint to save_gpt/checkpoint-8000-1.8894
+Saving optimizer states to save_gpt/checkpoint-last
+  steps: 8100  lr: 1.6e-05  loss: 1.5493
+  steps: 8200  lr: 1.5e-05  loss: 1.5623
+  steps: 8300  lr: 1.5e-05  loss: 1.5759
+  steps: 8400  lr: 1.5e-05  loss: 1.525
+  steps: 8500  lr: 1.5e-05  loss: 1.5611
+  steps: 8600  lr: 1.5e-05  loss: 1.5691
+  steps: 8700  lr: 1.4e-05  loss: 1.5109
+  steps: 8800  lr: 1.4e-05  loss: 1.5403
+  steps: 8900  lr: 1.4e-05  loss: 1.5635
+  steps: 9000  lr: 1.4e-05  loss: 1.5181
+Eval steps: 0
+  perplexity = 1.8798
+Saving model checkpoint to save_gpt/checkpoint-9000-1.8798
+Saving optimizer states to save_gpt/checkpoint-last
+  steps: 9100  lr: 1.4e-05  loss: 1.5048
+  steps: 9200  lr: 1.3e-05  loss: 1.5096
+  steps: 9300  lr: 1.3e-05  loss: 1.4885
+  steps: 9400  lr: 1.3e-05  loss: 1.549
+  steps: 9500  lr: 1.3e-05  loss: 1.4958
+  steps: 9600  lr: 1.3e-05  loss: 1.5073
+  steps: 9700  lr: 1.2e-05  loss: 1.528
+  steps: 9800  lr: 1.2e-05  loss: 1.5807
+  steps: 9900  lr: 1.2e-05  loss: 1.4928
+  steps: 10000  lr: 1.2e-05  loss: 1.4857
+Eval steps: 0
+  perplexity = 1.8925
+Saving model checkpoint to save_gpt/checkpoint-10000-1.8925
+Saving optimizer states to save_gpt/checkpoint-last
+  steps: 10100  lr: 1.2e-05  loss: 1.5666
+  steps: 10200  lr: 1.1e-05  loss: 1.5993
+  steps: 10300  lr: 1.1e-05  loss: 1.4957
+  steps: 10400  lr: 1.1e-05  loss: 1.5598
+  steps: 10500  lr: 1.1e-05  loss: 1.4976
+  steps: 10600  lr: 1.1e-05  loss: 1.5758
+  steps: 10700  lr: 1e-05  loss: 1.4829
+  steps: 10800  lr: 1e-05  loss: 1.4843
+  steps: 10900  lr: 1e-05  loss: 1.3983
+  steps: 11000  lr: 1e-05  loss: 1.4112
+Eval steps: 0
+  perplexity = 1.9365
+Saving model checkpoint to save_gpt/checkpoint-11000-1.9365
+Saving optimizer states to save_gpt/checkpoint-last
+  steps: 11100  lr: 1e-05  loss: 1.489
+  steps: 11200  lr: 9e-06  loss: 1.4598
+  steps: 11300  lr: 9e-06  loss: 1.4638
+  steps: 11400  lr: 9e-06  loss: 1.4604
+  steps: 11500  lr: 9e-06  loss: 1.4685
+  steps: 11600  lr: 9e-06  loss: 1.4605
+  steps: 11700  lr: 8e-06  loss: 1.5072
+  steps: 11800  lr: 8e-06  loss: 1.4804
+  steps: 11900  lr: 8e-06  loss: 1.4582
+  steps: 12000  lr: 8e-06  loss: 1.4753
+Eval steps: 0
+  perplexity = 1.8952
+Saving model checkpoint to save_gpt/checkpoint-12000-1.8952
+Saving optimizer states to save_gpt/checkpoint-last
+  steps: 12100  lr: 8e-06  loss: 1.4992
+  steps: 12200  lr: 7e-06  loss: 1.5224
+  steps: 12300  lr: 7e-06  loss: 1.4667
+  steps: 12400  lr: 7e-06  loss: 1.4311
+  steps: 12500  lr: 7e-06  loss: 1.4481
+  steps: 12600  lr: 7e-06  loss: 1.4217
+  steps: 12700  lr: 6e-06  loss: 1.5201
+  steps: 12800  lr: 6e-06  loss: 1.4034
+  steps: 12900  lr: 6e-06  loss: 1.4364
+  steps: 13000  lr: 6e-06  loss: 1.4615
+Eval steps: 0
+  perplexity = 1.8852
+Saving model checkpoint to save_gpt/checkpoint-13000-1.8852
+Saving optimizer states to save_gpt/checkpoint-last
+  steps: 13100  lr: 6e-06  loss: 1.4868
+  steps: 13200  lr: 5e-06  loss: 1.528
+  steps: 13300  lr: 5e-06  loss: 1.4353
+  steps: 13400  lr: 5e-06  loss: 1.4398
+  steps: 13500  lr: 5e-06  loss: 1.447
+  steps: 13600  lr: 5e-06  loss: 1.4348
+  steps: 13700  lr: 4e-06  loss: 1.4127
+  steps: 13800  lr: 4e-06  loss: 1.3894
+  steps: 13900  lr: 4e-06  loss: 1.4345
+  steps: 14000  lr: 4e-06  loss: 1.4458
+Eval steps: 0
+  perplexity = 1.9107
+Saving model checkpoint to save_gpt/checkpoint-14000-1.9107
+Saving optimizer states to save_gpt/checkpoint-last
+  steps: 14100  lr: 4e-06  loss: 1.4297
+  steps: 14200  lr: 3e-06  loss: 1.4165
+  steps: 14300  lr: 3e-06  loss: 1.3896
+  steps: 14400  lr: 3e-06  loss: 1.4293
+  steps: 14500  lr: 3e-06  loss: 1.4415
+  steps: 14600  lr: 3e-06  loss: 1.4385
+  steps: 14700  lr: 2e-06  loss: 1.4088
+  steps: 14800  lr: 2e-06  loss: 1.4285
+  steps: 14900  lr: 2e-06  loss: 1.4252
+  steps: 15000  lr: 2e-06  loss: 1.4154
+Eval steps: 0
+  perplexity = 1.9094
+Saving model checkpoint to save_gpt/checkpoint-15000-1.9094
+Saving optimizer states to save_gpt/checkpoint-last
+  steps: 15100  lr: 2e-06  loss: 1.4499
+  steps: 15200  lr: 1e-06  loss: 1.4245
+  steps: 15300  lr: 1e-06  loss: 1.3985
+  steps: 15400  lr: 1e-06  loss: 1.4719
+  steps: 15500  lr: 1e-06  loss: 1.4206
+  steps: 15600  lr: 1e-06  loss: 1.4401
+  steps: 15700  lr: 0.0  loss: 1.4631
+  steps: 15800  lr: 0.0  loss: 1.4374
+ global_step = 15894, average loss = 0.5119547156286924
