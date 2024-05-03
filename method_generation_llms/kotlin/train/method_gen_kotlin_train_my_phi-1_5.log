@@ -290,3 +290,4 @@ Saving optimizer states to save_phi/checkpoint-last
   steps: 15700  lr: 0.0  loss: 1.0067
   steps: 15800  lr: 0.0  loss: 1.0047
  global_step = 15894, average loss = 0.10436845530627595
+ 

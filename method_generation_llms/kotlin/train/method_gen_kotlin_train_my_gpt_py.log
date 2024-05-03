@@ -296,3 +296,4 @@ Saving optimizer states to save_gpt/checkpoint-last
   steps: 15700  lr: 0.0  loss: 1.4631
   steps: 15800  lr: 0.0  loss: 1.4374
  global_step = 15894, average loss = 0.5119547156286924
+ 
