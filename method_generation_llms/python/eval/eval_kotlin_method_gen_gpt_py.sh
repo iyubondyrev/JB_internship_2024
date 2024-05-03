@@ -3,7 +3,7 @@ DATADIR=../../../datasets/method_generation_dataset/python
 LITFILE=../../../datasets/method_generation_dataset/python/literals.json
 OUTPUTDIR=save_method_gen_gpt/
 PRETRAINDIR=iyubondyrev/jb_2024_kotlin_method_gen_gpt
-LOGFILE=eval.log
+LOGFILE=eval_method_gen_gpt.log
 
 python -u ../../code/run.py \
         --data_dir=$DATADIR \
