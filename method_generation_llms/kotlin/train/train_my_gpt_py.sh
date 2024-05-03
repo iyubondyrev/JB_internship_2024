@@ -25,9 +25,9 @@ python -u ../../code/run.py \
         --per_gpu_train_batch_size=4 \
         --per_gpu_eval_batch_size=12 \
         --gradient_accumulation_steps=1 \
-        --num_train_epochs=6 \
+        --num_train_epochs=1 \
         --logging_steps=100 \
-        --save_steps=1000 \
-        --warmup_steps=1000 \
+        --save_steps=500 \
+        --warmup_steps=0 \
         --overwrite_output_dir \
         --seed=42
