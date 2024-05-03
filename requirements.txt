@@ -4,3 +4,4 @@ tqdm
 gdown
 wandb
 fuzzywuzzy
+levenshtein
