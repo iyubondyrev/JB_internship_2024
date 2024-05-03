@@ -115,6 +115,8 @@ class MethodDataset(Dataset):
                     inputs = tokenizer.encode(x["signature"] + "<EOL>\"\"\"" + x["docstring"] + "\"\"\"<EOL>")
                 elif (args.lang == "kotlin"):
                     inputs = tokenizer.encode(x["docstring"] + "<EOL>" + x["signature"])
+                else:
+                    raise ValueError("Language must be kotlin or python")
 
                 input_ids, input_labels = self.pad_and_get_mask(code, inputs, tokenizer)
                 self.inputs.append(input_ids)
