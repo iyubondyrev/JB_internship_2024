@@ -1,9 +1,9 @@
 export CUDA_VISIBLE_DEVICES=0
 DATADIR=../../../datasets/method_generation_dataset/kotlin
 LITFILE=../../../datasets/method_generation_dataset/kotlin/literals.json
-OUTPUTDIR=save_vanilla_phi/
-PRETRAINDIR=microsoft/phi-1_5
-LOGFILE=eval_vanilla_phi.log
+OUTPUTDIR=save_kotlin_method_gen_gpt_py/
+PRETRAINDIR=iyubondyrev/jb_2024_kotlin_method_gen_gpt
+LOGFILE=eval_kotlin_method_gen_gpt_py.log
 
 python -u ../../code/run.py \
         --data_dir=$DATADIR \
@@ -11,8 +11,8 @@ python -u ../../code/run.py \
         --pretrain_dir=$PRETRAINDIR \
         --lit_file=$LITFILE \
         --log_file=$LOGFILE \
-        --model_type=phi_1_5 \
-        --block_size=512 \
+        --model_type=gpt2 \
+        --block_size=1024 \
         --lang=kotlin \
         --do_infer \
         --node_index 0 \
@@ -23,6 +23,6 @@ python -u ../../code/run.py \
         --overwrite_output_dir \
         --seed=42
 
-python ../../code/evaluator.py -a=save_vanilla_phi/test.gold -p=save_vanilla_phi/test.output > eval_result_vanilla_phi-1_5.txt 2>&1
+python ../../code/evaluator.py -a=save_kotlin_method_gen_gpt_py/test.gold -p=save_kotlin_method_gen_gpt_py/test.output > eval_result_kotlin_method_gen_gpt_py.txt 2>&1
 
-cp save_vanilla_phi/test.output predictions_vanilla_phi-1_5.txt
+cp save_kotlin_method_gen_gpt_py/test.output predictions_kotlin_method_gen_gpt_py.txt

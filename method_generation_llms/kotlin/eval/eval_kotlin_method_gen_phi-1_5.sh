@@ -1,9 +1,9 @@
 export CUDA_VISIBLE_DEVICES=0
 DATADIR=../../../datasets/method_generation_dataset/kotlin
 LITFILE=../../../datasets/method_generation_dataset/kotlin/literals.json
-OUTPUTDIR=save_vanilla_phi/
-PRETRAINDIR=microsoft/phi-1_5
-LOGFILE=eval_vanilla_phi.log
+OUTPUTDIR=save_kotlin_method_gen_phi/
+PRETRAINDIR=iyubondyrev/jb_2024_kotlin_method_gen_phi-1_5
+LOGFILE=eval_kotlin_method_gen_phi.log
 
 python -u ../../code/run.py \
         --data_dir=$DATADIR \
@@ -23,6 +23,6 @@ python -u ../../code/run.py \
         --overwrite_output_dir \
         --seed=42
 
-python ../../code/evaluator.py -a=save_vanilla_phi/test.gold -p=save_vanilla_phi/test.output > eval_result_vanilla_phi-1_5.txt 2>&1
+python ../../code/evaluator.py -a=save_kotlin_method_gen_phi/test.gold -p=save_kotlin_method_gen_phi/test.output > eval_result_kotlin_method_gen_phi-1_5.txt 2>&1
 
-cp save_vanilla_phi/test.output predictions_vanilla_phi-1_5.txt
+cp save_kotlin_method_gen_phi/test.output predictions_kotlin_method_gen_phi-1_5.txt
