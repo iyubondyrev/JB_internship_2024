@@ -180,6 +180,7 @@ def update_config(model, tokenizer):
 
 def train(args, train_dataset, model, tokenizer, fh, pool):
     """ Train the model """
+
     args.batch_size = args.per_gpu_train_batch_size * max(1, args.n_gpu)
     train_sampler = RandomSampler(train_dataset)
     
@@ -682,6 +683,13 @@ def main():
         model = model_class(config)
         model.resize_token_embeddings(len(tokenizer))
         update_config(model, tokenizer)
+
+    if args.model_type == "phi_1_5":
+        for name, param in model.named_parameters():
+            if 'lm_head' not in name:
+                param.requires_grad = False
+            else:
+                param.requires_grad = True
 
     model_parameters = model.parameters()
     num_params = sum([np.prod(p.size()) for p in model_parameters])
