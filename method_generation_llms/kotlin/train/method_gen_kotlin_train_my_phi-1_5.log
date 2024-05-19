@@ -290,4 +290,157 @@ Saving optimizer states to save_phi/checkpoint-last
   steps: 15700  lr: 0.0  loss: 1.0067
   steps: 15800  lr: 0.0  loss: 1.0047
  global_step = 15894, average loss = 0.10436845530627595
- 
+ [50295, 23748, 995, 50298, 50563, 50299, 220, 50296]
+PhiConfig {
+  "_name_or_path": "iyubondyrev/jb_2024_kotlin_phi-1_5",
+  "architectures": [
+    "PhiForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "auto_map": {
+    "AutoConfig": "microsoft/phi-1_5--configuration_phi.PhiConfig",
+    "AutoModelForCausalLM": "microsoft/phi-1_5--modeling_phi.PhiForCausalLM"
+  },
+  "bos_token_id": 50295,
+  "embd_pdrop": 0.0,
+  "eos_token_id": 50296,
+  "hidden_act": "gelu_new",
+  "hidden_size": 2048,
+  "initializer_range": 0.02,
+  "intermediate_size": 8192,
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 2048,
+  "model_type": "phi",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 24,
+  "num_key_value_heads": 32,
+  "pad_token_id": 50299,
+  "partial_rotary_factor": 0.5,
+  "qk_layernorm": false,
+  "resid_pdrop": 0.0,
+  "rope_scaling": null,
+  "rope_theta": 10000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float32",
+  "transformers_version": "4.41.0",
+  "use_cache": true,
+  "vocab_size": 50565
+}
+
+Model has a total of 103607685 trainable parameters
+Training/evaluation parameters Namespace(data_dir='../../../datasets/method_generation_dataset/kotlin', output_dir='save_phi/', model_type='phi_1_5', pretrain_dir='iyubondyrev/jb_2024_kotlin_phi-1_5', config_dir=None, tokenizer_dir=None, load_name='pretrained', lit_file='../../../datasets/method_generation_dataset/kotlin/literals.json', mlm=False, mlm_probability=0.15, cache_dir='', block_size=512, do_train=True, do_eval=False, do_infer=False, evaluate_during_training=True, do_lower_case=False, per_gpu_train_batch_size=4, per_gpu_eval_batch_size=12, gradient_accumulation_steps=1, learning_rate=3e-05, weight_decay=0.01, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=6.0, max_steps=-1, warmup_steps=1000, logging_steps=100, save_steps=1000, save_total_limit=None, eval_all_checkpoints=False, no_cuda=False, overwrite_output_dir=True, overwrite_cache=False, seed=42, fp16=False, fp16_opt_level='O1', local_rank=-1, node_index=0, gpu_per_node=1, server_ip='', server_port='', log_file='method_gen_kotlin_train_my_phi-1_5.log', tensorboard_dir=None, lang='kotlin', n_gpu=1, device=device(type='cuda'), start_step=0)
+Creating features from dataset file at ../../../datasets/method_generation_dataset/kotlin/train.jsonl
+Data size: 10597
+Rank 0, load 0
+Rank 0, load 10
+Rank 0, load 20
+Rank 0, load 30
+Rank 0, load 40
+Rank 0, load 50
+Rank 0, load 60
+Rank 0, load 70
+Rank 0, load 80
+Rank 0, load 90
+Rank 0, load 100
+Rank 0 Training 10597 samples
+Saving features into cached file save_phi/train_blocksize_512_wordsize_1_rank_0
+***** Running training *****
+  Num examples = 10597
+  Num epoch = 5
+  Instantaneous batch size per GPU = 4
+  Total train batch size (w. parallel, distributed & accumulation) = 4
+  Gradient Accumulation steps = 1
+  Total optimization steps = 15894
+  steps: 100  lr: 3e-06  loss: 2.3652
+  steps: 200  lr: 6e-06  loss: 2.2836
+  steps: 300  lr: 9e-06  loss: 2.444
+  steps: 400  lr: 1.2e-05  loss: 2.2829
+[50295, 23748, 995, 50298, 50563, 50299, 220, 50296]
+PhiConfig {
+  "_name_or_path": "iyubondyrev/jb_2024_kotlin_phi-1_5",
+  "architectures": [
+    "PhiForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "auto_map": {
+    "AutoConfig": "microsoft/phi-1_5--configuration_phi.PhiConfig",
+    "AutoModelForCausalLM": "microsoft/phi-1_5--modeling_phi.PhiForCausalLM"
+  },
+  "bos_token_id": 50295,
+  "embd_pdrop": 0.0,
+  "eos_token_id": 50296,
+  "hidden_act": "gelu_new",
+  "hidden_size": 2048,
+  "initializer_range": 0.02,
+  "intermediate_size": 8192,
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 2048,
+  "model_type": "phi",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 24,
+  "num_key_value_heads": 32,
+  "pad_token_id": 50299,
+  "partial_rotary_factor": 0.5,
+  "qk_layernorm": false,
+  "resid_pdrop": 0.0,
+  "rope_scaling": null,
+  "rope_theta": 10000.0,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float32",
+  "transformers_version": "4.41.0",
+  "use_cache": true,
+  "vocab_size": 50565
+}
+
+Model has a total of 103607685 trainable parameters
+Training/evaluation parameters Namespace(data_dir='../../../datasets/method_generation_dataset/kotlin', output_dir='save_phi/', model_type='phi_1_5', pretrain_dir='iyubondyrev/jb_2024_kotlin_phi-1_5', config_dir=None, tokenizer_dir=None, load_name='pretrained', lit_file='../../../datasets/method_generation_dataset/kotlin/literals.json', mlm=False, mlm_probability=0.15, cache_dir='', block_size=512, do_train=True, do_eval=False, do_infer=False, evaluate_during_training=True, do_lower_case=False, per_gpu_train_batch_size=8, per_gpu_eval_batch_size=12, gradient_accumulation_steps=1, learning_rate=3e-05, weight_decay=0.01, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=6.0, max_steps=-1, warmup_steps=1000, logging_steps=100, save_steps=1000, save_total_limit=None, eval_all_checkpoints=False, no_cuda=False, overwrite_output_dir=True, overwrite_cache=False, seed=42, fp16=False, fp16_opt_level='O1', local_rank=-1, node_index=0, gpu_per_node=1, server_ip='', server_port='', log_file='method_gen_kotlin_train_my_phi-1_5.log', tensorboard_dir=None, lang='kotlin', n_gpu=1, device=device(type='cuda'), start_step=0)
+Loading features from cached file save_phi/train_blocksize_512_wordsize_1_rank_0
+***** Running training *****
+  Num examples = 10597
+  Num epoch = 5
+  Instantaneous batch size per GPU = 8
+  Total train batch size (w. parallel, distributed & accumulation) = 8
+  Gradient Accumulation steps = 1
+  Total optimization steps = 7944
+  steps: 100  lr: 3e-06  loss: 2.2043
+  steps: 200  lr: 6e-06  loss: 2.3515
+  steps: 300  lr: 9e-06  loss: 2.1611
+  steps: 400  lr: 1.2e-05  loss: 1.9492
+  steps: 500  lr: 1.5e-05  loss: 1.8921
+  steps: 600  lr: 1.8e-05  loss: 1.7352
+  steps: 700  lr: 2.1e-05  loss: 1.6203
+  steps: 800  lr: 2.4e-05  loss: 1.5338
+  steps: 900  lr: 2.7e-05  loss: 1.4397
+  steps: 1000  lr: 3e-05  loss: 1.3981
+Data size: 669
+Rank 0, load 0
+Rank 0, load 10
+Rank 0, load 20
+Rank 0, load 30
+Rank 0, load 40
+Rank 0, load 50
+Rank 0, load 60
+Rank 0, load 70
+Rank 0, load 80
+Rank 0, load 90
+Rank 0, load 100
+Eval steps: 0
+  perplexity = 1.753
+Saving model checkpoint to save_phi/checkpoint-1000-1.753
+Saving optimizer states to save_phi/checkpoint-last
+  steps: 1100  lr: 3e-05  loss: 1.3795
+  steps: 1200  lr: 2.9e-05  loss: 1.3598
+  steps: 1300  lr: 2.9e-05  loss: 1.3675
+  steps: 1400  lr: 2.8e-05  loss: 1.3343
+  steps: 1500  lr: 2.8e-05  loss: 1.3217
+  steps: 1600  lr: 2.7e-05  loss: 1.2894
+  steps: 1700  lr: 2.7e-05  loss: 1.3158
+  steps: 1800  lr: 2.7e-05  loss: 1.3184
+  steps: 1900  lr: 2.6e-05  loss: 1.2905
+  steps: 2000  lr: 2.6e-05  loss: 1.3167
+Eval steps: 0
+  perplexity = 1.6926
+Saving model checkpoint to save_phi/checkpoint-2000-1.6926
+Saving optimizer states to save_phi/checkpoint-last
+  steps: 2100  lr: 2.5e-05  loss: 1.3168
+  steps: 2200  lr: 2.5e-05  loss: 1.2735

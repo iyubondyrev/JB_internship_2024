@@ -2,7 +2,7 @@ export CUDA_VISIBLE_DEVICES=0
 DATADIR=../../../datasets/method_generation_dataset/kotlin
 LITFILE=../../../datasets/method_generation_dataset/kotlin/literals.json
 OUTPUTDIR=save_kotlin_method_gen_phi/
-PRETRAINDIR=iyubondyrev/jb_2024_kotlin_method_gen_phi-1_5
+PRETRAINDIR=../train/save_phi/checkpoint-1000-1.753
 LOGFILE=eval_kotlin_method_gen_phi.log
 
 python -u ../../code/run.py \

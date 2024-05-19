@@ -692,7 +692,7 @@ def main():
                 param.requires_grad = True
 
     model_parameters = model.parameters()
-    num_params = sum([np.prod(p.size()) for p in model_parameters])
+    num_params = sum(p.numel() for p in model_parameters if p.requires_grad)
     logger.info(f"Model has a total of {num_params} trainable parameters")
 
     if args.local_rank == 0:

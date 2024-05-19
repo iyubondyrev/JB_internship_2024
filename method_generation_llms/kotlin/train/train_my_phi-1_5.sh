@@ -21,7 +21,7 @@ python -u ../../code/run.py \
         --learning_rate=3e-5 \
         --weight_decay=0.01 \
         --evaluate_during_training \
-        --per_gpu_train_batch_size=4 \
+        --per_gpu_train_batch_size=8 \
         --per_gpu_eval_batch_size=12 \
         --gradient_accumulation_steps=1 \
         --num_train_epochs=6 \
